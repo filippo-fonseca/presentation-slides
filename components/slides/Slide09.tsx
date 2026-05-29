@@ -29,7 +29,7 @@ export default function Slide09() {
       <div>
         <p className="eyebrow text-brand">Design Work</p>
         <h2 className="mt-2 font-display text-[clamp(32px,3.4vw,50px)] leading-tight">
-          Three steps. Repeatable. <span className="text-brand">No wet-membrane gymnastics.</span>
+          Three steps, repeatable: <span className="text-brand">no wet-membrane gymnastics</span>.
         </h2>
       </div>
 

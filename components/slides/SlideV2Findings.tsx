@@ -53,7 +53,7 @@ export default function SlideV2Findings() {
       <div>
         <p className="eyebrow text-brand">Validation · Iteration</p>
         <h2 className="mt-2 font-display text-[clamp(28px,3vw,42px)] leading-tight">
-          Currently <span className="font-mono text-[0.82em]">0.1&thinsp;mm</span> everywhere. <span className="text-brand">v2 says open it up.</span>
+          Currently <span className="font-mono text-[0.82em]">0.1&thinsp;mm</span> everywhere: <span className="text-brand">v2 says open it up</span>.
         </h2>
       </div>
 
