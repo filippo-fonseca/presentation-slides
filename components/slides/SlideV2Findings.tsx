@@ -63,8 +63,8 @@ export default function SlideV2Findings() {
 
       {/* Four findings cards */}
       <div className="grid min-h-0 grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((c) => (
-          <div key={c.eyebrow} className={`card ${c.accent} flex flex-col p-4`}>
+        {cards.map((c, i) => (
+          <div key={`${c.eyebrow}-${i}`} className={`card ${c.accent} flex flex-col p-4`}>
             <div className="mb-2.5">
               <span className={`${c.chip} rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em]`}>
                 {c.eyebrow}
