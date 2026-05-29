@@ -47,7 +47,7 @@ export default function Slide01() {
       {/* Title block — centered, restrained, scaled to fit */}
       <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 text-center">
         <p className="font-mono text-[10.5px] uppercase tracking-[0.28em] text-ink-muted">
-          Design Review · Working Document · No. 03
+          Design Review · No.&nbsp;2 · Summer Internship
         </p>
 
         <h1 className="font-display text-[clamp(36px,4vw,60px)] font-bold leading-[1.04] text-ink">
