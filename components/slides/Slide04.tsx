@@ -38,7 +38,7 @@ export default function Slide04() {
       <div>
         <p className="eyebrow text-brand">Design Work</p>
         <h2 className="mt-2 font-display text-[clamp(34px,3.6vw,52px)] leading-tight">
-          Three chambers, two membranes, <span className="text-brand">arranged radially</span>.
+          Three chambers, two membranes: <span className="text-brand">arranged radially</span>.
         </h2>
       </div>
 

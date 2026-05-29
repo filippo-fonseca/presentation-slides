@@ -6,7 +6,7 @@ export default function Slide08() {
       <div>
         <p className="eyebrow text-brand">Design Work</p>
         <h2 className="mt-2 font-display text-[clamp(32px,3.4vw,50px)] leading-tight">
-          A defined mechanical clamp. <span className="text-brand">Not a press-fit prayer.</span>
+          A defined mechanical clamp: <span className="text-brand">not a press-fit prayer</span>.
         </h2>
       </div>
 

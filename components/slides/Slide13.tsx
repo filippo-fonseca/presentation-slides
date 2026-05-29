@@ -11,7 +11,7 @@ export default function Slide13() {
       <div className="grid grid-cols-12 items-center gap-8">
         <div className="col-span-12 flex flex-col gap-5 md:col-span-7">
           <p className="font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">
-            The architecture targets a tunable <span className="font-semibold text-ink">4–20 mL</span> drug-hub volume to span healthy-to-infected knee synovial fluid. The exact internal volume of the current CAD is <span className="font-semibold text-amber">pending verification</span>. This is my next immediate measurement before sign-off.
+            The architecture targets a tunable <span className="font-semibold text-ink">4–20 mL</span> drug-hub volume to span healthy-to-infected knee synovial fluid. The exact internal volume of the current CAD is <span className="font-semibold text-amber">pending verification</span>: that's my next immediate measurement before sign-off.
           </p>
 
           <div className="card accent-brand p-5">

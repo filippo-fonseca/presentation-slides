@@ -3,7 +3,7 @@ import Plate from "@/components/ui/Plate";
 const tenets = [
   {
     title: "It stands on its own.",
-    body: "Integral legs/feet. The device sits flat and stable on the bench by itself. The published setup was awkward to place; this one has its own stance.",
+    body: "Integral legs/feet: the device sits flat and stable on the bench by itself. The published setup was awkward to place; this one has its own stance.",
   },
   {
     title: "Clean by intent.",

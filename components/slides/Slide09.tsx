@@ -74,7 +74,7 @@ export default function Slide09() {
 
       <div className="card-quote px-5 py-3">
         <p className="font-serif text-[15px] text-ink">
-          <span className="font-semibold">Modular by design.</span> A direct, recursive descendant of what worked in the cartridge and outer-disc-pair of the last two versions, now fully separable and bench-mountable.
+          <span className="font-semibold">Modular by design:</span> a direct, recursive descendant of what worked in the cartridge and outer-disc-pair of the last two versions, now fully separable and bench-mountable.
         </p>
       </div>
     </div>

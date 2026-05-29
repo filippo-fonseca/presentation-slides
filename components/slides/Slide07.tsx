@@ -31,7 +31,7 @@ export default function Slide07() {
       <div>
         <p className="eyebrow text-brand">Design Work · Hero</p>
         <h2 className="mt-2 font-display text-[clamp(28px,3vw,44px)] leading-[1.08]">
-          Watertight <span className="text-brand">by geometry</span>. O-rings are the helper, not the hero.
+          Watertight <span className="text-brand">by geometry</span>: O-rings are the helper, not the hero.
         </h2>
       </div>
 
