@@ -2,6 +2,22 @@
 
 This file orients Claude Code agents working in this repo. It is automatically loaded into context.
 
+## Standing rule: commit every change, in perpetuity
+
+Every change to the repo — slide copy, theme tokens, illustrations, components, scaffolding, even speaker notes — must be committed to git, in logical chunks, as you go. This is non-negotiable and applies forever, across every session. The reasons:
+
+- **Reversion.** Filippo iterates fast. Mistakes are normal. A clean commit history means any change can be reverted in one command. Long-running uncommitted state makes that impossible.
+- **Version control as the audit trail.** The git log is the canonical record of how a deck or landing evolved. If it isn't in `git log`, it isn't tracked.
+- **Push when asked.** When Filippo says "push" or similar, push to the configured remote without forcing — never `git push --force` without an explicit instruction.
+
+**How to apply:**
+
+- Don't batch a session's worth of work into a single end-of-day commit. Commit per logical unit (one slide redesign, one palette swap, one new component, one round of copy edits).
+- Use the user's existing commit-message style (short, lowercase, imperative when natural). See `git log --oneline -20` for examples.
+- Include `Co-Authored-By: Claude` as already specified in the global commit protocol.
+- After committing, briefly tell Filippo what was committed in the response summary.
+- If the working tree has accumulated uncommitted changes from previous sessions, catch up by making focused commits before continuing new work.
+
 ## What this repo is
 
 A **personal presentation-making hub** for Filippo Fonseca. Each presentation lives in its own sibling folder at the root. The repo also ships:
