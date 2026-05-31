@@ -27,6 +27,7 @@ import SceneHardParts from "./scenes/SceneHardParts";
 import SceneWhyUs from "./scenes/SceneWhyUs";
 import SceneAsk from "./scenes/SceneAsk";
 import SceneImpact from "./scenes/SceneImpact";
+import SceneConsider from "./scenes/SceneConsider";
 import SceneRecap from "./scenes/SceneRecap";
 import SceneClose from "./scenes/SceneClose";
 import ChimeToggle, { type ChimeApi } from "./components/ChimeToggle";
@@ -80,6 +81,7 @@ const SCENE_COMPONENTS: Record<string, React.FC<SceneProps>> = {
   "why-us":       SceneWhyUs,
   ask:            SceneAsk,
   impact:         SceneImpact,
+  consider:       SceneConsider,
   recap:          SceneRecap,
   close:          SceneClose,
 };

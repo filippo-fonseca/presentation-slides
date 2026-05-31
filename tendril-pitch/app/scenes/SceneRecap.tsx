@@ -101,7 +101,7 @@ const HERO_STATS = [
 
 export default function SceneRecap({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="25 · Recap">
+    <Stage eyebrow="26 · Recap">
       <div className="relative z-10 mx-auto flex w-full max-w-[88rem] flex-col gap-4">
         {/* Header */}
         <div className="mx-auto max-w-[80ch] text-center">
