@@ -40,6 +40,42 @@
 }
 .listen-glow { animation: listenGlow 1.6s ease-in-out infinite; }
 
+/* ───── Swarm animations (Slide 16) ───── */
+
+@keyframes swarmBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-2.5px); }
+}
+.swarm-bob {
+  animation: swarmBob 3.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes swarmHalo {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50%      { opacity: 0.35; transform: scale(1.18); }
+}
+.swarm-halo {
+  animation: swarmHalo 2.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes cropSway {
+  0%, 100% { transform: rotate(-1.2deg); }
+  50%      { transform: rotate(1.2deg); }
+}
+.crop-sway {
+  animation: cropSway 5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swarm-bob, .swarm-halo, .crop-sway { animation: none !important; }
+}
+
 /* ───── Pipeline token pulse ───── */
 
 @keyframes tokenFlow {
