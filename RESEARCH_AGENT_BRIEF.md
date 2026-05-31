@@ -200,9 +200,9 @@ Less is more. One argument per slide; one slide per argument.
 
 ## A worked example
 
-The DRD-3's spec — `drd-v3/DRD3_presentation_build_spec.md` — is the gold-standard for an `academic` preset spec. Read it before writing your first one. It also includes an "agent handoff note" that demonstrates the level of specificity the builder appreciates.
+The DRD-3's spec — `decks/drd-v3/DRD3_presentation_build_spec.md` — is the gold-standard for an `academic` preset spec. Read it before writing your first one. It also includes an "agent handoff note" that demonstrates the level of specificity the builder appreciates.
 
-The Ocura deck — `drd-v3/ocura-landing/app/deck/content.ts` + `deck-instructions/OCURA_PITCH_SITE_SPEC.md` — is the gold-standard for a `pitch` preset. (Note: that spec preceded the formalized format here; treat it as inspiration, not template.)
+The Ocura deck — `decks/drd-v3/ocura-landing/app/deck/content.ts` + `decks/drd-v3/deck-instructions/OCURA_PITCH_SITE_SPEC.md` — is the gold-standard for a `pitch` preset. (Note: that spec preceded the formalized format here; treat it as inspiration, not template.)
 
 ---
 
