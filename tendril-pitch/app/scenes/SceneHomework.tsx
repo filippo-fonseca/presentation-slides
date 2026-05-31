@@ -40,7 +40,7 @@ export default function SceneHomework({ beat }: SceneProps) {
             className="mb-2 text-balance text-[clamp(0.95rem,1.4vw,1.1rem)] italic leading-snug text-accent-soft"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            I did (too much) research on how farming and crops actually work this entire day…
+            I did (maybe too much) research on how farming and crops actually work this entire day…
           </p>
           <h2 className="text-balance text-[clamp(1.8rem,3.6vw,2.8rem)] font-medium leading-[1.05] tracking-[-0.03em]">
             Every crop runs on the{" "}

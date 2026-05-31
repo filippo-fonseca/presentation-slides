@@ -244,10 +244,16 @@ export default function DeckClient() {
         Skip to deck
       </a>
 
-      {/* Header — minimal: mark on the left, badge + audio toggle on the right */}
+      {/* Header — minimal: mark + wordmark on the left, badge + audio toggle on the right */}
       <header className="relative z-30 flex shrink-0 items-center justify-between px-6 py-4 sm:px-10">
-        <span aria-label={THEME.shortTitle} className="text-foreground/90">
-          <Mark size={32} />
+        <span aria-label={THEME.shortTitle} className="flex items-center gap-2.5 text-foreground/90">
+          <Mark size={30} />
+          <span
+            className="italic tracking-[-0.02em] text-foreground text-[18px]"
+            style={{ fontFamily: "var(--font-fraunces)", fontWeight: 600 }}
+          >
+            Tendril
+          </span>
         </span>
         <div className="flex items-center gap-3">
           {THEME.headerBadge && (
