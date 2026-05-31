@@ -86,11 +86,11 @@ export default function SceneHowDifferent({ beat }: SceneProps) {
 
         <div className="neu-raised overflow-hidden rounded-2xl">
           {/* Header row */}
-          <div className="grid grid-cols-[1.4fr_1.4fr] gap-3 border-b border-line px-5 py-3 sm:px-6">
-            <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-foreground/55">
+          <div className="grid grid-cols-[1fr_1fr] border-b border-line">
+            <span className="border-r border-line px-5 py-3 font-mono text-[10.5px] uppercase tracking-[0.22em] text-foreground/55 sm:px-6">
               Aigen
             </span>
-            <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-accent">
+            <span className="px-5 py-3 font-mono text-[10.5px] uppercase tracking-[0.22em] text-accent sm:px-6">
               Tendril
             </span>
           </div>
@@ -102,14 +102,18 @@ export default function SceneHowDifferent({ beat }: SceneProps) {
               <div
                 key={i}
                 aria-hidden={!visible}
-                className={`grid grid-cols-[1.4fr_1.4fr] items-start gap-3 px-5 py-4 text-[13.5px] sm:px-6 ${
+                className={`grid grid-cols-[1fr_1fr] items-stretch text-[13.5px] ${
                   isLast ? "" : "border-b border-line"
                 } transition-all duration-500 ${
                   visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-1 opacity-0"
                 }`}
               >
-                <span className="text-foreground/65 leading-snug">{row.aigen}</span>
-                <span className="text-foreground leading-snug">{row.tendril}</span>
+                <span className="border-r border-line px-5 py-4 leading-snug text-foreground/65 sm:px-6">
+                  {row.aigen}
+                </span>
+                <span className="px-5 py-4 leading-snug text-foreground sm:px-6">
+                  {row.tendril}
+                </span>
               </div>
             );
           })}
