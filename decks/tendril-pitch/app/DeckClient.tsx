@@ -29,6 +29,7 @@ import SceneAsk from "./scenes/SceneAsk";
 import SceneImpact from "./scenes/SceneImpact";
 import SceneConsider from "./scenes/SceneConsider";
 import SceneRecap from "./scenes/SceneRecap";
+import SceneVersatility from "./scenes/SceneVersatility";
 import SceneClose from "./scenes/SceneClose";
 import ChimeToggle, { type ChimeApi } from "./components/ChimeToggle";
 import SceneNav from "./components/SceneNav";
@@ -83,6 +84,7 @@ const SCENE_COMPONENTS: Record<string, React.FC<SceneProps>> = {
   impact:         SceneImpact,
   consider:       SceneConsider,
   recap:          SceneRecap,
+  versatility:    SceneVersatility,
   close:          SceneClose,
 };
 

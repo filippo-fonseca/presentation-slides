@@ -42,5 +42,6 @@ export const SCENES: ReadonlyArray<SceneMeta> = [
   { id: "impact",          title: "The bigger picture",     beats: 4 },
   { id: "consider",        title: "One ask before the recap", beats: 3 },
   { id: "recap",           title: "Recap",                  beats: 2 },
+  { id: "versatility",     title: "And not just plants",    beats: 3 },
   { id: "close",           title: "Close",                  beats: 2 },
 ];
