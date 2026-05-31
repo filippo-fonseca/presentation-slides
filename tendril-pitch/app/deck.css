@@ -42,29 +42,27 @@
 
 /* ───── Swarm animations (Slide 16) ───── */
 
-@keyframes swarmBob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-2.5px); }
-}
-.swarm-bob {
-  animation: swarmBob 3.4s ease-in-out infinite;
-  transform-box: fill-box;
-  transform-origin: center;
+/* Each row's robot sweeps left-to-right, fades out at the edge, restarts. */
+@keyframes rowSweep {
+  0%   { transform: translateX(0);     opacity: 0; }
+  6%   { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: translateX(440px); opacity: 0; }
 }
 
-@keyframes swarmHalo {
-  0%, 100% { opacity: 0.85; transform: scale(1); }
-  50%      { opacity: 0.35; transform: scale(1.18); }
+.row-sweep {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: rowSweep 8s linear infinite both;
 }
-.swarm-halo {
-  animation: swarmHalo 2.6s ease-in-out infinite;
-  transform-box: fill-box;
-  transform-origin: center;
-}
+.row-sweep-1 { animation-duration: 9.5s; animation-delay: 0s;   }
+.row-sweep-2 { animation-duration: 8s;   animation-delay: 2.2s; }
+.row-sweep-3 { animation-duration: 7s;   animation-delay: 4.4s; }
+.row-sweep-4 { animation-duration: 8.5s; animation-delay: 1s;   }
 
 @keyframes cropSway {
-  0%, 100% { transform: rotate(-1.2deg); }
-  50%      { transform: rotate(1.2deg); }
+  0%, 100% { transform: rotate(-1.6deg); }
+  50%      { transform: rotate(1.6deg); }
 }
 .crop-sway {
   animation: cropSway 5s ease-in-out infinite;
@@ -73,7 +71,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .swarm-bob, .swarm-halo, .crop-sway { animation: none !important; }
+  .row-sweep, .crop-sway { animation: none !important; }
 }
 
 /* ───── Pipeline token pulse ───── */
