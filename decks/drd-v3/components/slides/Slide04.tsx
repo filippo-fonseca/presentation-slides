@@ -78,7 +78,7 @@ export default function Slide04() {
           figureNumber="04B"
           caption="Bird's-eye view"
           meta="full assembly"
-          rotate={90}
+          rotate={180}
         >
           <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-6">
             <span className="chip-bacteria rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] shadow">bacteria</span>
