@@ -53,22 +53,50 @@ export default function AssemblyStrip({ className = "" }: { className?: string }
         <text x="18" y="5" fontFamily="var(--font-sans)" fontSize="12" fontWeight="600" letterSpacing="0.06em" fill="#1a1d24">PRESS INTO SATELLITE</text>
         <text x="18" y="22" fontFamily="var(--font-sans)" fontSize="11" fill="#4a4f59">the tooth retains it</text>
 
-        {/* satellite body */}
-        <rect x="20" y="80" width="280" height="180" rx="18" fill="#e3ecf6" stroke="#2D6CB0" strokeWidth="1.5" />
-        {/* port */}
-        <rect x="10" y="160" width="14" height="20" fill="#2D6CB0" />
-        {/* cartridge being inserted */}
-        <rect x="160" y="120" width="100" height="100" rx="10" fill="#fff" stroke="#5a5e66" strokeWidth="1.4" />
-        {/* tooth */}
-        <polygon points="155,150 165,145 165,165" fill="#16767B" />
-        <polygon points="155,210 165,205 165,225" fill="#16767B" />
-        <polygon points="265,150 255,145 255,165" fill="#16767B" />
-        <polygon points="265,210 255,205 255,225" fill="#16767B" />
-        {/* insertion arrow */}
-        <line x1="120" y1="170" x2="150" y2="170" stroke="#1a1d24" strokeWidth="1.2" />
-        <polygon points="150,167 156,170 150,173" fill="#1a1d24" />
-        <text x="100" y="280" fontFamily="var(--font-sans)" fontSize="10" fill="#7a7f88">satellite shell</text>
-        <text x="180" y="245" fontFamily="var(--font-sans)" fontSize="10" fill="#7a7f88">cartridge module</text>
+        {/* satellite body — section view: boxy chamber on the left, dome on the right,
+            with feet on the bottom and a mounting flange tab on the upper right. */}
+        <path d="
+          M 30 95
+          L 30 268
+          L 60 268
+          L 60 282
+          L 96 282
+          L 96 268
+          L 132 268
+          L 132 282
+          L 168 282
+          L 168 268
+          L 196 268
+          Q 248 264 248 180
+          Q 248 96 196 95
+          Z
+        " fill="#e3ecf6" stroke="#2D6CB0" strokeWidth="1.5" />
+
+        {/* interior chamber cavity (sectioned — the bacteria/perfusion space) */}
+        <rect x="48" y="113" width="124" height="138" fill="#cdc5b6" />
+
+        {/* circular bore opening on the right face — the cartridge slot */}
+        <ellipse cx="202" cy="180" rx="26" ry="46" fill="#ffffff" stroke="#5a5e66" strokeWidth="1.3" />
+        {/* O-ring sat inside the bore (red, as in the CAD section) */}
+        <ellipse cx="202" cy="180" rx="20" ry="38" fill="none" stroke="#C0552E" strokeWidth="2.4" />
+        {/* two locking-tooth marks at the top and bottom of the bore rim */}
+        <polygon points="198,140 206,140 202,150" fill="#16767B" />
+        <polygon points="198,220 206,220 202,210" fill="#16767B" />
+
+        {/* mounting flange tab + screw hole, top-right */}
+        <rect x="248" y="118" width="40" height="14" fill="#cdc5b6" stroke="#5a5e66" strokeWidth="1" />
+        <circle cx="272" cy="125" r="2.6" fill="#7a7f88" stroke="#1a1d24" strokeWidth="0.5" />
+
+        {/* cartridge module being pressed in from the right */}
+        <rect x="290" y="158" width="34" height="46" rx="6" fill="#fff" stroke="#5a5e66" strokeWidth="1.4" />
+        {/* insertion arrow pointing into the bore */}
+        <line x1="286" y1="180" x2="238" y2="180" stroke="#1a1d24" strokeWidth="1.4" />
+        <polygon points="238,175 230,180 238,185" fill="#1a1d24" />
+
+        {/* labels */}
+        <text x="110" y="186" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88" letterSpacing="0.08em">CHAMBER</text>
+        <text x="202" y="260" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88" letterSpacing="0.08em">CIRCULAR BORE</text>
+        <text x="307" y="222" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="10" fill="#7a7f88">cartridge</text>
       </g>
 
       {/* arrow */}
