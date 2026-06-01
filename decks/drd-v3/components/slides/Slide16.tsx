@@ -19,9 +19,6 @@ export default function Slide16() {
         <h1 className="mt-8 font-display text-[clamp(56px,7vw,108px)] leading-[1.02]">
           Thank&nbsp;you. <span className="text-brand italic">More to come</span>.
         </h1>
-        <p className="mt-6 max-w-[60ch] font-italic-display text-[clamp(20px,1.7vw,28px)] text-ink-soft">
-          The DRD-3. Watching transport and infection at once, without compromising either.
-        </p>
 
         <div className="mt-12 h-px w-24 bg-brand" />
         <div className="mt-6 flex flex-col items-center gap-2">
