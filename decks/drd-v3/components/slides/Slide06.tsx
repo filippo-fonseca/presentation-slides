@@ -49,19 +49,18 @@ function ToothProfile() {
       <line x1="204" y1="240" x2="204" y2="252" stroke="#1a1d24" strokeWidth="1" />
       <line x1="236" y1="240" x2="236" y2="252" stroke="#1a1d24" strokeWidth="1" />
       <text x="220" y="226" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="11" fontWeight="700" fill="#1a1d24">1&thinsp;mm</text>
-      <text x="220" y="212" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88" letterSpacing="0.12em">BASE &middot; NARROW</text>
+      {/* BASE · NARROW label, sat off to the right with a short leader */}
+      <line x1="242" y1="220" x2="296" y2="218" stroke="#7a7f88" strokeWidth="0.7" />
+      <text x="300" y="221" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88" letterSpacing="0.12em">BASE &middot; NARROW</text>
 
       {/* right-side annotation — tapered transition fit */}
       <line x1="285" y1="170" x2="332" y2="170" stroke="#C0552E" strokeWidth="0.9" strokeDasharray="2 3" />
       <text x="338" y="167" fontFamily="var(--font-sans)" fontSize="11" fontWeight="600" fill="#C0552E">tapered</text>
       <text x="338" y="180" fontFamily="var(--font-sans)" fontSize="10" fill="#C0552E">transition fit</text>
 
-      {/* left-side annotation — rounded root */}
+      {/* fillets at the root — geometry only, label moved to caption */}
       <path d="M 200 232 Q 198 226 204 226" fill="none" stroke="#0e5a5e" strokeWidth="1.4" />
       <path d="M 240 232 Q 242 226 236 226" fill="none" stroke="#0e5a5e" strokeWidth="1.4" />
-      <line x1="186" y1="232" x2="118" y2="270" stroke="#7a7f88" strokeWidth="0.7" />
-      <text x="14" y="266" fontFamily="var(--font-sans)" fontSize="10" fontWeight="600" fill="#4a4f59">rounded root</text>
-      <text x="14" y="278" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88">no crack risk</text>
 
       {/* angle arrow indicating "angled down" */}
       <line x1="305" y1="100" x2="305" y2="220" stroke="#7a7f88" strokeWidth="0.7" strokeDasharray="2 2" />
@@ -110,7 +109,7 @@ export default function Slide06() {
             tone="graph"
             padding="tight"
             figureNumber="06A"
-            caption="Tooth profile"
+            caption="Tooth profile, rounded root + fillets, no crack risks"
             meta="2 → 1 mm"
             className="max-h-[44%] flex-1"
           >
