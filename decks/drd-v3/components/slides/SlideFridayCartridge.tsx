@@ -20,7 +20,7 @@ const items = [
     title: "Change 1 · protective bars (back from v2)",
     body: (
       <>
-        Replaces the v3 porous structure with parallel bars from Aşık&apos;s original design. Same job, shielding the membrane from the UHMWPE implant strip, but bars leave flow <span className="font-semibold text-ink">far less restricted</span>. Aşık flagged last week that the porous geometry could hamper diffusion through the membrane; bars give us the same protection without the impedance.
+        Replaces the v3 porous structure with parallel bars from Dr. Aşık&apos;s original design. Same job, shielding the membrane from the UHMWPE implant strip, but bars leave flow <span className="font-semibold text-ink">far less restricted</span>. Dr. Aşık flagged last week that the porous geometry could hamper diffusion through the membrane; bars give us the same protection without the impedance.
       </>
     ),
   },
@@ -75,7 +75,7 @@ export default function SlideFridayCartridge() {
       </div>
 
       <p className="max-w-[88ch] font-serif text-[clamp(14px,1.2vw,17px)] leading-snug text-ink-soft">
-        I hadn&apos;t shown this until now, since it came in late Friday after two realizations. We still need to shield the membrane from the UHMWPE implant strip sitting in the drug hub, but the v3 porous structure was probably too restrictive for diffusion (per Aşık&apos;s note last week). And I hadn&apos;t given the cartridge a proper grip for clean removal, especially once the protective structure is back in the middle. Two small additions fix both.
+        I hadn&apos;t shown this until now, since it came in late Friday after two realizations. We still need to shield the membrane from the UHMWPE implant strip sitting in the drug hub, but the v3 porous structure was probably too restrictive for diffusion (per Dr. Aşık&apos;s note last week). Also, I hadn&apos;t given the cartridge a proper grip for clean removal, especially once the protective structure is back in the middle. Two small additions fix both.
       </p>
 
       {/* 3-col 2-row grid: figures on top row (flex), cards on bottom row.
