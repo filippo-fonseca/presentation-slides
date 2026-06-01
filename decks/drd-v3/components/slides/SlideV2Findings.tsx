@@ -35,7 +35,7 @@ const cards = [
     ),
   },
   {
-    eyebrow: "Proposed for v3 · before we print",
+    eyebrow: "Proposed for v3",
     chip: "chip-hub",
     accent: "accent-hub",
     title: "Open clearance slightly + bigger teeth + a second latch",
@@ -53,7 +53,7 @@ export default function SlideV2Findings() {
       <div>
         <p className="eyebrow text-brand">Validation · Iteration</p>
         <h2 className="mt-2 font-display text-[clamp(28px,3vw,42px)] leading-tight">
-          Currently <span className="font-mono text-[0.82em]">0.1&thinsp;mm</span> everywhere: <span className="text-brand">v2 says open it up</span>.
+          Currently <span className="font-mono text-[0.82em]">0.1&thinsp;mm</span> everywhere: <span className="text-brand">v2 indicates the clearance should be opened</span>.
         </h2>
       </div>
 
@@ -79,7 +79,7 @@ export default function SlideV2Findings() {
       {/* Closing pull line */}
       <div className="card-quote px-5 py-3">
         <p className="font-serif text-[clamp(14.5px,1.2vw,17px)] leading-snug text-ink">
-          This is exactly what the modular cartridge is built for. <span className="font-semibold">Reprint the cartridge only, drop it in, test the seat.</span> Parameters change; the architecture doesn&apos;t.
+          This is exactly what the modular cartridge is built for. <span className="font-semibold">Reprint the cartridge only, drop it in, test the seat.</span>
         </p>
       </div>
     </div>
