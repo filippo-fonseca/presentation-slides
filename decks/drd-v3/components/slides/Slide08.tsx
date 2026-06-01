@@ -49,7 +49,7 @@ export default function Slide08() {
             tone="paper"
             padding="snug"
             figureNumber="08B"
-            caption="Full assembly"
+            caption="Full assembly, top-down view"
             meta="clamped through arms"
           />
         </div>
