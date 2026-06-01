@@ -27,7 +27,7 @@ const phases = [
 
 export default function Slide14() {
   return (
-    <div className="grid h-full grid-rows-[auto_1fr_auto] gap-6">
+    <div className="grid h-full grid-rows-[auto_1fr] gap-6">
       <div>
         <p className="eyebrow text-brand">Validation</p>
         <h2 className="mt-2 font-display text-[clamp(30px,3.2vw,48px)] leading-tight">
@@ -56,11 +56,6 @@ export default function Slide14() {
         ))}
       </div>
 
-      <div className="card-quote px-5 py-3">
-        <p className="font-serif text-[15px] text-ink">
-          <span className="font-semibold">Credibility first:</span> the device has to reproduce what the published paper already proved before it earns the right to show something new.
-        </p>
-      </div>
     </div>
   );
 }
