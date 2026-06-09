@@ -1,22 +1,21 @@
-// Scene registry — one entry per scene, in display order.  Each scene has a
-// stable `id` that maps to a component in SCENE_COMPONENTS (DeckClient.tsx)
-// and a `beats` count (how many forward-presses the scene takes before the
-// deck advances to the next scene).  Pitch decks use beats to reveal content
-// progressively within a scene — see scenes/SceneContent.tsx for the
-// canonical pattern.
+// Scene registry — one entry per scene, in display order.
+// Each scene's `id` maps to a component in SCENE_COMPONENTS (DeckClient.tsx).
+// `beats` is how many forward-presses the scene takes.
 
 export type SceneId = string;
 
 export type SceneMeta = {
   id: SceneId;
-  /** Shown in the footer pill + jump menu. */
   title: string;
-  /** Number of beats (forward-presses) within the scene. ≥1. */
   beats: number;
 };
 
 export const SCENES: ReadonlyArray<SceneMeta> = [
-  { id: "cover",   title: "Open",   beats: 1 },
-  { id: "content", title: "Body",   beats: 3 },
-  { id: "close",   title: "Close",  beats: 2 },
+  { id: "cover",   title: "Eyeline",          beats: 1 },
+  { id: "problem", title: "The gap",          beats: 3 },
+  { id: "system",  title: "Not a camera",     beats: 3 },
+  { id: "tracks",  title: "Three tracks",     beats: 3 },
+  { id: "curling", title: "Curling",          beats: 3 },
+  { id: "college", title: "Go big, skip top", beats: 3 },
+  { id: "close",   title: "The ask",          beats: 1 },
 ];

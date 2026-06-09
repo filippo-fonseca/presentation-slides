@@ -3,7 +3,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SCENES } from "@/lib/content";
 import SceneCover from "./scenes/SceneCover";
-import SceneContent from "./scenes/SceneContent";
+import SceneProblem from "./scenes/SceneProblem";
+import SceneSystem from "./scenes/SceneSystem";
+import SceneTracks from "./scenes/SceneTracks";
+import SceneCurling from "./scenes/SceneCurling";
+import SceneCollege from "./scenes/SceneCollege";
 import SceneClose from "./scenes/SceneClose";
 import ChimeToggle, { type ChimeApi } from "./components/ChimeToggle";
 import SceneNav from "./components/SceneNav";
@@ -32,7 +36,11 @@ export type SceneProps = {
 // scenes/ and wiring them up below.
 const SCENE_COMPONENTS: Record<string, React.FC<SceneProps>> = {
   cover: SceneCover,
-  content: SceneContent,
+  problem: SceneProblem,
+  system: SceneSystem,
+  tracks: SceneTracks,
+  curling: SceneCurling,
+  college: SceneCollege,
   close: SceneClose,
 };
 
@@ -44,7 +52,7 @@ export default function DeckClient() {
 
   const totalScenes = SCENES.length;
   const currentScene = SCENES[sceneIndex];
-  const SceneComponent = SCENE_COMPONENTS[currentScene.id] ?? SceneContent;
+  const SceneComponent = SCENE_COMPONENTS[currentScene.id] ?? SceneCover;
 
   // Chime — Web Audio, muted by default.  Stable wrapper around a mutating
   // ref so scene useEffect deps don't bust on every toggle.
