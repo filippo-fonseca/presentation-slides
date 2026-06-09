@@ -10,10 +10,10 @@ export type Theme = {
 };
 
 export const THEME: Theme = {
-  title: "Eyeline · POV Sports Broadcasting, Curling-First",
+  title: "Eyeline · POV Sports Broadcasting",
   shortTitle: "Eyeline",
   description:
-    "A live, switchable point-of-view broadcast system for sport. Built engine-first, launched in curling.",
+    "A live, switchable point-of-view broadcast system for sport. Built engine-first, launched in the open tier.",
   authors: [{ name: "Filippo Fonseca" }],
   headerBadge: "Concept preview",
 };

@@ -1,9 +1,9 @@
 ---
 preset: pitch
 folder: eyeline-pitch
-title: "Eyeline — POV Sports Broadcasting, Curling-First"
+title: "Eyeline — POV Sports Broadcasting"
 short_title: "Eyeline"
-description: "A live, switchable point-of-view broadcast system for sport — built engine-first, launched in curling."
+description: "A live, switchable point-of-view broadcast system for sport — built engine-first, launched in the open tier."
 audience: "Co-founders (David, Amir). VC-style internal pitch, recorded as a 5-minute Loom — speaker talks over light slides."
 duration: "5 minutes"
 ---
@@ -69,7 +69,7 @@ Concentric rings with the innermost ring filled, rendered in the ice-blue accent
 #### Body
 
 - Mark centerpiece: the concentric-rings aperture/house mark, ice-blue, faint glow.
-- Status pill: "Concept preview · curling-first"
+- Status pill: "Concept preview"
 - Tagline (italic, beneath the mark): _Watch any sport from inside the action — live, and switchable._
 
 #### Speaker notes
@@ -145,7 +145,7 @@ But here's the gift — that layer is identical whether we start with curling or
 #### Body
 
 - Pillar 1 — label: "01 · ENGINE" · role: _the heavy lift_ · body: Build the sport-agnostic wireless core. Starts today, before anything sport-specific.
-- Pillar 2 — label: "02 · WEDGE" · role: _start here_ · body: Curling — an open door, insanely POV-able, and Yale runs a top program.
+- Pillar 2 — label: "02 · WEDGE" · role: _start here_ · body: A POV-perfect sport with an open door. Curling is the leading candidate; squash, rowing, and fencing fit the same shape.
 - Pillar 3 — label: "03 · LIGHTHOUSE" · role: _get noticed_ · body: Big sports through college — not the pro leagues. The visibility play.
 
 #### Speaker notes
@@ -154,39 +154,43 @@ The plan is three tracks at once, because they hedge each other.
 
 Track one is the real engineering lift: build that universal wireless core now, before anything sport-specific. The rule I'd set for ourselves — we don't cut open a single helmet until we can stream two live feeds you can switch between on a phone. Prove the engine, then bolt it to a sport.
 
-Track two is where we actually go to market first — and it's the one I'm most excited about. Curling.
+Track two is where we actually go to market first — and the sport I'm most excited about as a starting point is curling. But the point is the profile of the sport, not curling specifically. There are a handful that fit.
 
 Track three, in parallel, is bigger sports through college — our visibility play. Let me take two and three one at a time.
 
-### Slide 5 — curling (hero)
+### Slide 5 — sports that fit (curling as the worked example)
 
-- section_label: TRACK 02 · START HERE
+- section_label: TRACK 02 · SPORTS THAT FIT
 - bare: false
 - pattern: beat-driven-body _(custom — this scene embeds a video; see Body)_
 - beats: 3
 
 #### Title
 
-**Curling.** The most POV-able sport nobody's filming right.
+**Take curling.** It's the kind of sport this is built for.
 
 #### Body
 
-- Beat 1 — **Embedded video.** YouTube embed, video id `uj-U45zUxP4` (Olympic mixed-doubles: Norway's upset of Canada on the final stone, ~7.6M views). Trim to the climactic final end via start/end params — _Filippo to confirm the exact timestamp of the last-stone moment._ Muted; plays on this beat; framed in a raised neumorphic surface with the ice-blue accent edge. The clip is the argument — let it dominate the scene.
-- Beat 2 — POV-switch row, four chips: "Thrower" → "Sweeper's eyes" → "Cam on the stone" → "Opposing skip." Line above: _Now imagine it live — and switchable._
-- Beat 3 — Three short market chips:
-  - "Semi-popular, room to grow" — top curling videos pull millions of views, but they're old explainers, not this.
-  - "Top is locked, the tier below is open" — Olympics sit on NBC/Peacock, but USA Curling self-streams its championships on YouTube with a tiny crew. No rights-holder to fight.
-  - "We have a door today" — Yale runs a national-caliber program.
+- Beat 1 — **Embedded video.** YouTube embed, video id `uj-U45zUxP4` (Olympic mixed-doubles: Norway's upset of Canada on the final stone, ~7.6M views). Trim to the climactic final end via start/end params — _Filippo to confirm the exact timestamp of the last-stone moment._ Muted; framed in a raised neumorphic surface with the ice-blue accent edge. The clip proves the format: look how POV-able this is.
+- Beat 2 — POV-switch row + "Why it fits." POV chips: "Thrower" → "Sweeper's eyes" → "Cam on the stone" → "Opposing skip." Line above: _Now imagine it live, and switchable._ Below, a "Why it fits" row: contained playing surface · slow enough to follow a single POV · top tier locked, tier below open · reachable through Yale.
+- Beat 3 — "Same shape, more sports." A four-up grid of other candidates, each with a one-line reason:
+  - Squash — tight court, mic-able, no rights-holder.
+  - Rowing — cox cam already a meme; 8 simultaneous POVs.
+  - Fencing — mask cam, sub-second tempo, Yale powerhouse.
+  - Lacrosse — helmet sport, college tier wide open.
+  Closing line: _Pick one, prove the engine on it, the others come cheap._
 
 #### Speaker notes
 
-Curling. Hear me out — and just watch this.
+Take curling for a moment, and just watch this.
 
-[let the clip breathe] That's an Olympic match — Norway upsetting Canada on the final stone, seven and a half million views. Now imagine that live, and switchable: from the player throwing the stone, to the sweeper's eyes, to a camera on the stone itself, to the opposing skip calling the shot. It's the most POV-able sport almost nobody is filming well.
+[let the clip breathe] That's an Olympic match — Norway upsetting Canada on the final stone, seven and a half million views. Now imagine that live, and switchable: from the player throwing the stone, to the sweeper's eyes, to a camera on the stone itself, to the opposing skip calling the shot.
 
-And the market is wide open. Curling is semi-popular — the big videos pull millions of views, but they're old explainers, not this. Huge room to grow. Olympic curling is locked to NBC and Peacock — but one level down, USA Curling streams its own national championships on YouTube with a tiny crew. That tier has no rights-holder to fight, and it's hungry for exactly this. And Yale runs a national-caliber program, so we have a door we can walk through today.
+I want to be clear — I'm not saying we bet the company on curling specifically. Curling is the worked example because it's the cleanest one I've seen. What we're actually after is a profile. A sport where the surface is contained, the tempo lets one POV carry the story, the top tier is locked but the tier just below is open, and Yale gives us a door to walk through this month.
 
-Curling's the wedge — but the same playbook fits a few others we can reach through Yale: lacrosse, squash, rowing.
+A few sports fit that profile. Squash — tight court, totally mic-able, no rights-holder fight. Rowing — the cox cam is already a meme on its own, and you've got eight live POVs in a boat. Fencing — a mask cam at sub-second tempo would be unlike anything on TV, and Yale runs a powerhouse program. Lacrosse — it's a helmet sport, and the college tier is wide open.
+
+The plan is to pick one as the wedge, probably curling, and prove the engine on it. Once that works, the others come cheap.
 
 ### Slide 6 — go big, skip the top
 
@@ -203,7 +207,7 @@ Go big — but **skip the top.**
 
 - Beat 1: "NFL & NBA = billion-dollar rights with ESPN and NBC. Can't touch it yet." → small echo line: _Same pattern as curling: top tier locked, tier below open._
 - Beat 2: "Our open tier is **college**." Three chips: "Harvard–Yale football" · "NCAA hockey" · "Division III." Note: _helmet sports — easy form factor._
-- Beat 3: "Why all three at once?" Three short lines: "The engine pays off whatever door opens first" · "Curling = a fast yes + real footage" · "College = the eyeballs." Closing line: _And 2 + 3 tell us which form factor to lock — we can be on many sports. That's the exciting part._
+- Beat 3: "Why all three at once?" Three short lines: "The engine pays off whatever door opens first" · "The wedge sport = a fast yes + real footage" · "College = the eyeballs." Closing line: _And 2 + 3 tell us which form factor to lock — we can be on many sports. That's the exciting part._
 
 #### Speaker notes
 
@@ -211,7 +215,7 @@ Track three, in parallel: bigger sports — but explicitly not the top leagues. 
 
 For us, that open tier is college. A Harvard-Yale football game, NCAA hockey, Division III teams we reach through the Yale network. Those are helmet sports, so the form factor is easy.
 
-Why run all three at once? Because they hedge each other. The engine pays off no matter which door opens first. Curling gets us a fast yes and real footage while the college talks are slow. College gets us eyeballs curling can't. And as those land, they tell us which form factor to actually lock down — because of course we can be on many sports. That's the exciting part. Only track one is a heavy build; two and three are emails and meetings.
+Why run all three at once? Because they hedge each other. The engine pays off no matter which door opens first. The wedge sport — probably curling — gets us a fast yes and real footage while the college talks are slow. College gets us eyeballs the wedge can't. And as those land, they tell us which form factor to actually lock down, because of course we can be on many sports. That's the exciting part. Only track one is a heavy build; two and three are emails and meetings.
 
 ### Slide 7 — close
 
@@ -226,14 +230,27 @@ Build the hard part. Walk through the open doors. **Aim where the attention is.*
 
 #### Body
 
-- The ask (small, beneath the mission line): "Engineering → the wireless comms layer, priority one. Curling + college outreach → this week."
-- Mark echo (concentric rings) behind the line, faint.
+The mission line above, plus a three-up summary of the asks (one card per pillar, each tagged with a timeframe):
+
+- 01 · Engine — _this quarter_ — Point engineering at the wireless comms layer.
+- 02 · Wedge — _this week_ — Shortlist the sport. Curling leads; squash, rowing, fencing in the running.
+- 03 · Lighthouse — _this week_ — Open the college conversations. Harvard–Yale football, NCAA hockey.
+
+Closing italic line beneath the cards: _Three tracks, in parallel. Let's go._
+
+Faint concentric-ring mark echo behind everything.
 
 #### Speaker notes
 
-So here's the ask: point engineering at the wireless comms layer as priority one, and start curling and college outreach this week — in parallel.
+So here's the ask, on the three pillars:
 
-Build the universal hard part. Walk through the doors that are already open. Aim the demo where the attention is. That's the plan. Let's go.
+One — engine. Point engineering at the wireless comms layer as priority one. That's the heavy build, and it starts this quarter.
+
+Two — the wedge. We shortlist the sport this week. Curling is my lead candidate, but squash, rowing, and fencing all fit the same profile. We pick one based on who picks up the phone first.
+
+Three — the lighthouse. We open the college conversations this week too. Harvard-Yale football, NCAA hockey, the names that get attention.
+
+Build the universal hard part. Walk through the doors that are already open. Aim the demo where the attention is. Three tracks, in parallel. Let's go.
 
 ---
 
@@ -242,5 +259,6 @@ Build the universal hard part. Walk through the doors that are already open. Aim
 - **Working name.** "Eyeline" is a placeholder. If the team renames, change the frontmatter `title`/`short_title`, the cover headline, and `folder`.
 - **Video trim.** The Slide 5 clip is a 3:30 highlight; the payoff is the final stone. Set the embed's start/end to that moment once Filippo confirms the timestamp — don't play the full 3:30.
 - **Mixed doubles vs. team curling.** The embedded clip is mixed doubles (2 players/side). The product vision reads even stronger for _team_ curling (4 players/side = more switchable angles). Worth a word in narration if Filippo wants, but not on-screen.
+- **Curling as example, not commitment.** Slide 5 is intentionally framed as "the kind of sport this is built for" rather than "we're a curling company." The wedge profile (contained surface, slow-enough tempo, locked top tier with open lower tier, Yale access) is the real argument. Curling is the worked example.
 - **Optional 8th scene.** If the engineering audience wants more on Track 1, split a dedicated `beat-driven-body` scene out of the Slide 4 pillar — camera/resolution, multi-feed sync, the wireless pipeline, the viewer app — placed right after Slide 4. Left out here to hold 5 minutes.
 - **Restraint.** Spend the boldness on the ice-blue accent and the curling clip. Everything else: quiet raised surfaces, generous space, EB Garamond doing the talking.

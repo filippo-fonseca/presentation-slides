@@ -2,6 +2,27 @@
 
 import type { SceneProps } from "../DeckClient";
 
+const ASKS = [
+  {
+    num: "01",
+    label: "Engine",
+    ask: "Point engineering at the wireless comms layer.",
+    when: "this quarter",
+  },
+  {
+    num: "02",
+    label: "Wedge",
+    ask: "Shortlist the sport. Curling leads; squash, rowing, fencing in the running.",
+    when: "this week",
+  },
+  {
+    num: "03",
+    label: "Lighthouse",
+    ask: "Open the college conversations. Harvard–Yale football, NCAA hockey.",
+    when: "this week",
+  },
+];
+
 export default function SceneClose(_props: SceneProps) {
   void _props;
   return (
@@ -27,24 +48,39 @@ export default function SceneClose(_props: SceneProps) {
         </g>
       </svg>
 
-      <div className="relative z-10 flex flex-col items-center text-center">
-        <p className="mb-8 font-mono text-[10.5px] uppercase tracking-[0.32em] text-foreground/55">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <p className="mb-7 font-mono text-[10.5px] uppercase tracking-[0.32em] text-foreground/55">
           The ask
         </p>
 
         <h2
-          className="max-w-[18ch] text-balance font-serif font-medium leading-[1.02] tracking-[-0.02em] text-foreground"
-          style={{ fontSize: "clamp(2.4rem, 6vw, 5rem)" }}
+          className="max-w-[22ch] text-balance font-serif font-medium leading-[1.02] tracking-[-0.02em] text-foreground"
+          style={{ fontSize: "clamp(2rem, 4.6vw, 3.6rem)" }}
         >
           Build the hard part. Walk through the open doors.{" "}
           <span className="italic text-accent-lift">Aim where the attention is.</span>
         </h2>
 
-        <p className="mt-10 max-w-[58ch] text-balance text-[14.5px] leading-relaxed text-foreground/80">
-          Engineering: the wireless comms layer, priority one.
-        </p>
-        <p className="mt-1 max-w-[58ch] text-balance text-[14.5px] leading-relaxed text-foreground/80">
-          Curling and college outreach: this week.
+        <div className="mt-10 grid w-full grid-cols-1 gap-3 text-left sm:grid-cols-3">
+          {ASKS.map((a) => (
+            <div key={a.num} className="neu-raised rounded-2xl px-5 py-5">
+              <div className="flex items-baseline justify-between">
+                <p className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-accent-lift">
+                  {a.num} · {a.label}
+                </p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/55">
+                  {a.when}
+                </p>
+              </div>
+              <p className="mt-3 font-serif text-[15px] leading-snug text-foreground/90">
+                {a.ask}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-7 font-serif italic text-[15px] text-accent-lift">
+          Three tracks, in parallel. Let's go.
         </p>
       </div>
     </div>

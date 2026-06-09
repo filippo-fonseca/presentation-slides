@@ -16,7 +16,7 @@ const PILLARS = [
     num: "02",
     label: "Wedge",
     role: "start here",
-    body: "Curling. An open door, insanely POV-able, and Yale runs a top program.",
+    body: "A POV-perfect sport with an open door. Curling leads the list; squash, rowing, and fencing fit the same shape.",
   },
   {
     id: 2,

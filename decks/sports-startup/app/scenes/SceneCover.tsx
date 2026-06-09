@@ -36,7 +36,7 @@ export default function SceneCover(_props: SceneProps) {
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60" />
             <span className="relative inline-flex size-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(91,176,206,0.85)]" />
           </span>
-          Concept preview · curling-first
+          Concept preview
         </p>
 
         <h1
