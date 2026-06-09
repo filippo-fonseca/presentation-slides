@@ -2,39 +2,38 @@
 @import "./deck.css";
 
 /* =========================================================================
-   Pitch deck — design tokens
-   Dark, neumorphic, accent-glow aesthetic.  For investor decks, demo days,
-   keynotes.  Edit the values in :root to retheme; the @theme block surfaces
-   every var as a Tailwind utility (`bg-background`, `text-accent`, …).
+   Eyeline — design tokens
+   Dark, neumorphic, ice-blue accent.  POV sports broadcast aesthetic.
    ========================================================================= */
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f4f1ea;
-  --muted:      #8a8680;
-  --accent:     #f5b06a;
-  --accent-soft:#f6c89a;
-  --line:       rgba(244, 241, 234, 0.08);
+  --background:  #0a0a0a;
+  --foreground:  #f4f1ea;
+  --muted:       #8a8680;
+  --accent:      #5bb0ce; /* glacial ice-blue */
+  --accent-soft: #213a44; /* desaturated deep tint */
+  --accent-lift: #8fcde0; /* lighter ice for italic accents on dark */
+  --line:        rgba(244, 241, 234, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted:      var(--muted);
-  --color-accent:     var(--accent);
-  --color-accent-soft:var(--accent-soft);
-  --color-line:       var(--line);
+  --color-background:  var(--background);
+  --color-foreground:  var(--foreground);
+  --color-muted:       var(--muted);
+  --color-accent:      var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-lift: var(--accent-lift);
+  --color-line:        var(--line);
 
-  --font-sans:  var(--font-geist-sans);
-  --font-mono:  var(--font-geist-mono);
-  --font-serif: var(--font-instrument-serif);
+  --font-sans:  var(--font-inter);
+  --font-mono:  ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: var(--font-eb-garamond);
 }
 
 html, body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  font-feature-settings: "ss01", "ss02", "cv11";
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -50,7 +49,6 @@ button:disabled, [disabled] { cursor: not-allowed; }
   border-radius: 4px;
 }
 
-/* Pillow-soft surfaces — pair the ring with a slightly larger offset. */
 .neu-light:focus-visible,
 .neu-raised:focus-visible,
 .neu-raised-sm:focus-visible { outline-offset: 4px; }
@@ -65,7 +63,6 @@ button:disabled, [disabled] { cursor: not-allowed; }
   border: 0;
 }
 
-/* Default route crossfade — quick, blur-free. */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 240ms;
@@ -104,22 +101,22 @@ button:disabled, [disabled] { cursor: not-allowed; }
 .glow-radial {
   background: radial-gradient(
     ellipse at center,
-    rgba(245, 176, 106, 0.18) 0%,
-    rgba(245, 176, 106, 0.08) 25%,
+    rgba(91, 176, 206, 0.20) 0%,
+    rgba(91, 176, 206, 0.09) 25%,
     rgba(10, 10, 10, 0) 60%
   );
 }
 .glow-radial-tight {
   background: radial-gradient(
     circle at center,
-    rgba(246, 200, 154, 0.45) 0%,
-    rgba(245, 176, 106, 0.18) 30%,
+    rgba(143, 205, 224, 0.42) 0%,
+    rgba(91, 176, 206, 0.18) 30%,
     rgba(10, 10, 10, 0) 70%
   );
 }
 
 /* =========================================================================
-   Entrance animations (also used on the landing-style cover)
+   Entrance animations
    ========================================================================= */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -161,7 +158,6 @@ button:disabled, [disabled] { cursor: not-allowed; }
 }
 .neu-raised-sm:hover { border-color: rgba(244, 241, 234, 0.12); }
 
-/* Light primary — pillow-soft off-white CTA surface */
 .neu-light {
   background: linear-gradient(148deg, #faf7f0 0%, #d8d3c6 100%);
   color: #0a0a0a;
@@ -174,11 +170,21 @@ button:disabled, [disabled] { cursor: not-allowed; }
 .neu-light:hover { background: linear-gradient(148deg, #fdf9f1 0%, #e0dbcd 100%); }
 
 .neu-accent {
-  background: linear-gradient(148deg, #f8c794 0%, #d99858 100%);
+  background: linear-gradient(148deg, #8fcde0 0%, #4a92ad 100%);
   color: #0a0a0a;
   box-shadow:
-    0 10px 24px -8px rgba(214, 138, 70, 0.5),
+    0 10px 24px -8px rgba(91, 176, 206, 0.55),
     0 4px 8px -2px rgba(0, 0, 0, 0.45),
-    0 1px 0 0 rgba(255, 235, 205, 0.7) inset,
-    0 -2px 4px 0 rgba(120, 65, 20, 0.25) inset;
+    0 1px 0 0 rgba(220, 240, 248, 0.7) inset,
+    0 -2px 4px 0 rgba(20, 60, 75, 0.3) inset;
+}
+
+/* Accent-edged frame — used to wrap the curling video (Slide 5). */
+.neu-edge-accent {
+  border: 1px solid rgba(91, 176, 206, 0.4);
+  box-shadow:
+    0 18px 48px -12px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(91, 176, 206, 0.18),
+    0 0 60px -6px rgba(91, 176, 206, 0.35);
+  background: rgba(0, 0, 0, 0.5);
 }

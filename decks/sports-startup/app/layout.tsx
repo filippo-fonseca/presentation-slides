@@ -1,24 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { THEME } from "@/lib/theme";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+
+const ebGaramond = EB_Garamond({
+  variable: "--font-eb-garamond",
   weight: ["400", "500"],
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
   style: ["normal", "italic"],
   subsets: ["latin"],
 });
@@ -41,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${inter.variable} ${ebGaramond.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>
