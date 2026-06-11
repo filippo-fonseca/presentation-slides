@@ -6,7 +6,6 @@ const immediate = [
 
 const input = [
   "Septum vs. swabbable luer valve for the bacteria port.",
-  "Keep the four-screw clamp, or develop the screwless quarter-turn version?",
   "Sign-off on target volume and material before order.",
 ];
 

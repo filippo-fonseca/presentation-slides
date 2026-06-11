@@ -146,11 +146,11 @@ export const SLIDES: SlideEntry[] = [
   },
   {
     id: "v2-findings",
-    title: "v2 findings: open the clearance",
+    title: "Designing the press-fits out",
     sectionLabel: "Validation",
     Component: SlideV2Findings,
     notes:
-      "One last honest item before validation — this one straight from the bench. Right now in the DRD-3 CAD I have a uniform 0.1 mm clearance on every press-fit interface in the device. The cartridge lid-to-base, and especially the holes in the satellite that the cartridge slides into. Same number everywhere.\n\nThe v2 print came in Friday afternoon, May 29, and assembling it told me that 0.1 mm is a little too tight. Parts seat but they don't come out without real disassembly force, particularly the cartridge in the satellite hole. SLA roughness and resin shrinkage are eating the whole 0.1 mm budget, so what I drew as a transition fit is behaving as an interference fit. I'd like to open it up — proposing 0.15 mm nominal with a test variant at 0.20 mm — and I'd value your read on that before we commit to print.\n\nThe second v2 thing: the tooth was so small it was barely tactile, and a single latch is doing all the work. For v3 the tooth profile is sized up and there are two latches per cartridge so the engagement is symmetric.\n\nBoth are parameter changes, not architecture changes. This is exactly what the modular cartridge is for: reprint the cartridge, swap it in, test the seat, lock the spec.",
+      "I want to spend a moment on the assembly philosophy, because it's changed materially. Earlier iterations leaned on tight press fits between rigid SLA parts to hold things together. That made every assembly a little different and every disassembly a fight.\n\nThree things are different now. First, I spent real care on filleting edges and on choosing clearances that match what the interface actually needs, rather than putting one number everywhere. Second, where two parts genuinely need to press or transition together, the compliance lives in a proper elastomer, not in a thin printed feature trying to flex. Third, where possible I've removed press-fit dependencies from the load path entirely. The clearest example is the new C-ring wrapper: the satellite-hub joint is now latched by screws closing two halves around the interface, not held together by friction.\n\nThe net effect is that each interface has a defined job and a defined retainer: a fillet to seat against, an elastomer to seal, or a screw to clamp. Nothing is asked to do a job its geometry can't back up.",
   },
   {
     id: "friday-cartridge",
