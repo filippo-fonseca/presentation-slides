@@ -95,7 +95,6 @@ export default function AssemblyStrip({ className = "" }: { className?: string }
 
         {/* labels */}
         <text x="110" y="186" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88" letterSpacing="0.08em">CHAMBER</text>
-        <text x="202" y="260" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#7a7f88" letterSpacing="0.08em">CIRCULAR BORE</text>
         <text x="307" y="222" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="10" fill="#7a7f88">cartridge</text>
       </g>
 
