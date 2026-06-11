@@ -57,7 +57,7 @@ export default function Slide01() {
         <div className="h-px w-20 bg-brand" />
 
         <p className="max-w-[58ch] font-italic-display text-[clamp(15px,1.25vw,20px)] leading-[1.35] text-ink-soft">
-          A three-chamber dynamic release device for simultaneous drug-release kinetics and <span className="not-italic">in&nbsp;situ</span> infection challenge, built around a UHMWPE implant strip as the drug source.
+          A three-chamber dynamic release device for simultaneous drug-release kinetics and <span className="not-italic">in&nbsp;situ</span> infection challenge.
         </p>
 
         {/* Hero plate — sized to leave breathing room */}
