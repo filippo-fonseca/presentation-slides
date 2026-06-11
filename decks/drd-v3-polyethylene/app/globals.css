@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   DRD-3 Deck — design tokens
+   Brand:  Mass General Brigham teal
+   Accents: drug hub teal / perfusion blue / bacteria coral
+   ========================================================================= */
+
+:root {
+  /* Surfaces — academic light palette, with a near-black ink for text */
+  --background: #fbfaf7;          /* paper */
+  --surface:    #ffffff;          /* card  */
+  --surface-2:  #f4f1ea;          /* tonal */
+  --ink:        #1a1d24;          /* primary text */
+  --ink-soft:   #4a4f59;          /* secondary */
+  --ink-muted:  #7a7f88;          /* tertiary */
+  --line:       #e3ddd2;          /* hairline */
+  --line-strong:#cdc5b6;
+
+  /* Brand */
+  --brand-teal:        #16767B;
+  --brand-teal-deep:   #0e5a5e;
+  --brand-teal-soft:   #d8e9ea;
+  --brand-teal-fade:   #ecf3f3;
+
+  /* Chamber accents (the three chambers, used everywhere a chamber is referenced) */
+  --hub:        #16767B;          /* drug hub = teal */
+  --hub-soft:   #d8e9ea;
+  --perfusion:  #2D6CB0;          /* perfusion = blue */
+  --perfusion-soft: #dce6f3;
+  --bacteria:   #C0552E;          /* bacteria = coral */
+  --bacteria-soft: #f5e0d4;
+
+  /* Warning / amber (caveat) */
+  --amber:      #b3801c;
+  --amber-soft: #f5e8c8;
+
+  /* Harvard crimson — used very sparingly */
+  --crimson:    #a51c30;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface:    var(--surface);
+  --color-surface-2:  var(--surface-2);
+  --color-ink:        var(--ink);
+  --color-ink-soft:   var(--ink-soft);
+  --color-ink-muted:  var(--ink-muted);
+  --color-line:       var(--line);
+  --color-line-strong:var(--line-strong);
+
+  --color-brand:        var(--brand-teal);
+  --color-brand-deep:   var(--brand-teal-deep);
+  --color-brand-soft:   var(--brand-teal-soft);
+  --color-brand-fade:   var(--brand-teal-fade);
+
+  --color-hub:         var(--hub);
+  --color-hub-soft:    var(--hub-soft);
+  --color-perfusion:   var(--perfusion);
+  --color-perfusion-soft: var(--perfusion-soft);
+  --color-bacteria:    var(--bacteria);
+  --color-bacteria-soft: var(--bacteria-soft);
+  --color-amber:       var(--amber);
+  --color-amber-soft:  var(--amber-soft);
+  --color-crimson:     var(--crimson);
+
+  --font-sans:    var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif:   var(--font-spectral), "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-mono:    ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, monospace;
+}
+
+/* =========================================================================
+   Base
+   ========================================================================= */
+html, body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+::selection { background: var(--brand-teal-soft); color: var(--brand-teal-deep); }
+
+/* =========================================================================
+   Type ramp
+   ========================================================================= */
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.06;
+}
+.font-italic-display {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* =========================================================================
+   Surfaces / cards
+   ========================================================================= */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow:
+    0 1px 0 rgba(20, 26, 36, 0.02),
+    0 1px 2px rgba(20, 26, 36, 0.04);
+}
+.card-tonal {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.card-quote {
+  background: var(--brand-teal-fade);
+  border: 1px solid var(--brand-teal-soft);
+  border-left: 3px solid var(--brand-teal);
+  border-radius: 12px;
+}
+
+/* Chamber-accent cards: a left-border accent strip in the chamber's color */
+.chip-hub        { background: var(--hub-soft);       color: var(--hub);       }
+.chip-perfusion  { background: var(--perfusion-soft); color: var(--perfusion); }
+.chip-bacteria   { background: var(--bacteria-soft);  color: var(--bacteria);  }
+.chip-amber      { background: var(--amber-soft);     color: var(--amber);     }
+
+.accent-hub        { border-left: 3px solid var(--hub); }
+.accent-perfusion  { border-left: 3px solid var(--perfusion); }
+.accent-bacteria   { border-left: 3px solid var(--bacteria); }
+.accent-amber      { border-left: 3px solid var(--amber); }
+.accent-brand      { border-left: 3px solid var(--brand-teal); }
+
+/* =========================================================================
+   Slide transitions — direction-aware
+   ========================================================================= */
+@keyframes slideForwardIn {
+  0%   { opacity: 0; transform: translateX(28px) scale(0.985); filter: blur(2px); }
+  60%  { filter: blur(0); }
+  100% { opacity: 1; transform: translateX(0)  scale(1);     filter: blur(0); }
+}
+@keyframes slideBackwardIn {
+  0%   { opacity: 0; transform: translateX(-28px) scale(0.985); filter: blur(2px); }
+  60%  { filter: blur(0); }
+  100% { opacity: 1; transform: translateX(0)    scale(1);     filter: blur(0); }
+}
+@keyframes slideFadeIn {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.985); }
+  100% { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+.slide-enter             { animation: slideFadeIn       360ms cubic-bezier(0.2, 0.65, 0.2, 1) both; }
+.slide-enter-forward     { animation: slideForwardIn    420ms cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+.slide-enter-back        { animation: slideBackwardIn   420ms cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+
+/* Staggered reveal for plates/cards inside a slide once it's mounted. */
+@keyframes plateRise {
+  0%   { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.slide-enter-forward > *,
+.slide-enter-back > *,
+.slide-enter > * {
+  animation: plateRise 520ms cubic-bezier(0.2, 0.65, 0.2, 1) both;
+  animation-delay: 60ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-enter,
+  .slide-enter-forward,
+  .slide-enter-back,
+  .slide-enter-forward > *,
+  .slide-enter-back > *,
+  .slide-enter > * {
+    animation: none !important;
+  }
+}
+
+@keyframes pop {
+  0%   { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.pop-in { animation: pop 320ms cubic-bezier(0.2, 0.65, 0.2, 1) both; }
+.pop-delay-1 { animation-delay: 80ms; }
+.pop-delay-2 { animation-delay: 160ms; }
+.pop-delay-3 { animation-delay: 240ms; }
+.pop-delay-4 { animation-delay: 320ms; }
+
+/* =========================================================================
+   Print
+   ========================================================================= */
+@media print {
+  body { background: white; }
+  .deck-chrome { display: none !important; }
+  .slide-root  { page-break-after: always; height: auto; min-height: 100vh; }
+}
+
+/* Hide scrollbar in webkit on the deck stage when content fits */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--brand-teal);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Subtle paper texture (very faint) on dark teal bands */
+.band-teal {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.06)),
+    var(--brand-teal);
+  color: white;
+}
+.band-teal-deep {
+  background: var(--brand-teal-deep);
+  color: white;
+}
