@@ -102,21 +102,21 @@ export default function Slide02() {
 
         {/* v2 — prior iteration */}
         <div className="flex h-full flex-col items-center justify-center">
-          <div className="grid w-full max-w-[280px] grid-cols-[1fr_0.8fr] items-stretch gap-2">
+          <div className="grid w-full max-w-[360px] grid-cols-[0.85fr_1fr] items-stretch gap-3">
             <Plate
               tone="graph"
               padding="snug"
               figureNumber="v2·a"
               caption="Six-tooth CSM"
               meta="seal mechanism"
-              className="aspect-square"
+              className="aspect-[4/5]"
             >
               <SixToothRing />
             </Plate>
             <Plate
               src="/images/v2/v2_section.png"
               alt="v2 device, section view, stacked chambers with screw threads visible"
-              sizes="(max-width: 768px) 100vw, 12vw"
+              sizes="(max-width: 768px) 100vw, 18vw"
               tone="paper"
               padding="snug"
               figureNumber="v2·b"
