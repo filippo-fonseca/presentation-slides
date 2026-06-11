@@ -28,7 +28,7 @@ export default function Slide03() {
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-4">
           <div className="card accent-bacteria h-full p-5">
-            <p className="eyebrow mb-2 text-bacteria">What the authors state</p>
+            <p className="eyebrow mb-2 text-bacteria">What the paper we published says</p>
             <p className="font-serif text-[15px] leading-snug text-ink-soft">
               Biofilm formation, altered pH, and inflammatory vascular permeability are <span className="font-semibold text-ink">explicitly out of scope</span>. The DRD models <span className="italic">fluid-phase transport</span>, not pathology.
             </p>
