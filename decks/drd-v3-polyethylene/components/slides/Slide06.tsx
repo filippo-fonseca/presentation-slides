@@ -82,7 +82,7 @@ export default function Slide06() {
       </div>
 
       <div className="grid h-full min-h-0 grid-cols-12 gap-4">
-        <div className="col-span-12 flex h-full min-h-0 flex-col justify-center gap-2.5 md:col-span-7">
+        <div className="col-span-12 flex h-full min-h-0 flex-col justify-center gap-2.5 md:col-span-5">
           <div className="card accent-bacteria p-3">
             <p className="eyebrow mb-0.5 text-bacteria">Sized up from v2</p>
             <p className="font-serif text-[12.5px] leading-snug text-ink-soft">
@@ -104,39 +104,61 @@ export default function Slide06() {
           </div>
         </div>
 
-        <div className="col-span-12 flex h-full min-h-0 flex-col justify-center gap-2.5 md:col-span-5">
-          <Plate
-            tone="graph"
-            padding="tight"
-            figureNumber="06A"
-            caption="Tooth profile, rounded root + fillets, no crack risks"
-            meta="2 → 1 mm"
-            className="max-h-[34%] flex-1"
-          >
-            <ToothProfile />
-          </Plate>
-          <Plate
-            src="/images/v2/csm_v2_physical.jpeg"
-            alt="v2 CSM, physical print, ring with two tooth profiles on the outer edge"
-            sizes="(max-width: 768px) 100vw, 30vw"
-            tone="paper"
-            padding="tight"
-            figureNumber="06B"
-            caption="v2 CSM · single, small tooth"
-            meta="prior iteration"
-            className="max-h-[30%] flex-1"
-          />
-          <Plate
-            src="/images/cartridge/cartridge_tooth_detail.jpg"
-            alt="v3 cartridge lid, side view, showing the two tooth profiles extruded outward"
-            sizes="(max-width: 768px) 100vw, 30vw"
-            tone="paper"
-            padding="tight"
-            figureNumber="06C"
-            caption="v3 lid · two larger teeth"
-            meta="current"
-            className="max-h-[30%] flex-1"
-          />
+        <div className="col-span-12 flex h-full min-h-0 flex-col gap-2 md:col-span-7">
+          <p className="eyebrow text-ink-muted">Progression · v2 → v3</p>
+          <div className="grid min-h-0 grid-cols-2 gap-2">
+            <Plate
+              tone="graph"
+              padding="tight"
+              figureNumber="06A"
+              caption="Tooth profile"
+              meta="2 → 1 mm, filleted root"
+            >
+              <ToothProfile />
+            </Plate>
+            <Plate
+              src="/images/v2/csm_v2_physical.jpeg"
+              alt="v2 CSM, physical print, ring with two small tooth profiles on the outer edge"
+              sizes="(max-width: 768px) 100vw, 22vw"
+              tone="paper"
+              padding="tight"
+              figureNumber="06B"
+              caption="v2 CSM · small teeth, single latch"
+              meta="prior iteration · physical print"
+            />
+          </div>
+          <div className="grid min-h-0 flex-1 grid-cols-3 gap-2">
+            <Plate
+              src="/images/cartridge/cartridge_tooth_detail.jpg"
+              alt="v3 cartridge lid, side view, two tooth profiles extruded outward"
+              sizes="(max-width: 768px) 100vw, 15vw"
+              tone="paper"
+              padding="tight"
+              figureNumber="06C"
+              caption="v3 lid · side"
+              meta="two larger teeth"
+            />
+            <Plate
+              src="/images/cartridge/cartridge_base_oring.jpg"
+              alt="v3 cartridge base alone, parallel-bar membrane floor visible"
+              sizes="(max-width: 768px) 100vw, 15vw"
+              tone="paper"
+              padding="tight"
+              figureNumber="06D"
+              caption="v3 base · cleaner"
+              meta="bars + tweezer tabs"
+            />
+            <Plate
+              src="/images/cartridge/cartridge_edge.jpg"
+              alt="v3 cartridge lid, bottom/side view, thin clean profile"
+              sizes="(max-width: 768px) 100vw, 15vw"
+              tone="paper"
+              padding="tight"
+              figureNumber="06E"
+              caption="v3 lid · bottom"
+              meta="thin, even profile"
+            />
+          </div>
         </div>
       </div>
     </div>
