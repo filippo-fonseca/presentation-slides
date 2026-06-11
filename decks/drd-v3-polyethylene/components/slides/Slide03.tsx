@@ -58,7 +58,7 @@ export default function Slide03() {
           Measurement integrity
         </span>
         <p className="font-serif text-[14.5px] leading-snug text-ink-soft">
-          Bacteria cannot touch the main transport membrane. Biofilm on the transport membrane would change its permeability mid-experiment and corrupt the very kinetics the device exists to measure. <span className="font-semibold text-bacteria">Isolation isn&apos;t a nice-to-have; it protects the measurement.</span>
+          Bacteria cannot touch the main transport membrane. Biofilm on the transport membrane would change its permeability mid-experiment and corrupt the very kinetics the device exists to measure. <span className="font-semibold text-bacteria">Isolation is important to protect the measurement.</span>
         </p>
       </div>
     </div>
