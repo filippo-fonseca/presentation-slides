@@ -104,27 +104,38 @@ export default function Slide06() {
           </div>
         </div>
 
-        <div className="col-span-12 flex h-full min-h-0 flex-col justify-center gap-3 md:col-span-5">
+        <div className="col-span-12 flex h-full min-h-0 flex-col justify-center gap-2.5 md:col-span-5">
           <Plate
             tone="graph"
             padding="tight"
             figureNumber="06A"
             caption="Tooth profile, rounded root + fillets, no crack risks"
             meta="2 → 1 mm"
-            className="max-h-[44%] flex-1"
+            className="max-h-[34%] flex-1"
           >
             <ToothProfile />
           </Plate>
           <Plate
-            src="/images/cartridge/cartridge_tooth_detail.jpg"
-            alt="Cartridge lid alone, side view, showing the two tooth profiles extruded outward"
+            src="/images/v2/csm_v2_physical.jpeg"
+            alt="v2 CSM, physical print, ring with two tooth profiles on the outer edge"
             sizes="(max-width: 768px) 100vw, 30vw"
             tone="paper"
             padding="tight"
             figureNumber="06B"
-            caption="Lid · side view"
-            meta="two teeth visible"
-            className="max-h-[44%] flex-1"
+            caption="v2 CSM · single, small tooth"
+            meta="prior iteration"
+            className="max-h-[30%] flex-1"
+          />
+          <Plate
+            src="/images/cartridge/cartridge_tooth_detail.jpg"
+            alt="v3 cartridge lid, side view, showing the two tooth profiles extruded outward"
+            sizes="(max-width: 768px) 100vw, 30vw"
+            tone="paper"
+            padding="tight"
+            figureNumber="06C"
+            caption="v3 lid · two larger teeth"
+            meta="current"
+            className="max-h-[30%] flex-1"
           />
         </div>
       </div>
