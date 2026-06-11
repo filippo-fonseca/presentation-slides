@@ -101,31 +101,29 @@ export default function Slide02() {
         <Arrow />
 
         {/* v2 — prior iteration */}
-        <div className="flex h-full flex-col items-center">
-          <div className="flex w-full max-w-[260px] flex-col gap-2">
-            <div className="aspect-square w-full">
-              <Plate
-                tone="graph"
-                padding="snug"
-                figureNumber="v2·a"
-                caption="Six-tooth CSM"
-                meta="seal mechanism"
-              >
-                <SixToothRing />
-              </Plate>
-            </div>
-            <div className="aspect-[4/5] w-full">
-              <Plate
-                src="/images/v2/v2_section.png"
-                alt="v2 device, section view, stacked chambers with screw threads visible"
-                sizes="(max-width: 768px) 100vw, 22vw"
-                tone="paper"
-                padding="snug"
-                figureNumber="v2·b"
-                caption="v2 device"
-                meta="section view"
-              />
-            </div>
+        <div className="flex h-full flex-col items-center justify-center">
+          <div className="grid w-full max-w-[280px] grid-cols-[1fr_0.8fr] items-stretch gap-2">
+            <Plate
+              tone="graph"
+              padding="snug"
+              figureNumber="v2·a"
+              caption="Six-tooth CSM"
+              meta="seal mechanism"
+              className="aspect-square"
+            >
+              <SixToothRing />
+            </Plate>
+            <Plate
+              src="/images/v2/v2_section.png"
+              alt="v2 device, section view, stacked chambers with screw threads visible"
+              sizes="(max-width: 768px) 100vw, 12vw"
+              tone="paper"
+              padding="snug"
+              figureNumber="v2·b"
+              caption="v2 device"
+              meta="section view"
+              className="aspect-[4/5]"
+            />
           </div>
           <p className="mt-3 max-w-[26ch] text-center font-serif text-[13.5px] italic text-ink-muted">
             Prior iteration: the six-tooth CSM (Compliant Seal Mechanism) inside the v2 device.
