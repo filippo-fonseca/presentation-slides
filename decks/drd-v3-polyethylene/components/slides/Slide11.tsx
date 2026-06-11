@@ -18,6 +18,10 @@ const changes = [
     title: "Optional optical window.",
     body: "A swappable face plate can carry a borosilicate window for biofilm imaging when wanted. Committed to nothing now, ready later.",
   },
+  {
+    title: "Volume mismatch, currently.",
+    body: "As drawn, the bacteria chamber's internal volume is materially larger than the perfusion chamber's. To be discussed: do we match them, or keep the asymmetry on purpose for the culture side.",
+  },
 ];
 
 export default function Slide11() {
@@ -31,8 +35,15 @@ export default function Slide11() {
       </div>
 
       <p className="max-w-[80ch] font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">
-        In the current CAD, the bacteria satellite is built on the perfusion satellite's body; the <span className="italic">shared chassis</span> is deliberate. A few targeted changes specialize it for a sealed culture.
+        In the current CAD, the bacteria satellite is built on the perfusion satellite&apos;s body; the <span className="italic">shared chassis</span> is deliberate. A few targeted changes specialize it for a sealed culture.
       </p>
+
+      <div className="card accent-amber px-4 py-2.5">
+        <p className="font-serif text-[clamp(13px,1.1vw,15px)] leading-snug text-ink">
+          <span className="eyebrow mr-2 align-middle text-amber">Pending</span>
+          The changes on this slide are proposals, not committed: I want to discuss them with Dr.&nbsp;Aşık before locking them in.
+        </p>
+      </div>
 
       <div className="grid grid-cols-12 gap-5">
         <div className="col-span-12 grid grid-cols-1 gap-3 md:col-span-6">

@@ -45,16 +45,6 @@ export default function Slide13() {
               <span>30 mL</span>
             </div>
 
-            <div className="mt-5 grid grid-cols-2 gap-3">
-              <div className="rounded-lg border border-amber/30 bg-amber-soft px-3 py-2">
-                <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-amber">Current</p>
-                <p className="mt-1 font-serif text-[15px] italic text-amber">pending verification</p>
-              </div>
-              <div className="rounded-lg border border-line bg-surface-2 px-3 py-2">
-                <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-ink-muted">Tunable via</p>
-                <p className="mt-1 font-serif text-[15px] text-ink-soft">hub depth</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

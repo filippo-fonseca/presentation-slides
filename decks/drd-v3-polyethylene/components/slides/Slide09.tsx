@@ -13,7 +13,7 @@ const steps = [
     n: "2",
     title: "Press into the satellite.",
     body: "The tooth retains it; each satellite now owns its cartridge.",
-    img: "/images/satellite/satellite_section.jpg",
+    img: "/images/satellite/satellite_oring_section.jpg",
   },
   {
     n: "3",

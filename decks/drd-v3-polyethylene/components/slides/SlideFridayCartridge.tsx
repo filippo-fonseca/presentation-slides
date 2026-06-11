@@ -66,7 +66,7 @@ export default function SlideFridayCartridge() {
       <div>
         <p className="eyebrow text-brand">Design Work</p>
         <h2 className="mt-1 font-display text-[clamp(26px,2.8vw,40px)] leading-[1.08]">
-          The cartridge, <span className="text-brand">protected and pull-able</span>.
+          The cartridge, <span className="text-brand">protected and removable</span>.
         </h2>
       </div>
 

@@ -43,12 +43,6 @@ export default function Slide12() {
         </div>
       </div>
 
-      <div className="card accent-amber p-5">
-        <p className="eyebrow mb-1 text-amber">Caveat · raised proactively</p>
-        <p className="font-serif text-[15.5px] leading-snug text-ink-soft">
-          Before any live-bacteria run, SLA parts must be fully <span className="font-semibold text-ink">post-cured and washed</span>. Uncured resin monomer is mildly antimicrobial and would otherwise bias a kill curve. Known risk, <span className="italic">managed by process</span>.
-        </p>
-      </div>
     </div>
   );
 }
