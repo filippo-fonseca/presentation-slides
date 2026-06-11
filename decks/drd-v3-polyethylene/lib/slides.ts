@@ -110,7 +110,7 @@ export const SLIDES: SlideEntry[] = [
     sectionLabel: "Assembly / Bench Testing",
     Component: Slide09,
     notes:
-      "This is the payoff of the modularity. Three steps, identical every time. Build the cartridge in your hand. Press it into the satellite — the tooth holds it. Bolt the two satellites onto the single hub piece. That's it. No fighting a wet membrane inside a half-assembled device.\n\nThis is the recursive lesson from the last two versions: we saw what worked in the cartridge and the outer-disc-pair and distilled it into a clean modular cartridge that mounts completely separately.",
+      "This is the payoff of the modularity. Three steps, identical every time. Build the cartridge in your hand. Press it into the satellite, the tooth holds it. Then wrap the two C-rings around each satellite-hub joint and bolt them together: one pair per satellite, four C-rings total, one bolt on each side of every pair.\n\nNo fighting a wet membrane inside a half-assembled device, and the wrapper does the radial sealing as it closes.",
   },
   {
     id: "bench",

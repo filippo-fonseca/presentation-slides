@@ -82,7 +82,7 @@ export default function Slide07() {
               padding="snug"
               figureNumber="07′"
               caption="Glands sit behind the clamp"
-              meta="CAD section"
+              meta="full section · side view"
               className="min-h-[160px] flex-1"
             />
           </div>

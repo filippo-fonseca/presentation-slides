@@ -66,26 +66,19 @@ export default function Slide04() {
           tone="graph"
           padding="snug"
           figureNumber="04A"
-          caption="Sectioned at middle"
-          meta="3 chambers · 2 cartridges"
+          caption="Top-down, bird's-eye"
+          meta="full assembly · non-section"
         />
         <Plate
           src="/images/section/topdown_sectioned.jpg"
-          alt="DRD-3 top-down sectioned view showing the three chambers and both membrane cartridges"
+          alt="DRD-3 top-down sectioned view, annotated, showing the three chambers and both membrane cartridges"
           sizes="(max-width: 768px) 100vw, 50vw"
           tone="graph"
           padding="snug"
           figureNumber="04B"
-          caption="Bird's-eye view"
-          meta="full assembly"
-          rotate={180}
-        >
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-6">
-            <span className="chip-bacteria rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] shadow">bacteria</span>
-            <span className="chip-hub rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] shadow">hub</span>
-            <span className="chip-perfusion rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] shadow">perfusion</span>
-          </div>
-        </Plate>
+          caption="Sectioned at middle"
+          meta="3 chambers · 2 cartridges · annotated"
+        />
       </div>
 
     </div>

@@ -13,9 +13,9 @@ const points = [
 
 const figs = [
   { n: "05A", src: "/images/cartridge/cartridge_full_side.jpg",       cap: "Full cartridge",       meta: "top-from-side" },
-  { n: "05B", src: "/images/cartridge/cartridge_base_oring.jpg",      cap: "Base, O-ring seated",  meta: "elastomer" },
-  { n: "05C", src: "/images/cartridge/cartridge_lid.jpg",             cap: "Lid",                  meta: "off-device build" },
-  { n: "05D", src: "/images/cartridge/cartridge_assembly_bottom.jpg", cap: "Assembled cartridge",  meta: "membrane captured" },
+  { n: "05B", src: "/images/cartridge/cartridge_base_oring.jpg",      cap: "Base, parallel bars",  meta: "shields the membrane" },
+  { n: "05C", src: "/images/cartridge/cartridge_lid.jpg",             cap: "Lid · top/side",       meta: "matching bar pattern" },
+  { n: "05D", src: "/images/cartridge/cartridge_assembly_bottom.jpg", cap: "Assembled cartridge",  meta: "bottom/side · membrane captured" },
 ];
 
 export default function Slide05() {

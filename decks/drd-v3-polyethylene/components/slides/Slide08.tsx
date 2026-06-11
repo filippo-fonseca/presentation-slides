@@ -34,23 +34,23 @@ export default function Slide08() {
         <div className="col-span-12 grid grid-rows-2 gap-4 md:col-span-6">
           <Plate
             src="/images/cring/cring_iso.png"
-            alt="Isometric view of one C-shaped wrapper ring"
+            alt="Isometric view of one C-shaped wrapper ring with internal U-channel visible"
             sizes="(max-width: 768px) 100vw, 40vw"
             tone="paper"
             padding="snug"
             figureNumber="08A"
-            caption="The C-ring wrapper"
+            caption="The C-ring wrapper, isometric"
             meta="one half · two per satellite"
           />
           <Plate
             src="/images/full/full_assembly_clamped.jpg"
-            alt="Full DRD-3 assembly showing both C-ring wrappers closed around the satellites"
+            alt="Full DRD-3 assembly, front view, both C-ring wrappers closed around the satellites with hex closures visible on top"
             sizes="(max-width: 768px) 100vw, 40vw"
             tone="graph"
             padding="snug"
             figureNumber="08B"
-            caption="Wrappers closed"
-            meta="one screw on each side"
+            caption="Wrappers closed, in context"
+            meta="front view · one screw per side"
           />
         </div>
       </div>

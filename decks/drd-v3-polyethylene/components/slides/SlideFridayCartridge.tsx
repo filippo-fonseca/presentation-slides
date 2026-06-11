@@ -4,11 +4,11 @@ const items = [
   {
     key: "bars",
     plate: {
-      src: "/images/cartridge/cartridge_full_side.jpg",
-      alt: "Cartridge top view showing protective parallel bars across the membrane",
+      src: "/images/cartridge/cartridge_base_oring.jpg",
+      alt: "Cartridge base alone, showing the parallel-bar floor that shields the membrane",
       tone: "paper" as const,
       figureNumber: "14A",
-      caption: "Protective bars · top view",
+      caption: "Protective bars · base",
       meta: "parallel bars over membrane",
     },
     accent: "accent-hub",
@@ -23,12 +23,12 @@ const items = [
   {
     key: "tabs",
     plate: {
-      src: "/images/cartridge/cartridge_edge.jpg",
-      alt: "Cartridge side view showing the two tweezer pinch tabs rising from the base",
+      src: "/images/cartridge/cartridge_assembly_bottom.jpg",
+      alt: "Full membrane cartridge assembly viewed from bottom/side, showing the two tweezer pinch tabs rising from the base",
       tone: "paper" as const,
       figureNumber: "14B",
-      caption: "Tweezer tabs · side",
-      meta: "one on each side",
+      caption: "Tweezer tabs · assembled",
+      meta: "tabs rise from the base",
     },
     accent: "accent-bacteria",
     chipColor: "text-bacteria",

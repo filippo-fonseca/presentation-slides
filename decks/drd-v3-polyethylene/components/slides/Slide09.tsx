@@ -17,8 +17,8 @@ const steps = [
   },
   {
     n: "3",
-    title: "Bolt the satellites to the hub.",
-    body: "Four screws each side. One central hub piece. Done.",
+    title: "Wrap the C-rings, bolt them together.",
+    body: "Two C-rings meet around each satellite-hub joint, one pair per satellite (four C-rings total). One bolt per side draws the pair closed. Done.",
     img: "/images/full/hero_full_assembly.jpg",
   },
 ];

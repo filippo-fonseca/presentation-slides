@@ -42,23 +42,23 @@ export default function Slide10() {
         <div className="col-span-12 grid grid-rows-2 gap-4 md:col-span-5">
           <Plate
             src="/images/full/full_assembly_on_legs.jpg"
-            alt="DRD-3 standing on its integral feet"
+            alt="DRD-3 front view, standing on its integral feet, both wrappers visible"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="graph"
             padding="snug"
             figureNumber="10A"
             caption="Stands on the bench"
-            meta="integral feet · side view"
+            meta="front view · integral feet"
           />
           <Plate
             src="/images/hub/drughub_front_flanges.jpg"
-            alt="Drug hub front view, symmetric form, clean geometry"
+            alt="Drug hub, side / frontal view, looking into the bore with the membrane-floor pattern visible"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="paper"
             padding="snug"
             figureNumber="10B"
-            caption="Drug hub"
-            meta="symmetric form"
+            caption="Drug hub · side/frontal"
+            meta="looking into the bore"
           />
         </div>
       </div>

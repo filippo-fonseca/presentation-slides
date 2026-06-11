@@ -117,13 +117,13 @@ export default function Slide06() {
           </Plate>
           <Plate
             src="/images/cartridge/cartridge_tooth_detail.jpg"
-            alt="Cartridge tooth detail, CAD render"
+            alt="Cartridge lid alone, side view, showing the two tooth profiles extruded outward"
             sizes="(max-width: 768px) 100vw, 30vw"
             tone="paper"
             padding="tight"
             figureNumber="06B"
-            caption="Cartridge tooth"
-            meta="CAD view"
+            caption="Lid · side view"
+            meta="two teeth visible"
             className="max-h-[44%] flex-1"
           />
         </div>

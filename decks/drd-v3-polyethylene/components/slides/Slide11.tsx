@@ -47,13 +47,13 @@ export default function Slide11() {
         <div className="col-span-12 grid grid-rows-2 gap-4 md:col-span-6">
           <Plate
             src="/images/satellite/bacteria_satellite.jpg"
-            alt="Bacteria satellite, sealed culture compartment"
+            alt="Full perfusion satellite assembly, shared chassis with the bacteria satellite, cartridge installed"
             sizes="(max-width: 768px) 100vw, 40vw"
             tone="paper"
             padding="snug"
             figureNumber="11A"
-            caption="Bacteria satellite"
-            meta="shared chassis · single port"
+            caption="Satellite, fully assembled"
+            meta="shared chassis · cartridge installed"
           />
           <Plate
             tone="graph"

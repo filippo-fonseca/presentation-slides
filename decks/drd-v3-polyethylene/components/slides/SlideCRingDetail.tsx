@@ -32,7 +32,7 @@ export default function SlideCRingDetail() {
         <div className="col-span-12 grid grid-cols-2 gap-4 md:col-span-7">
           <Plate
             src="/images/cring/cring_iso.png"
-            alt="Isometric view of one C-shaped wrapper with internal U-channel visible"
+            alt="Isometric view of one C-shaped wrapper, internal U-channel visible"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="paper"
             padding="snug"
@@ -42,23 +42,23 @@ export default function SlideCRingDetail() {
           />
           <Plate
             src="/images/cring/cring_meeting.jpg"
-            alt="Close-up of the C-ring meeting point showing inward radial pressure on the cartridge"
+            alt="Close-up of the inverse U-shaped meeting point with the cartridge teeth pressed in and the extended lip locking the cartridge in place"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="graph"
             padding="snug"
             figureNumber="09B"
             caption="Meeting point, close-up"
-            meta="hub edge inboard of satellite"
+            meta="lip + teeth · cartridge pinned"
           />
           <Plate
             src="/images/section/section_iso_membranes.jpg"
-            alt="Section of full DRD-3 with C-ring wrappers in place, both membrane cartridges visible"
+            alt="Section view of the full DRD-3 from the side at an angle, both membrane cartridges visible inside the satellites"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="paper"
             padding="snug"
             figureNumber="09C"
-            caption="Full section"
-            meta="both cartridges pressed in"
+            caption="Full section, in context"
+            meta="both cartridges seated · angled section"
             className="col-span-2"
           />
         </div>
