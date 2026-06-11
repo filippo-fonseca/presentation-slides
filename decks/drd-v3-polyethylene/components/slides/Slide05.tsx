@@ -23,7 +23,7 @@ export default function Slide05() {
     <div className="grid h-full grid-cols-12 gap-8">
       <div className="col-span-12 flex flex-col gap-6 md:col-span-5">
         <div>
-          <p className="eyebrow text-brand">Design Work · Hero</p>
+          <p className="eyebrow text-brand">Design Work</p>
           <h2 className="mt-2 font-display text-[clamp(30px,3vw,46px)] leading-tight">
             The membrane cartridge: <span className="text-brand">build it off the device, and drop in.</span>
           </h2>
