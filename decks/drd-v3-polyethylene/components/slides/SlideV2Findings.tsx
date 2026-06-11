@@ -74,12 +74,6 @@ export default function SlideV2Findings() {
         ))}
       </div>
 
-      {/* Closing pull line */}
-      <div className="card-quote px-5 py-3">
-        <p className="font-serif text-[clamp(14.5px,1.2vw,17px)] leading-snug text-ink">
-          <span className="font-semibold">Rigid where it should be, compliant where it must be, and clamped where it matters.</span> No interface is asked to do a job its geometry can&apos;t back up.
-        </p>
-      </div>
     </div>
   );
 }
