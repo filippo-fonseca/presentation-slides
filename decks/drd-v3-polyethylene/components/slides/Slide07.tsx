@@ -21,7 +21,7 @@ const interfaces = [
     color: "chip-perfusion",
     border: "accent-perfusion",
     title: "Satellite → hub",
-    body: "Four M2.5 screws pull the joint together; O-ring rides in the gland.",
+    body: "Two C-ring wrappers close around the joint, one bolt per side; O-ring rides in the gland.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function Slide07() {
             <ol className="flex flex-col gap-2 font-serif text-[13.5px] text-ink-soft">
               <li className="flex gap-2">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand text-[10.5px] font-bold text-white">1</span>
-                <span><span className="font-semibold text-ink">Screw clamp.</span> 4× M2.5 pulls the satellite onto the hub face. Defined load, not a press-fit prayer.</span>
+                <span><span className="font-semibold text-ink">C-ring wrapper.</span> Two halves close around the satellite-hub joint, one bolt per side, pulling the joint together with uniform radial load.</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand text-[10.5px] font-bold text-white">2</span>
@@ -104,7 +104,7 @@ export default function Slide07() {
 
       <div className="card-quote px-5 py-3">
         <p className="font-serif text-[15px] text-ink">
-          <span className="font-semibold">v1 + v2, refined.</span> Screw clamp from v1, compliant tooth from v2, last week's fixes carried forward. The O-ring goes back to doing what it's good at: filling the last micron.
+          <span className="font-semibold">v1 + v2, refined.</span> The new C-ring wrapper replaces the old four-bolt clamp, the compliant tooth carries over from v2, and prior fixes are folded in. The O-ring goes back to doing what it&apos;s good at: filling the last micron.
         </p>
       </div>
     </div>
