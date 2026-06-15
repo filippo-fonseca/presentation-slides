@@ -1,0 +1,12 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+
+# local PDF/PNG previews (the committed PDF is the deliverable)
+preview*.png
+top*.png
