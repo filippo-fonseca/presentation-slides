@@ -25,7 +25,14 @@ This is the **content + narrative plan** for the deck. It is a **scout teaser**:
 - Design: one idea per slide; beautiful, uncluttered; hammer points without repeating them; reuse the landing's components (Fraunces serif, Space Mono kickers, the swarm visual, the `.farm` file mock, glass cards, persimmon/chartreuse on soil-black).
 
 ## Numbers to verify before sending
-548 resistant weeds · 0 new modes of action since the 1980s · 50-70% specialty labor (<2% automated) · ~96% US farms family-owned / ~1.9M / 86% small (USDA) · comps Carbon ~$177M, Ecorobotix ~$150M, Verdant ~$46M, Aigen ~$19M, TRIC ~$5.5M · Blue River→Deere ~$300M (2017) · Deere smart-tractor ~$400K+ [verify] · iron: ~$450K tractor / ~$1M combine / $200-300K-yr repairs (Matt Griggs WIRED, *archetype not a signed partner*) · ~10B people by 2058-2060 (UN).
+548 resistant weeds · 0 new modes of action since the 1980s · 50-70% specialty labor (<2% automated) · ~96% US farms family-owned / ~1.9M / 86% small (USDA) · comps raised: Carbon ~$177M, Ecorobotix ~$150M, Verdant ~$46M, Aigen ~$19M · Blue River→Deere ~$300M (2017) · ~10B people by 2058-2060 (UN).
+
+**Competitor hardware costs (researched — use these on the contrast slides):**
+- **John Deere row-crop tractor:** ~$500K-$600K base (8R/9R). "Smart" precision package ~$10-15K hardware + **annual software subscriptions** (Operations Center). **Full autonomy:** ~$40K autonomy-ready package + ~$10K/yr per-license → **~$50K first year on top of the tractor.** Compact/utility tractors run $15K-$24K (small scale only).
+- **Carbon Robotics LaserWeeder G2:** a pull-behind implement, **~$600K to $1.6M** depending on width (20ft vs 40ft). Lasers + computer vision; weeding only. (Also sells Carbon ATK, an autonomous retrofit kit for Deere 6R/8R.)
+- **Aigen:** small + solar, but **mechanical weeding only** — a single-task rover, not a farm OS.
+- **Iron (Matt Griggs, WIRED — archetype, not a signed partner):** ~$450K tractor / ~$1M combine / $200-300K-yr repairs.
+- **Tendril:** zero grower capex, priced per acre tended (RaaS). The contrast writes itself.
 
 ---
 
@@ -72,12 +79,13 @@ The non-generic insight, four doors: **edge vision got cheap** (per-plant classi
 
 ### 8 — Small and modular (the approach that worked for power)
 - Headline: "Small and modular. **Like microreactors, not megaprojects.**"
-- Mass-manufacturable · modular (snap in a weeder, a scout, a disease arm) · affordable (no $400K smart tractor; priced on the acre). Contrast: "A John Deere smart tractor is $400K+ with no agentic OS. Ours is one of many, and runs the whole farm's intelligence." *(Radiant/Kaleidos resonance for Also.)*
+- Mass-manufacturable · modular (snap in a weeder, a scout, a disease arm) · affordable (priced on the acre, zero capex). Contrast with the bulky incumbents: "A Deere row-crop tractor is **$500-600K**, plus ~$50K and annual subscriptions just to switch on autonomy, and still no agentic farm OS. A Carbon LaserWeeder is **$600K-$1.6M** and only weeds. We're one of many small units, priced on the acre." *(Radiant/Kaleidos resonance for Also: small, mass-manufacturable, modular beats big and centralized.)*
 
 ### 9 — How we're different
-- Headline: "Aigen proved small robots can weed. **We make them a system, for any crop.**"
-- Table (Capability | Tendril | the field): resolution per plant vs per field · chemistry mechanical/chemical-free vs herbicide · memory persistent vs none · crops **any (agnostic)** vs one job · decisioning agentic vs operator/dashboard · capital zero/on-outcome vs six-to-seven figures.
-- Two failure modes we sit between: **big iron** (hardware, no intelligence: Deere, Carbon, Aigen) and **dashboards** (data, no hands: INCYT and the IoT crowd). Comps bar (Carbon 177, Ecorobotix 150, Verdant 46, Aigen 19) prove the market is funded; none own our shape.
+- Headline: "Big and bulky, or blind. **We're the only true farm OS.**"
+- Cost contrast (concrete, hammers affordability): **Deere** $500-600K + ~$50K/yr to switch on autonomy · **Carbon LaserWeeder** $600K-$1.6M, weeds only · **Aigen** small but **mechanical weeding only**, a single-task rover · **Tendril** $0 capex, priced per acre.
+- Table (Capability | Tendril | the field): resolution per plant vs per field · chemistry mechanical/chemical-free vs herbicide · scope **whole farm, any crop** vs one job/one crop · memory persistent vs none · decisioning **agentic** vs operator/dashboard · capital **$0, per-acre** vs $500K-$1.6M+.
+- The shape no one else has: "A swarm that is the **hands, eyes, and ears** of the farmer, run by one agentic, crop-agnostic OS. The incumbents are either big, bulky, single-purpose machines (Deere, Carbon, Aigen) or dashboards with no hands (INCYT, the IoT crowd). We're neither." Comps bar (Carbon 177, Ecorobotix 150, Verdant 46, Aigen 19) proves the market is funded; none own our shape.
 
 ### 10 — The moat
 - Headline: "Hardware gets copied. **A field that remembers does not.**" *(reserved for the deck.)*
