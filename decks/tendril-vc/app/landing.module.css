@@ -182,16 +182,24 @@
   inset: 0;
   z-index: 0;
 }
-/* animated persimmon + sprout aurora over soil */
-.aurora {
+/* real field photo, crushed dark; the aurora blooms over it as the light */
+.heroPhoto {
   position: absolute;
   inset: 0;
   z-index: 0;
+  background: url("/images/field-hero.jpg") center 32% / cover no-repeat;
+  filter: brightness(0.4) saturate(0.72) contrast(1.06);
+}
+/* animated persimmon + sprout aurora over the photo */
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background:
-    radial-gradient(120% 90% at 18% 12%, rgba(245, 106, 48, 0.34), transparent 55%),
-    radial-gradient(110% 80% at 86% 20%, rgba(181, 211, 61, 0.16), transparent 52%),
-    radial-gradient(140% 120% at 50% 112%, rgba(229, 96, 44, 0.42), transparent 60%),
-    linear-gradient(180deg, #0c0d08 0%, #0a0b07 60%, #08090550 100%);
+    radial-gradient(120% 90% at 18% 12%, rgba(245, 106, 48, 0.4), transparent 55%),
+    radial-gradient(110% 80% at 86% 20%, rgba(181, 211, 61, 0.18), transparent 52%),
+    radial-gradient(140% 120% at 50% 112%, rgba(229, 96, 44, 0.46), transparent 60%),
+    linear-gradient(180deg, rgba(12, 13, 8, 0.28) 0%, rgba(10, 11, 7, 0.52) 56%, rgba(10, 11, 7, 0.94) 100%);
   animation: auroraDrift 20s ease-in-out infinite alternate;
 }
 .aurora::before {
@@ -335,17 +343,59 @@
   flex-wrap: wrap;
   align-items: center;
 }
-.heroNote {
-  display: flex;
+/* Yale credential — a Yale-blue pill with a pulsing dot */
+.yaleCredit {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 28px;
-  font-size: 13px;
-  color: var(--txt-mute);
+  gap: 10px;
+  margin-top: 30px;
+  padding: 9px 17px 9px 13px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  line-height: 1;
+  color: var(--txt);
+  background: rgba(22, 44, 100, 0.34);
+  border: 1px solid rgba(98, 138, 230, 0.4);
+  box-shadow: 0 0 26px rgba(48, 90, 196, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
 }
-.heroNote strong {
-  color: var(--txt-soft);
-  font-weight: 500;
+.yaleCredit :global(img) {
+  opacity: 1 !important;
+}
+.yaleDot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6a92ff;
+  box-shadow: 0 0 11px rgba(106, 146, 255, 0.95);
+  flex: none;
+}
+.yaleDot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #6a92ff;
+  opacity: 0.55;
+  animation: yalePing 2.2s ease-out infinite;
+}
+@keyframes yalePing {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+.yaleSubnote {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--txt-mute);
 }
 
 /* buttons */
@@ -595,10 +645,21 @@
   text-align: center;
   font-family: var(--font-fraunces), Georgia, serif;
   font-weight: 300;
-  font-size: clamp(26px, 4vw, 50px);
+  font-size: clamp(24px, 3.4vw, 42px);
   line-height: 1.16;
   letter-spacing: -0.02em;
-  color: var(--txt);
+  color: var(--txt-soft);
+}
+.problemPunchCallout {
+  margin-top: 16px;
+  text-align: center;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(32px, 5.4vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--persimmon-bright);
+  text-shadow: 0 0 46px rgba(255, 122, 67, 0.4);
 }
 @media (max-width: 760px) {
   .problemGrid {
@@ -883,6 +944,23 @@
 .card:hover::before {
   opacity: 1;
 }
+.cardImg {
+  position: relative;
+  height: 150px;
+  margin: -34px -30px 24px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.66) saturate(0.82) contrast(1.04);
+  border-bottom: 1px solid var(--panel-line);
+}
+.cardImg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(82% 130% at 20% 0%, rgba(229, 96, 44, 0.2), transparent 60%),
+    linear-gradient(180deg, rgba(10, 11, 7, 0.05), rgba(10, 11, 7, 0.72));
+}
 .cardTag {
   font-family: var(--font-space-mono), monospace;
   font-size: 10px;
@@ -1004,6 +1082,84 @@
   font-size: 11.5px;
   letter-spacing: 0.04em;
 }
+.farmTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.farmTag {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sprout-bright);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(181, 211, 61, 0.28);
+  background: rgba(181, 211, 61, 0.06);
+}
+
+/* ── .farm file animation (compiles the day as you scroll in) ─ */
+.farmProgress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, var(--persimmon), var(--sprout-bright));
+  box-shadow: 0 0 12px rgba(255, 122, 67, 0.7);
+  z-index: 3;
+}
+.playing .farmProgress {
+  animation: farmCompile 2.8s var(--ease) forwards;
+}
+@keyframes farmCompile {
+  to {
+    width: 100%;
+  }
+}
+.playing .farmRow,
+.playing .farmCarry {
+  animation: farmRowIn 0.5s var(--ease) both;
+}
+@keyframes farmRowIn {
+  from {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.farmCaret {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  margin-left: 5px;
+  vertical-align: -2px;
+  background: var(--persimmon-bright);
+  box-shadow: 0 0 8px rgba(255, 122, 67, 0.85);
+  animation: caretBlink 1.05s steps(1) infinite;
+}
+@keyframes caretBlink {
+  50% {
+    opacity: 0;
+  }
+}
+.farmLive {
+  animation: farmLivePulse 2.4s ease-in-out infinite;
+}
+@keyframes farmLivePulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
 @media (max-width: 860px) {
   .farmGrid {
     grid-template-columns: 1fr;
@@ -1013,8 +1169,29 @@
 
 /* ── STANCE (Also Capital thesis resonance) ───────────────── */
 .stance {
+  position: relative;
   border-top: 1px solid var(--panel-line);
   text-align: center;
+  overflow: hidden;
+}
+.stanceBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/images/field-aerial.jpg") center / cover no-repeat;
+  filter: brightness(0.3) saturate(0.68) contrast(1.05);
+}
+.stanceBg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(55% 80% at 50% 50%, rgba(229, 96, 44, 0.18), transparent 70%),
+    linear-gradient(180deg, var(--bg), rgba(10, 11, 7, 0.4) 32%, rgba(10, 11, 7, 0.4) 68%, var(--bg));
+}
+.stance .wrap {
+  position: relative;
+  z-index: 1;
 }
 .stanceText {
   font-family: var(--font-fraunces), Georgia, serif;

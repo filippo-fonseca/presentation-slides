@@ -167,12 +167,12 @@ The loop never stops, and it's the same loop whether the limb on the end is a we
 
 **On screen**
 - Headline: "Every day on the farm compiles to **one file.**"
-- Left text (beat 0): "`.farm` is the format the whole system runs on. One file per field per day: every sensor reading, every robot action, every decision the system made, every word the grower said, written to disk."
-- Right (beat 0): a styled `.farm` file showing FIELD / SENSORS / SWARM / SAW / DECIDED / DID / GROWER, and a `carried → tomorrow.farm` line.
-- Beat 1 (why it matters): "Stack them up and you have something no incumbent can reconstruct after the fact: the complete, machine-readable memory of a piece of land. The grower owns their field's history. We own the format."
+- Left text (beat 0): "The system underneath is complex. `.farm` is how it stays legible: every day on every field aggregates into one interpretable, exportable file. Every sensor reading, every robot action, every decision the system made, every word from the grower." + three tags: Interpretable · Exportable · Dynamic.
+- Right (beat 0): an animated `.farm` file (cascades in, compile-bar) showing FIELD / SENSORS / SWARM / SAW / DECIDED / DID / GROWER, and a `carried → tomorrow.farm` line.
+- Beat 1 (why it matters): "It's dynamic, not a static log. The farm-OS agent reads it as a living, complete overview of the land, and the grower can export and own it. Stack the days and you have a record no incumbent can reconstruct."
 
 **Speaker notes**
-This is the most distinctive piece of architecture and worth dwelling on. An operating system has a filesystem; ours is the `.farm` file. It is the unit of memory (ties directly to the moat), the audit trail, and the portable record the grower keeps. It is also a planned innovation, so present it as the design, not a shipped feature. **[verify: framing as planned vs in-progress.]**
+The most distinctive piece of architecture, worth dwelling on. The `.farm` file is the **aggregative** artifact: the real system is far more complex, but it all rolls up into one file per field per day that stays interpretable, exportable, and dynamic, so the farm-OS agent has a complete overview and the grower owns the record. An OS has a filesystem; ours is `.farm`. It is the unit of memory (ties to the moat), the audit trail, and the portable export. Planned innovation, present as design not shipped. **[verify: framing as planned vs in-progress.]**
 
 ---
 

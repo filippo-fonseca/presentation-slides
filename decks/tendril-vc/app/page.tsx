@@ -7,6 +7,7 @@ import Reveal from "./components/Reveal";
 import Mark from "./components/Mark";
 import YaleMark from "./components/YaleMark";
 import FieldInstrument from "./components/FieldInstrument";
+import FarmFile from "./components/FarmFile";
 
 const Arrow = () => (
   <svg
@@ -74,28 +75,21 @@ const BUILD_WITH = [
   {
     tag: "Row crops",
     title: "Row-crop growers",
+    img: "/images/field-plowed.jpg",
     body: "Corn, cotton, soybeans, wheat. Margins are razor-thin and the iron sits idle most of the year. We attack the single largest line on the farm.",
   },
   {
     tag: "Specialty",
     title: "Specialty farms",
+    img: "/images/grower.jpg",
     body: "Where labor runs 50 to 70 percent of cost and almost nothing is automated. The work is repetitive, skilled, and unfillable. The intelligence carries it.",
   },
   {
     tag: "The land",
     title: "The soil itself",
+    img: "/images/soil-hands.jpg",
     body: "Less compaction, fewer chemicals, biology that recovers. The advantages that make us defensible are the same ones that keep the ground alive.",
   },
-];
-
-const FARM_FILE: [string, React.ReactNode][] = [
-  ["field", "north-40 · 38.2 ac · corn, V6"],
-  ["sensors", "soil moisture, canopy temp, NDVI · 1,440 reads"],
-  ["swarm", "4 units · 11.6 ac worked · 38 min downtime"],
-  ["saw", "2,304 weeds · 17 disease flags · 3 wind-damaged rows"],
-  ["decided", "spot-weed NE quadrant · hold row 12 · alert grower"],
-  ["did", "2,291 weeds pulled mechanically · 0 mL herbicide"],
-  ["grower", <em key="g">&ldquo;harvesting the south strip Friday, skip it&rdquo;</em>],
 ];
 
 export default function Home() {
@@ -135,6 +129,7 @@ export default function Home() {
       {/* HERO */}
       <header className={styles.hero} id="top">
         <div className={styles.heroMedia}>
+          <div className={styles.heroPhoto} />
           <div className={styles.aurora} />
           <div className={styles.contours} />
         </div>
@@ -163,10 +158,14 @@ export default function Home() {
               See the system
             </a>
           </div>
-          <p className={styles.heroNote}>
-            Built by engineers at <YaleMark height={13} />
-            <strong>on food security and chemical-free farming.</strong>
-          </p>
+          <div className={styles.yaleCredit}>
+            <span className={styles.yaleDot} />
+            Built by engineers and researchers from
+            <YaleMark height={12} />
+          </div>
+          <span className={styles.yaleSubnote}>
+            Working on food security and chemical-free farming.
+          </span>
         </div>
       </header>
 
@@ -254,7 +253,9 @@ export default function Home() {
           </div>
           <Reveal delay={160}>
             <p className={styles.problemPunch}>
-              The chemical era sees the field <em className={styles.ital}>once a season</em>.
+              The chemical era sees the field once a season.
+            </p>
+            <p className={styles.problemPunchCallout}>
               Tendril sees it <em className={styles.ital}>every day</em>.
             </p>
           </Reveal>
@@ -357,47 +358,24 @@ export default function Home() {
           <div className={styles.farmGrid}>
             <Reveal>
               <p className={styles.farmLead}>
-                <b>.farm</b> is the format the whole system runs on. One file per field
-                per day: every sensor reading, every robot action, every decision the
-                system made, every word the grower said, written to disk.
+                The system underneath is complex. <b>.farm</b> is how it stays
+                legible: every day on every field aggregates into one interpretable,
+                exportable file. Every sensor reading, every robot action, every
+                decision the system made, every word from the grower.
               </p>
               <p className={styles.farmLead}>
-                Stack them up and you have something no incumbent can reconstruct after
-                the fact: the complete, machine-readable{" "}
-                <b>memory of a piece of land</b>.
+                It is dynamic, not a static log. The farm-OS agent reads it as a living,
+                complete overview of the land, and the grower can export and own it.
+                Stack the days and you have a record <b>no incumbent can reconstruct</b>.
               </p>
+              <div className={styles.farmTags}>
+                <span className={styles.farmTag}>Interpretable</span>
+                <span className={styles.farmTag}>Exportable</span>
+                <span className={styles.farmTag}>Dynamic</span>
+              </div>
             </Reveal>
             <Reveal delay={120}>
-              <div className={styles.farmCard}>
-                <div className={styles.farmBar}>
-                  <div className={styles.farmDots}>
-                    <span
-                      className={styles.farmDot}
-                      style={{ background: "var(--persimmon)" }}
-                    />
-                    <span
-                      className={styles.farmDot}
-                      style={{ background: "var(--sprout)" }}
-                    />
-                    <span
-                      className={styles.farmDot}
-                      style={{ background: "var(--txt-faint)" }}
-                    />
-                  </div>
-                  <span className={styles.farmName}>
-                    2026-06-15<b>.farm</b>
-                  </span>
-                </div>
-                <div className={styles.farmBody}>
-                  {FARM_FILE.map(([k, v]) => (
-                    <div className={styles.farmRow} key={k as string}>
-                      <span className={styles.farmKey}>{k}</span>
-                      <span className={styles.farmVal}>{v}</span>
-                    </div>
-                  ))}
-                  <div className={styles.farmCarry}>carried → 2026-06-16.farm</div>
-                </div>
-              </div>
+              <FarmFile />
             </Reveal>
           </div>
         </div>
@@ -447,6 +425,10 @@ export default function Home() {
           <div className={styles.cards}>
             {BUILD_WITH.map((c, i) => (
               <Reveal key={c.title} className={styles.card} delay={i * 110}>
+                <div
+                  className={styles.cardImg}
+                  style={{ backgroundImage: `url(${c.img})` }}
+                />
                 <span className={styles.cardTag}>{c.tag}</span>
                 <h3 className={styles.cardTitle}>{c.title}</h3>
                 <p className={styles.cardBody}>{c.body}</p>
@@ -458,6 +440,7 @@ export default function Home() {
 
       {/* STANCE */}
       <section className={`${styles.section} ${styles.sectionTight} ${styles.stance}`}>
+        <div className={styles.stanceBg} />
         <div className={styles.wrap}>
           <Reveal>
             <div className={`${styles.kicker} ${styles.kickerCenter}`}>
@@ -478,12 +461,17 @@ export default function Home() {
         <div className={styles.wrap}>
           <div className={styles.ctaInner}>
             <Reveal>
+              <div className={`${styles.kicker} ${styles.kickerCenter}`}>
+                <span>Get in touch</span>
+              </div>
               <h2 className={styles.ctaTitle}>
-                Build the <em className={styles.ital}>way off</em>.
+                Step off the <em className={styles.ital}>treadmill</em>.
               </h2>
               <p className={styles.ctaSub}>
-                Tendril is in development, designed with family farms and engineered for
-                the row. If you back founders who choose hard problems, we should talk.
+                Tendril is the operating system that steps off the chemical treadmill:
+                chemical-free robots and an agentic intelligence layer, built with family
+                farms. We&apos;re in development, and if you back founders who choose hard
+                problems, we should talk.
               </p>
             </Reveal>
             <Reveal delay={120}>
