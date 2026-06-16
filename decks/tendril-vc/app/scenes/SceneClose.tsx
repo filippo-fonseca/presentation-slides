@@ -66,8 +66,8 @@ export default function SceneClose(_props: SceneProps) {
         </h2>
 
         <p className="max-w-[58ch] text-balance text-[clamp(0.98rem,1.5vw,1.18rem)] leading-relaxed text-foreground/70">
-          Off the chemical treadmill that thins soil and breeds resistance, and onto a field that
-          perceives, remembers, and acts, plant by plant.
+          &hellip;off the chemical treadmill that thins soil and breeds resistance, and onto a field
+          that perceives, remembers, and acts, plant by plant.
         </p>
 
         <p className="max-w-[52ch] text-balance text-[clamp(1.1rem,1.9vw,1.4rem)] leading-relaxed text-foreground/85">
