@@ -137,18 +137,29 @@ export default function SceneTeam({ beat }: SceneProps) {
               target="_blank"
               rel="noopener noreferrer"
               data-no-advance
-              className="neu-sage flex h-full flex-col gap-2.5 rounded-2xl p-4 text-left transition-colors hover:border-accent-soft"
+              className="neu-sage flex h-full flex-col overflow-hidden rounded-2xl text-left transition-colors hover:border-accent-soft"
             >
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-soft">
-                Spatial-MemER
+              <span className="relative block h-24 w-full bg-[#f4f2e9]">
+                <Image
+                  src="/press/spatial-mem-er.png"
+                  alt="Spatial-MemER architecture diagram"
+                  fill
+                  unoptimized
+                  className="object-contain p-2"
+                />
               </span>
-              <ResearchMarks />
-              <span className="text-[12px] leading-snug text-foreground/85">
-                Persistent spatial memory, built with Stanford researchers. The brain remembers the
-                field.
-              </span>
-              <span className="mt-auto font-mono text-[9.5px] uppercase tracking-[0.16em] text-foreground/50">
-                spatial-memer.vercel.app ↗
+              <span className="flex flex-1 flex-col gap-2 p-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-soft">
+                  Spatial-MemER
+                </span>
+                <span className="text-[12px] leading-snug text-foreground/85">
+                  Persistent spatial memory, built with Stanford researchers. The brain remembers
+                  the field.
+                </span>
+                <ResearchMarks />
+                <span className="mt-auto pt-1 font-mono text-[9.5px] uppercase tracking-[0.16em] text-foreground/50">
+                  spatial-memer.vercel.app ↗
+                </span>
               </span>
             </a>
           </li>
