@@ -170,8 +170,8 @@ export default function Home() {
           </h1>
           <p className={styles.heroSub}>
             Not a dashboard, not a single-task tool.{" "}
-            <span className={styles.heroEmph}>One cohesive system</span> that runs a
-            farm&apos;s daily work and its long-range plan,{" "}
+            <span className={styles.heroEmph}>One cohesive system</span>{" "}
+            that runs a farm&apos;s daily work and its long-range plan,{" "}
             <span className={styles.heroEmph}>
               delivered through a swarm of small, chemical-free robots
             </span>
@@ -188,9 +188,9 @@ export default function Home() {
           <div className={styles.yaleCredit}>
             <span className={styles.yaleDot} />
             <span>
-              Built by engineers and researchers from <YaleMark height={12} />, working
-              on food security and chemical-free farming, to feed a growing world
-              without poisoning the land that feeds it.
+              Built by engineers and researchers from <YaleMark height={12} /> working on
+              food security and chemical-free farming to feed a growing world without
+              taking more of its land.
             </span>
           </div>
         </div>
@@ -501,18 +501,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STANCE */}
+      {/* THE APPROACH — SMALL & MODULAR */}
+      <section className={styles.section}>
+        <div className={styles.wrap}>
+          <Reveal>
+            <div className={styles.kicker}>
+              <span>The approach</span>
+            </div>
+            <h2 className={styles.h2}>
+              Small and modular. Like <em className={styles.ital}>microreactors</em>, not
+              megaprojects.
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className={styles.problemIntro}>
+              The smartest hardware in agriculture costs hundreds of thousands of dollars
+              and sits on a single farm. We took the path that worked for power: instead
+              of one massive, centralized machine, a fleet of small, mass-manufacturable,
+              modular units that deploy anywhere and price on the acre.
+            </p>
+          </Reveal>
+          <div className={styles.cards}>
+            <Reveal className={styles.card} delay={0}>
+              <span className={styles.cardTag}>Mass-manufacturable</span>
+              <h3 className={styles.cardTitle}>Built at volume</h3>
+              <p className={styles.cardBody}>
+                One design, produced at scale. Unit cost falls as the fleet grows, not
+                up front, per farm.
+              </p>
+            </Reveal>
+            <Reveal className={styles.card} delay={110}>
+              <span className={styles.cardTag}>Modular</span>
+              <h3 className={styles.cardTitle}>Swappable by task</h3>
+              <p className={styles.cardBody}>
+                Snap in a weeder, a scout, a disease arm. One platform, many jobs, across
+                the whole season.
+              </p>
+            </Reveal>
+            <Reveal className={styles.card} delay={220}>
+              <span className={styles.cardTag}>Affordable</span>
+              <h3 className={styles.cardTitle}>Within reach</h3>
+              <p className={styles.cardBody}>
+                No $400,000 smart tractor to buy. Priced on the acre, for the family
+                farms that are most of US agriculture, and unlike big iron, it ships with
+                a real agentic operating system.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* STANCE / STAKES */}
       <section className={`${styles.section} ${styles.sectionTight} ${styles.stance}`}>
         <div className={styles.stanceBg} />
         <div className={styles.wrap}>
           <Reveal>
             <div className={`${styles.kicker} ${styles.kickerCenter}`}>
-              <span>The stance</span>
+              <span>The stakes</span>
             </div>
+            <p className={styles.stanceStat}>
+              Ten billion people by 2060. The same land, or less.
+            </p>
             <p className={styles.stanceText}>
-              Food is the hardest, most necessary, most durable problem there is. We are
-              building the system that resists decay in the field, plant by plant, acre
-              by acre, season over season.
+              We can&apos;t deforest our way there. The only lever left is efficiency per
+              acre, and that is the company we&apos;re building: the system that resists
+              decay in the field, plant by plant, season over season.
             </p>
           </Reveal>
         </div>

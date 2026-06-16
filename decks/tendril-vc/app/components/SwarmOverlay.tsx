@@ -8,7 +8,7 @@ const CENTER = { x: 648, y: 162 };
 type Node = {
   x: number;
   y: number;
-  type: "weeder" | "scout" | "drone" | "satellite" | "weather" | "soil" | "grower" | "more";
+  type: "weeder" | "scout" | "cam" | "map" | "weather" | "soil" | "grower" | "more";
   label: string;
   dir: "in" | "out";
   robot?: boolean;
@@ -16,8 +16,8 @@ type Node = {
 };
 
 const NODES: Node[] = [
-  { x: 432, y: 84, type: "drone", label: "Drone", dir: "in" },
-  { x: 884, y: 76, type: "satellite", label: "Satellite", dir: "in" },
+  { x: 432, y: 84, type: "cam", label: "Cameras", dir: "in" },
+  { x: 884, y: 76, type: "map", label: "3D map", dir: "in" },
   { x: 1088, y: 150, type: "weather", label: "Weather", dir: "in" },
   { x: 236, y: 196, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
   { x: 304, y: 250, type: "soil", label: "Soil probe", dir: "in" },
@@ -58,26 +58,26 @@ function Icon({ n, color }: { n: Node; color: string }) {
           <circle cx={x + 5} cy={y + 6} r="1.9" {...s} strokeWidth="1.1" />
         </>
       );
-    case "drone":
+    case "cam":
       return (
         <>
-          <line x1={x - 8} y1={y - 8} x2={x + 8} y2={y + 8} {...s} strokeWidth="1.1" />
-          <line x1={x + 8} y1={y - 8} x2={x - 8} y2={y + 8} {...s} strokeWidth="1.1" />
-          <circle cx={x - 8} cy={y - 8} r="3" {...s} strokeWidth="1.1" />
-          <circle cx={x + 8} cy={y - 8} r="3" {...s} strokeWidth="1.1" />
-          <circle cx={x - 8} cy={y + 8} r="3" {...s} strokeWidth="1.1" />
-          <circle cx={x + 8} cy={y + 8} r="3" {...s} strokeWidth="1.1" />
-          <rect x={x - 3} y={y - 3} width="6" height="6" rx="1.5" fill={dark} stroke={color} strokeWidth="1.2" />
+          <line x1={x} y1={y + 9} x2={x} y2={y - 2} {...s} strokeWidth="1.3" />
+          <line x1={x - 4} y1={y + 9} x2={x + 4} y2={y + 9} {...s} strokeWidth="1.2" />
+          <rect x={x - 6} y={y - 8} width="12" height="6.5" rx="1.5" fill={dark} stroke={color} strokeWidth="1.2" />
+          <circle cx={x + 4} cy={y - 4.7} r="1.3" fill={color} />
         </>
       );
-    case "satellite":
+    case "map":
       return (
         <>
-          <rect x={x - 4} y={y - 4} width="8" height="8" rx="1.5" fill={dark} stroke={color} strokeWidth="1.2" />
-          <rect x={x - 13} y={y - 3} width="6" height="6" {...s} strokeWidth="1.1" />
-          <rect x={x + 7} y={y - 3} width="6" height="6" {...s} strokeWidth="1.1" />
-          <line x1={x} y1={y - 4} x2={x + 4} y2={y - 9} {...s} strokeWidth="1.1" />
-          <circle cx={x + 4} cy={y - 9} r="1.4" fill={color} />
+          <path
+            d={`M${x} ${y - 7} L${x + 9} ${y - 2} L${x} ${y + 7} L${x - 9} ${y - 2} Z`}
+            fill={dark}
+            stroke={color}
+            strokeWidth="1.2"
+          />
+          <line x1={x - 4.5} y1={y - 4.5} x2={x + 4.5} y2={y + 4.5} {...s} strokeWidth="0.8" opacity="0.75" />
+          <line x1={x + 4.5} y1={y - 4.5} x2={x - 4.5} y2={y + 4.5} {...s} strokeWidth="0.8" opacity="0.75" />
         </>
       );
     case "weather":

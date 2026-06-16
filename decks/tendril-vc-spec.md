@@ -152,10 +152,11 @@ This is the founder-market-fit slide. We are not agronomists who learned to code
   - **Remember** — every pass writes to a persistent field map; the system tracks what failed last season.
   - **Decide** — the agentic layer plans the fleet's work against the field's memory and the grower's goals.
   - **Act** — weeds removed mechanically, treatment placed plant by plant, result measured and fed back.
+- Diverse inputs (show the swarm-render + a node diagram): the inputs are many and terrestrial: the robot swarm itself, stationary field cameras, soil and weather sensors, and the grower's own input, all feeding one agentic core that maintains a live 3D map of the field.
 - Footnote (mono): "Delivered through a coordinated fleet of small, modular robots + a live field-health dashboard."
 
 **Speaker notes**
-The loop never stops, and it's the same loop whether the limb on the end is a weeder, a UV-C disease arm, or a seeder. That's what makes it a platform, not a tool.
+The loop never stops, and it's the same loop whether the limb on the end is a weeder, a UV-C disease arm, or a seeder. That's what makes it a platform, not a tool. Emphasize the physical intelligence: a real, robust, modular team of hands in the field, fed by a diverse array of mobile and stationary sensors, with the decision-making tying it all together. Mirror the landing's hero swarm visual here.
 
 ---
 
@@ -256,6 +257,26 @@ RaaS is how a capital-intensive hardware business becomes a recurring-revenue so
 
 ---
 
+### 10.5 — Small and modular (the approach that worked for power)
+
+- **section_label**: 09 · The approach
+- **pattern**: Beat-driven body, three pillars + the affordability contrast
+- **beats**: 3
+
+**On screen**
+- Headline: "Small and modular. **Like microreactors, not megaprojects.**"
+- Beat 0: "The smartest hardware in agriculture costs hundreds of thousands of dollars and sits on a single farm. We took the path that worked for power: mass-manufacturable, modular units that deploy anywhere and price on the acre."
+- Three pillars (beat 1):
+  - **Mass-manufacturable.** One design, built at volume. Unit cost falls as the fleet grows, not up front, per farm.
+  - **Modular.** Snap in a weeder, a scout, a disease arm. One platform, many jobs, across the season.
+  - **Affordable.** No $400,000 smart tractor to buy. Priced on the acre, within reach of the family farms that are most of US agriculture.
+- Beat 2 (the contrast): "A John Deere smart tractor is $400K+ and ships with no agentic operating system. A Tendril unit is one of many, priced on the acre, and runs the whole farm's intelligence."
+
+**Speaker notes**
+The slide that should resonate hardest with Also: it's the small-modular thesis they already backed in power (Radiant / Kaleidos, mass-manufactured microreactors replacing diesel generators), applied to the field. Centralized megaprojects (big iron) don't reach the bulk of farmers; small, mass-manufacturable, modular units do. Affordability is the wedge into the 1.9M small family farms John Deere's economics were never built for, and we bring the agentic OS they've never had. **[verify the $400K+ smart-tractor figure.]**
+
+---
+
 ### 11 — Go-to-market / the wedge
 
 - **section_label**: 10 · Wedge
@@ -333,9 +354,9 @@ This slide is a feature for Also specifically. They back founders who choose har
 - **beats**: 3
 
 **On screen**
-- Headline: "Two billion more mouths. **The same amount of land.**"
-- Hero stats: **+2B** people by 2084 · **0** new land we should be clearing · **efficiency per acre** as the only honest lever.
-- Mission line: "Food is the hardest, most necessary, most durable problem there is. We're building the system that resists decay in the field, plant by plant, acre by acre, season over season."
+- Headline: "Ten billion people by 2060. **The same land, or less.**"
+- Hero stats: **10B** by ~2060 (UN Population Division projects 10 billion between 2058 and 2060) · **+2B** more mouths · **0** more forest we can afford to clear · **efficiency per acre** is the only honest lever.
+- Mission line: "We can't deforest our way there. Food is the hardest, most necessary, most durable problem there is, and we're building the system that resists decay in the field, plant by plant, acre by acre, season over season."
 
 **Speaker notes**
 This is the civilizational-scale slide, stated plainly. The negentropy framing is the through-line: efficiency per acre, not more cleared forest.
