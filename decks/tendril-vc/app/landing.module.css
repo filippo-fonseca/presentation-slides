@@ -306,12 +306,12 @@
   transform: translateX(-50%);
   bottom: -10%;
   width: 100vw;
-  height: 165%;
+  height: 180%;
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(0deg, var(--bg) 0%, rgba(10, 11, 7, 0.82) 14%, rgba(10, 11, 7, 0.4) 46%, transparent 68%),
-    radial-gradient(58% 78% at 24% 86%, rgba(10, 11, 7, 0.82), rgba(10, 11, 7, 0.32) 48%, transparent 76%);
+    linear-gradient(0deg, var(--bg) 0%, rgba(10, 11, 7, 0.84) 16%, rgba(10, 11, 7, 0.56) 46%, rgba(10, 11, 7, 0.28) 70%, transparent 90%),
+    radial-gradient(66% 92% at 26% 72%, rgba(10, 11, 7, 0.85), rgba(10, 11, 7, 0.38) 52%, transparent 80%);
 }
 .heroEyebrow {
   display: inline-flex;
