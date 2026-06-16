@@ -218,7 +218,8 @@ export default function Home() {
           <div className={styles.yaleCredit}>
             <span className={styles.yaleDot} />
             <span>
-              In dev by engineers and researchers from <YaleMark height={12} /> working on
+              In dev by <strong>engineers and researchers from</strong>{" "}
+              <YaleMark height={12} /> working on
               food security and chemical-free farming to feed a growing world without
               taking more of its land.
             </span>

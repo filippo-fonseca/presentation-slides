@@ -302,20 +302,16 @@
 .heroContent::before {
   content: "";
   position: absolute;
-  left: -8%;
-  bottom: -8%;
-  width: 92%;
-  height: 138%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10%;
+  width: 100vw;
+  height: 165%;
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(
-      130% 120% at 18% 74%,
-      rgba(10, 11, 7, 0.96),
-      rgba(10, 11, 7, 0.78) 44%,
-      transparent 78%
-    ),
-    linear-gradient(0deg, rgba(10, 11, 7, 0.66) 0%, rgba(10, 11, 7, 0.32) 64%, transparent 100%);
+    linear-gradient(0deg, var(--bg) 0%, rgba(10, 11, 7, 0.82) 14%, rgba(10, 11, 7, 0.4) 46%, transparent 68%),
+    radial-gradient(58% 78% at 24% 86%, rgba(10, 11, 7, 0.82), rgba(10, 11, 7, 0.32) 48%, transparent 76%);
 }
 .heroEyebrow {
   display: inline-flex;
