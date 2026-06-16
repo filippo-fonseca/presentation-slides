@@ -59,6 +59,12 @@ The non-generic insight, four doors: **edge vision got cheap** (per-plant classi
 - Loop: **Perceive → Remember → Decide → Act** (the landing's swarm visual). Diverse terrestrial inputs feeding one core: the robot swarm, stationary cameras, soil & weather sensors, the grower, building a live 3D field map.
 - Hammer crop-agnostic: "The core doesn't care what's growing. The same loop runs corn, cotton, tomatoes, vines: swap the limb, not the brain."
 
+### 6b — What the hands actually do  *(NEW — make the physical capability concrete)*
+- Headline: "The brain is the company. **But the hands do real work.**"
+- The modular tools (one chassis, swap the limb): **Weed** — mechanical, chemical-free removal, plant by plant (the v1 job) · **Scout** — leaf-level vision classifying crop / weed / pest / disease / damage, building the live 3D map · **Treat** — place an intervention precisely on the plant that needs it (spot, never blanket); e.g. a UV-C disease module · **Tend** — snap in the tool the season calls for; same chassis, many jobs, all season.
+- Why it matters here: "This is what makes the funnel real. A dashboard tells you a weed is there. **Our hand pulls it.**"
+- Honest framing: v1 leads with weeding + perception; the other modules are the near-term roadmap on the same proven loop. Hardware in development.
+
 ### 7 — The .farm file + the funnel
 - Headline: "Every day on the farm compiles to **one file.**"
 - Animated `.farm` mock (from the landing). Left: aggregative, interpretable, exportable, dynamic. The funnel: complex inputs → one `.farm` file → the agentic layer decides *with* the grower → **execution isn't abstract** (real robots actuate). Punch: "Execution, not advice."
