@@ -3,7 +3,19 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { SCENES } from "@/lib/content";
 import SceneCover from "./scenes/SceneCover";
-import SceneContent from "./scenes/SceneContent";
+import SceneThesis from "./scenes/SceneThesis";
+import SceneProblem from "./scenes/SceneProblem";
+import SceneWhyNow from "./scenes/SceneWhyNow";
+import SceneTeam from "./scenes/SceneTeam";
+import SceneSystem from "./scenes/SceneSystem";
+import SceneHands from "./scenes/SceneHands";
+import SceneFarmFile from "./scenes/SceneFarmFile";
+import SceneSmall from "./scenes/SceneSmall";
+import SceneDifferent from "./scenes/SceneDifferent";
+import SceneMoat from "./scenes/SceneMoat";
+import SceneMarket from "./scenes/SceneMarket";
+import SceneModel from "./scenes/SceneModel";
+import SceneStakes from "./scenes/SceneStakes";
 import SceneClose from "./scenes/SceneClose";
 import ChimeToggle, { type ChimeApi } from "./components/ChimeToggle";
 import SceneNav from "./components/SceneNav";
@@ -32,7 +44,19 @@ export type SceneProps = {
 // scenes/ and wiring them up below.
 const SCENE_COMPONENTS: Record<string, React.FC<SceneProps>> = {
   cover: SceneCover,
-  content: SceneContent,
+  thesis: SceneThesis,
+  problem: SceneProblem,
+  "why-now": SceneWhyNow,
+  team: SceneTeam,
+  system: SceneSystem,
+  hands: SceneHands,
+  "farm-file": SceneFarmFile,
+  small: SceneSmall,
+  different: SceneDifferent,
+  moat: SceneMoat,
+  market: SceneMarket,
+  model: SceneModel,
+  stakes: SceneStakes,
   close: SceneClose,
 };
 
@@ -44,7 +68,7 @@ export default function DeckClient() {
 
   const totalScenes = SCENES.length;
   const currentScene = SCENES[sceneIndex];
-  const SceneComponent = SCENE_COMPONENTS[currentScene.id] ?? SceneContent;
+  const SceneComponent = SCENE_COMPONENTS[currentScene.id] ?? SceneCover;
 
   // Chime — Web Audio, muted by default.  Stable wrapper around a mutating
   // ref so scene useEffect deps don't bust on every toggle.

@@ -1,9 +1,8 @@
-// Scene registry — one entry per scene, in display order.  Each scene has a
+// Scene registry — one entry per scene, in display order. Each scene has a
 // stable `id` that maps to a component in SCENE_COMPONENTS (DeckClient.tsx)
-// and a `beats` count (how many forward-presses the scene takes before the
-// deck advances to the next scene).  Pitch decks use beats to reveal content
-// progressively within a scene — see scenes/SceneContent.tsx for the
-// canonical pattern.
+// and a `beats` count (forward-presses before the deck advances). Beats reveal
+// supporting detail; the substance of each scene lands on beat 0, so the deck
+// reads cleanly when clicked straight through (it's a self-guided scout teaser).
 
 export type SceneId = string;
 
@@ -16,7 +15,19 @@ export type SceneMeta = {
 };
 
 export const SCENES: ReadonlyArray<SceneMeta> = [
-  { id: "cover",   title: "Open",   beats: 1 },
-  { id: "content", title: "Body",   beats: 3 },
-  { id: "close",   title: "Close",  beats: 2 },
+  { id: "cover",     title: "Cover",              beats: 1 },
+  { id: "thesis",    title: "The thesis",         beats: 2 },
+  { id: "problem",   title: "The problem",        beats: 2 },
+  { id: "why-now",   title: "Why now",            beats: 2 },
+  { id: "team",      title: "The brain",          beats: 3 },
+  { id: "system",    title: "The system",         beats: 2 },
+  { id: "hands",     title: "The hands",          beats: 2 },
+  { id: "farm-file", title: "The .farm file",     beats: 2 },
+  { id: "small",     title: "Small and modular",  beats: 2 },
+  { id: "different", title: "How we're different", beats: 3 },
+  { id: "moat",      title: "The moat",           beats: 2 },
+  { id: "market",    title: "Who we build with",  beats: 2 },
+  { id: "model",     title: "Business model",     beats: 2 },
+  { id: "stakes",    title: "The stakes",         beats: 2 },
+  { id: "close",     title: "Close",              beats: 2 },
 ];

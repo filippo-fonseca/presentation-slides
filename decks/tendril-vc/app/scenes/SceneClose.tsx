@@ -2,8 +2,8 @@
 
 import type { SceneProps } from "../DeckClient";
 
-// Example closing scene — large centered mission line with concentric rings.
-// Beat 0: mission only.  Beat 1: mission + CTA.
+// Scene 15 — the close. No formal ask (this is a scout teaser). Beat 0: the
+// turn + the honest stage. Beat 1: the invitation + contact.
 
 export default function SceneClose({ beat }: SceneProps) {
   return (
@@ -19,45 +19,50 @@ export default function SceneClose({ beat }: SceneProps) {
         className="pointer-events-none absolute left-1/2 top-1/2 h-[140%] -translate-x-1/2 -translate-y-1/2 opacity-50"
       >
         <g style={{ transformOrigin: "400px 400px" }}>
-          <circle cx="400" cy="400" r="380" stroke="rgba(245,176,106,0.18)" strokeWidth="0.6" strokeDasharray="2 8" fill="none" />
+          <circle cx="400" cy="400" r="380" stroke="rgba(229,96,44,0.20)" strokeWidth="0.6" strokeDasharray="2 8" fill="none" />
         </g>
         <g style={{ transformOrigin: "400px 400px" }}>
-          <circle cx="400" cy="400" r="280" stroke="rgba(244,241,234,0.15)" strokeWidth="0.6" strokeDasharray="1 6" fill="none" />
+          <circle cx="400" cy="400" r="280" stroke="rgba(181,211,61,0.22)" strokeWidth="0.6" strokeDasharray="1 6" fill="none" />
         </g>
         <g style={{ transformOrigin: "400px 400px" }}>
-          <circle cx="400" cy="400" r="180" stroke="rgba(245,176,106,0.25)" strokeWidth="0.6" strokeDasharray="1 5" fill="none" />
+          <circle cx="400" cy="400" r="180" stroke="rgba(229,96,44,0.30)" strokeWidth="0.6" strokeDasharray="1 5" fill="none" />
         </g>
       </svg>
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        <p className="mb-8 font-mono text-[10.5px] uppercase tracking-[0.32em] text-foreground/55">
-          The close
-        </p>
-
-        <h2 className="max-w-[16ch] text-balance text-[clamp(2.8rem,7.5vw,6rem)] font-medium leading-[0.98] tracking-[-0.04em] text-foreground">
-          The mission, in{" "}
+        <h2 className="max-w-[15ch] text-balance text-[clamp(2.8rem,8vw,6rem)] font-medium leading-[0.98] tracking-[-0.04em] text-foreground">
+          Step off the{" "}
           <span
-            className="italic font-normal text-accent-soft"
-            style={{ fontFamily: "var(--font-instrument-serif)" }}
+            className="italic font-normal text-accent"
+            style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            one breath.
+            treadmill.
           </span>
         </h2>
 
+        <p className="mt-7 max-w-[56ch] text-balance text-[14px] leading-relaxed text-foreground/70">
+          Very early. The intelligence is proven; the swarm is in development; we&apos;re partnering
+          with farmers now.
+        </p>
+
         {beat >= 1 && (
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <p className="max-w-[44ch] text-balance text-[14px] leading-relaxed text-foreground/80">
-              A short call to action: what you want the room to do next.
+          <div className="mt-9 flex flex-col items-center gap-5">
+            <p
+              className="max-w-[44ch] text-balance text-[clamp(1.1rem,1.9vw,1.45rem)] italic leading-snug text-accent-soft"
+              style={{ fontFamily: "var(--font-fraunces)" }}
+            >
+              If you back founders who choose hard problems, we&apos;d love to talk.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="mailto:speaker@example.com"
-                className="neu-light inline-flex h-11 items-center gap-2 rounded-full px-5 text-[13.5px] font-medium"
-                data-no-advance
-              >
-                speaker@example.com
-              </a>
-            </div>
+            <a
+              href="mailto:filippo.fonseca@yale.edu"
+              className="neu-light inline-flex h-11 items-center gap-2 rounded-full px-5 text-[13.5px] font-medium"
+              data-no-advance
+            >
+              filippo.fonseca@yale.edu
+            </a>
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/45">
+              Filippo Fonseca · Emir Ahmed · David Antwi
+            </p>
           </div>
         )}
       </div>

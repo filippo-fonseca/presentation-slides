@@ -1778,3 +1778,33 @@
     transition: none;
   }
 }
+
+/* ── Deck embeds ──────────────────────────────────────────────
+   The deck (Tailwind tokens, globals.css) reuses these landing
+   components. They reference the persimmon/sprout palette vars,
+   which are scoped to .root, so .deckEmbed re-exposes them for
+   any scene that hosts a landing widget. .swarmDeck neutralizes
+   the hero-absolute positioning so the swarm centers in a scene. */
+.deckEmbed {
+  --persimmon: #e5602c;
+  --persimmon-bright: #ff7a43;
+  --persimmon-glow: #f56a30;
+  --sprout: #b5d33d;
+  --sprout-bright: #c8e25a;
+  --txt: #f4f2e9;
+  --txt-soft: #cdc9bb;
+  --txt-mute: #8c8475;
+  --txt-faint: #565243;
+  --decay: #a98a5e;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+.swarmDeck {
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}

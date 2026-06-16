@@ -3,20 +3,18 @@
 import type { SceneProps } from "../DeckClient";
 import Mark from "../components/Mark";
 
-// Example title scene — single beat, centered cover with the brand mark,
-// status pill, big headline (sans + italic-serif accent), description line,
-// and a "press space to begin" prompt.
+// Scene 1 — cover. Mark centerpiece, "For Also Capital" pill, the full
+// positioning line as the headline (with an italic-serif accent on "open
+// field"), the one-line definition, founder attribution.
+
 export default function SceneCover(_props: SceneProps) {
   void _props;
   return (
     <div className="relative flex h-full w-full items-center justify-center overflow-hidden px-6 sm:px-10">
-      {/* Ambient background glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/2 h-[820px] w-[820px] -translate-x-1/2 -translate-y-1/2 glow-radial blur-3xl"
       />
-
-      {/* Very subtle masked grid */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.022]"
@@ -29,51 +27,48 @@ export default function SceneCover(_props: SceneProps) {
       />
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        {/* Centerpiece mark */}
-        <div className="animate-fade-in delay-200 mb-3 text-accent">
-          <Mark size={140} />
+        <div className="animate-fade-in delay-200 mb-5 text-accent">
+          <Mark size={120} />
         </div>
 
-        {/* Status pill */}
-        <p className="neu-raised-sm animate-fade-up delay-300 mb-6 inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.2em] text-foreground/80">
+        <p className="neu-raised-sm animate-fade-up delay-300 mb-7 inline-flex items-center gap-2 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.2em] text-foreground/80">
           <span className="relative flex size-1.5">
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60" />
-            <span className="relative inline-flex size-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(245,176,106,0.8)]" />
+            <span className="relative inline-flex size-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(229,96,44,0.8)]" />
           </span>
-          Status · pill
+          For Also Capital
         </p>
 
-        {/* Headline */}
-        <h1 className="animate-fade-up delay-500 mx-auto max-w-[17ch] text-balance text-[clamp(2.2rem,5.8vw,4.5rem)] font-medium leading-[0.98] tracking-[-0.035em] text-foreground">
-          The bold{" "}
+        <h1 className="animate-fade-up delay-500 mx-auto max-w-[18ch] text-balance text-[clamp(2rem,5vw,3.7rem)] font-medium leading-[1.0] tracking-[-0.035em] text-foreground">
+          The physically intelligent operating system for the{" "}
           <span
-            className="italic font-normal text-accent-soft"
-            style={{ fontFamily: "var(--font-instrument-serif)" }}
+            className="italic font-normal text-accent"
+            style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            thesis
-          </span>{" "}
-          of the deck.
+            open field.
+          </span>
         </h1>
 
-        <p className="animate-fade-up delay-700 mx-auto mt-3 max-w-[58ch] text-balance text-[clamp(0.92rem,1.15vw,1.075rem)] leading-relaxed text-foreground/80 sm:max-w-[88ch]">
-          A two-line description that frames the rest of the deck without giving away the punchline.
+        <p className="animate-fade-up delay-700 mx-auto mt-5 max-w-[56ch] text-balance text-[clamp(0.95rem,1.3vw,1.15rem)] leading-relaxed text-foreground/75">
+          A crop-agnostic, agentic farm OS, delivered through a swarm of small,
+          chemical-free robots.
         </p>
 
-        {/* Three-word tagline */}
-        <p className="animate-fade-up delay-1000 mt-3 font-mono text-[11px] uppercase tracking-[0.32em] text-foreground/55">
-          <span className="text-foreground/80">First</span>
+        <p className="animate-fade-up delay-1000 mt-8 font-mono text-[10.5px] uppercase tracking-[0.28em] text-foreground/55">
+          <span className="text-foreground/80">Filippo Fonseca</span>
           <span className="mx-2 text-foreground/35">·</span>
-          <span className="text-foreground/80">Second</span>
+          <span className="text-foreground/80">Emir Ahmed</span>
           <span className="mx-2 text-foreground/35">·</span>
-          <span className="text-foreground/80">Third</span>
+          <span className="text-foreground/80">David Antwi</span>
+          <span className="mx-2 text-foreground/35">·</span>
+          <span className="text-foreground/80">Yale · 2026</span>
         </p>
 
-        {/* Press-to-begin */}
-        <div className="animate-fade-up delay-1000 mt-7">
+        <div className="animate-fade-up delay-1000 mt-8">
           <span className="neu-raised-sm inline-flex items-center gap-2 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-[0.24em] text-foreground/85">
             <span className="relative flex size-1.5">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(245,176,106,0.8)]" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(229,96,44,0.8)]" />
             </span>
             Press space to begin
           </span>
