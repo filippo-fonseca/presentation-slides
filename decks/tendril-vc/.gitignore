@@ -1,0 +1,31 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next
+/.next/
+/out/
+next-env.d.ts
+
+# build
+/build
+/dist
+
+# misc
+.DS_Store
+*.pem
+.vercel
+.env*.local
+.env
+
+# typescript
+*.tsbuildinfo
+
+# editor
+.idea/
+.vscode/
+
+# raw, un-curated assets — keep curated copies under /public/
+/raw-images/
+/reference/
