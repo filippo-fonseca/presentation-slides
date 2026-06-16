@@ -489,7 +489,7 @@ export default function Home() {
                 with the grower to decide, monitor, and make the changes the field needs.
                 And because there are real robots in the field,{" "}
                 <em className={styles.italGreen}>execution isn&apos;t abstract</em>: the
-                system only commits to what it can deploy, then deploys it.
+                system only commits to what it can deploy, then actuates it.
               </p>
             </Reveal>
             <Reveal delay={140}>

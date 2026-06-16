@@ -310,12 +310,12 @@
   pointer-events: none;
   background:
     radial-gradient(
-      125% 105% at 16% 96%,
-      rgba(10, 11, 7, 0.95),
-      rgba(10, 11, 7, 0.7) 40%,
-      transparent 74%
+      130% 120% at 18% 74%,
+      rgba(10, 11, 7, 0.96),
+      rgba(10, 11, 7, 0.78) 44%,
+      transparent 78%
     ),
-    linear-gradient(0deg, rgba(10, 11, 7, 0.6) 0%, transparent 58%);
+    linear-gradient(0deg, rgba(10, 11, 7, 0.66) 0%, rgba(10, 11, 7, 0.32) 64%, transparent 100%);
 }
 .heroEyebrow {
   display: inline-flex;
@@ -345,7 +345,7 @@
   letter-spacing: -0.025em;
   max-width: 26ch;
   margin-bottom: 22px;
-  text-shadow: 0 2px 30px rgba(10, 11, 7, 0.6);
+  text-shadow: 0 2px 16px rgba(10, 11, 7, 0.92), 0 0 54px rgba(10, 11, 7, 0.6);
 }
 .heroSub {
   font-size: clamp(15px, 1.55vw, 18px);
