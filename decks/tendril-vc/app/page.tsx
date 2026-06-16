@@ -142,7 +142,7 @@ export default function Home() {
             The .farm file
           </a>
           <a className={styles.navLink} href="#moat">
-            The moat
+            The funnel
           </a>
           <Link className={styles.navCta} href="/deck">
             Read the brief <Arrow />
@@ -161,11 +161,8 @@ export default function Home() {
         <SwarmOverlay />
 
         <div className={styles.heroContent}>
-          <div className={styles.heroEyebrow}>
-            <span>Physically intelligent · agentic · chemical-free</span>
-          </div>
           <h1 className={styles.heroTitle}>
-            The operating system for the{" "}
+            The physically intelligent operating system for the{" "}
             <em className={styles.ital}>open field</em>.
           </h1>
           <p className={styles.heroSub}>
@@ -175,7 +172,13 @@ export default function Home() {
             <span className={styles.heroEmph}>
               delivered through a swarm of small, chemical-free robots
             </span>
-            . Built with the family farms that are most of American agriculture.
+            . Built with and for the small family farms that are most of American
+            agriculture.
+          </p>
+          <p className={styles.heroTraits}>
+            Our system is <span className={styles.traitOn}>physically intelligent</span>.{" "}
+            <span className={styles.traitOn}>Agentic</span>. Oh, and{" "}
+            <span className={styles.traitGreen}>chemical-free</span>.
           </p>
           <div className={styles.heroCtas}>
             <Link className={styles.btnPrimary} href="/deck">
@@ -184,6 +187,33 @@ export default function Home() {
             <a className={styles.btnGhost} href="#system">
               See the system
             </a>
+            <div className={styles.heroAside}>
+              <span className={styles.heroAsideText}>
+                We&apos;re not afraid to tackle big problems.
+              </span>
+              <svg
+                className={styles.heroAsideArrow}
+                width="46"
+                height="58"
+                viewBox="0 0 46 58"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 7 C 33 9, 43 26, 31 46"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M22 39 L 31 48 L 40 39"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
           <div className={styles.yaleCredit}>
             <span className={styles.yaleDot} />
@@ -353,11 +383,11 @@ export default function Home() {
         <div className={styles.renderBandInner}>
           <Reveal>
             <span className={styles.renderTag}>Concept render · hardware in development</span>
-            <p className={styles.renderText}>The hands of the system.</p>
+            <p className={styles.renderText}>The hands of the system:</p>
             <p className={styles.renderSub}>
-              A coordinated team of small, modular, chemical-free robots, swappable by
-              task and directed by the agentic core. The tendrils of the operating
-              system, in the field.
+              A coordinated team of <strong>small, modular, chemical-free robots</strong>,
+              swappable by task and directed by <strong>the agentic core</strong>. The{" "}
+              <strong>tendrils of the operating system</strong>, in the field.
             </p>
           </Reveal>
         </div>
@@ -444,24 +474,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE MOAT */}
+      {/* THE FUNNEL — SIGNAL TO EXECUTION */}
       <section className={`${styles.section} ${styles.intel}`} id="moat">
         <div className={styles.intelGlow} />
         <div className={styles.wrap}>
           <div className={styles.intelInner}>
             <Reveal>
               <div className={`${styles.kicker} ${styles.kickerCenter}`}>
-                <span>The moat</span>
+                <span>The whole funnel</span>
               </div>
               <p className={styles.intelText}>
-                Hardware gets copied. A field that <em className={styles.italGreen}>remembers</em>{" "}
-                does not. Every day writes another <b>.farm</b> file, and the stack
-                becomes a record of the land no incumbent can rebuild. The robots are
-                the hands. The memory is the company.
+                The farm&apos;s many complex, multi-dimensional inputs synthesize into one
+                cohesive <b>.farm</b> file the agentic layer can interpret, then it works
+                with the grower to decide, monitor, and make the changes the field needs.
+                And because there are real robots in the field,{" "}
+                <em className={styles.italGreen}>execution isn&apos;t abstract</em>: the
+                system only commits to what it can deploy, then deploys it.
               </p>
             </Reveal>
             <Reveal delay={140}>
-              <p className={styles.intelPunch}>A field that remembers.</p>
+              <p className={styles.intelPunch}>Execution, not advice.</p>
             </Reveal>
           </div>
         </div>
@@ -611,7 +643,7 @@ export default function Home() {
             <div className={styles.footerBrand}>
               <Mark size={22} />
               Tendril
-              <span className={styles.footerTag}>The operating system for the open field.</span>
+              <span className={styles.footerTag}>A physically intelligent farm operating system.</span>
             </div>
             <div className={styles.footerLinks}>
               <Link href="/deck">Brief</Link>

@@ -125,9 +125,9 @@ export default function SwarmOverlay({ className = "" }: { className?: string })
     <div className={`${styles.swarm} ${className}`} aria-hidden="true">
       <svg
         className={styles.swarmSvg}
-        viewBox="0 0 1200 520"
+        viewBox="0 0 1200 320"
         fill="none"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMin meet"
       >
         {NODES.map((n, i) => {
           const d = tendril(n);
