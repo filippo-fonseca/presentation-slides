@@ -127,6 +127,10 @@
   letter-spacing: -0.01em;
   font-weight: 600;
   color: var(--txt);
+  text-shadow: 0 1px 10px rgba(10, 11, 7, 0.75);
+}
+.navScrolled .brand {
+  text-shadow: none;
 }
 .brandMark {
   display: block;
@@ -139,12 +143,17 @@
 }
 .navLink {
   font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0.01em;
-  color: var(--txt-soft);
+  color: var(--txt);
+  text-shadow: 0 1px 10px rgba(10, 11, 7, 0.75);
   transition: color 0.2s ease;
 }
 .navLink:hover {
-  color: var(--txt);
+  color: var(--persimmon-bright);
+}
+.navScrolled .navLink {
+  text-shadow: none;
 }
 .navCta {
   display: inline-flex;
@@ -207,7 +216,7 @@
     radial-gradient(120% 90% at 16% 10%, rgba(245, 106, 48, 0.3), transparent 56%),
     radial-gradient(110% 80% at 88% 18%, rgba(181, 211, 61, 0.14), transparent 54%),
     radial-gradient(150% 120% at 50% 116%, rgba(229, 96, 44, 0.34), transparent 62%),
-    linear-gradient(180deg, rgba(12, 13, 8, 0.08) 0%, rgba(10, 11, 7, 0.24) 48%, rgba(10, 11, 7, 0.8) 100%);
+    linear-gradient(180deg, rgba(12, 13, 8, 0.2) 0%, rgba(10, 11, 7, 0.44) 48%, rgba(10, 11, 7, 0.86) 100%);
   animation: auroraDrift 20s ease-in-out infinite alternate;
 }
 .aurora::before {
@@ -359,15 +368,17 @@
 }
 /* Yale credential — a Yale-blue pill with a pulsing dot */
 .yaleCredit {
-  display: inline-flex;
-  align-items: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-top: 30px;
-  max-width: 800px;
-  padding: 12px 22px;
+  width: 100%;
+  padding: 13px 24px;
   border-radius: 16px;
   font-size: 13.5px;
   line-height: 1.5;
+  text-align: center;
   color: var(--txt);
   background: rgba(22, 44, 100, 0.34);
   border: 1px solid rgba(98, 138, 230, 0.4);
@@ -383,7 +394,6 @@
   position: relative;
   width: 8px;
   height: 8px;
-  margin-top: 6px;
   border-radius: 50%;
   background: #6a92ff;
   box-shadow: 0 0 11px rgba(106, 146, 255, 0.95);
@@ -467,7 +477,7 @@
 .swarm {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
 }
 .swarmSvg {
@@ -479,11 +489,11 @@
 .tendril {
   fill: none;
   stroke: var(--persimmon-bright);
-  stroke-width: 1.2;
-  opacity: 0.42;
+  stroke-width: 1.4;
+  opacity: 0.6;
   stroke-dasharray: 1700;
   stroke-dashoffset: 1700;
-  filter: drop-shadow(0 0 4px rgba(255, 122, 67, 0.55));
+  filter: drop-shadow(0 0 5px rgba(255, 122, 67, 0.7));
   animation: swarmDraw 1.5s var(--ease) forwards;
 }
 @keyframes swarmDraw {

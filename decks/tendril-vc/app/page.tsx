@@ -82,7 +82,7 @@ const BUILD_WITH = [
   {
     tag: "Specialty",
     title: "Specialty farms",
-    img: "/images/grower.jpg",
+    img: "/images/farmer-2.jpg",
     body: "Where labor runs 50 to 70 percent of cost and almost nothing is automated. The work is repetitive, skilled, and unfillable. The intelligence carries it.",
   },
   {
@@ -237,7 +237,7 @@ export default function Home() {
             <Reveal>
               <div
                 className={styles.hookImg}
-                style={{ backgroundImage: "url(/images/grower.jpg)" }}
+                style={{ backgroundImage: "url(/images/farmer-4.jpg)" }}
               />
             </Reveal>
             <Reveal delay={120}>

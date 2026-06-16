@@ -20,10 +20,10 @@ const NODES: Node[] = [
   { x: 330, y: 150, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
   { x: 858, y: 86, type: "map", label: "3D map", dir: "in" },
   { x: 1004, y: 150, type: "scout", label: "Scout", dir: "out", robot: true },
-  { x: 1118, y: 240, type: "weather", label: "Weather", dir: "in" },
-  { x: 250, y: 250, type: "soil", label: "Soil probe", dir: "in" },
-  { x: 560, y: 250, type: "grower", label: "Grower", dir: "in" },
-  { x: 772, y: 250, type: "more", label: "+ more", dir: "in" },
+  { x: 1126, y: 214, type: "weather", label: "Weather", dir: "in" },
+  { x: 250, y: 212, type: "soil", label: "Soil probe", dir: "in" },
+  { x: 560, y: 216, type: "grower", label: "Grower", dir: "in" },
+  { x: 778, y: 210, type: "more", label: "+ more", dir: "in" },
 ];
 
 const pillW = (label: string) => label.length * 6.2 + 18;
