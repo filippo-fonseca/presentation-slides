@@ -1,0 +1,182 @@
+import styles from "../landing.module.css";
+
+// The agentic core, fed by a diverse swarm of input sources and reaching
+// out to a team of small modular robots. Data flows in (green), commands
+// flow out (persimmon). Decorative; sits behind the hero copy.
+const CENTER = { x: 648, y: 162 };
+
+type Node = {
+  x: number;
+  y: number;
+  type: "weeder" | "scout" | "drone" | "satellite" | "weather" | "soil" | "grower" | "more";
+  label: string;
+  dir: "in" | "out";
+  robot?: boolean;
+  live?: boolean;
+};
+
+const NODES: Node[] = [
+  { x: 432, y: 84, type: "drone", label: "Drone", dir: "in" },
+  { x: 884, y: 76, type: "satellite", label: "Satellite", dir: "in" },
+  { x: 1088, y: 150, type: "weather", label: "Weather", dir: "in" },
+  { x: 236, y: 196, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
+  { x: 304, y: 250, type: "soil", label: "Soil probe", dir: "in" },
+  { x: 1016, y: 250, type: "scout", label: "Scout", dir: "out", robot: true },
+  { x: 1150, y: 262, type: "grower", label: "Grower", dir: "in" },
+  { x: 742, y: 246, type: "more", label: "+ more", dir: "in" },
+];
+
+function tendril(n: Node) {
+  const mx = (CENTER.x + n.x) / 2;
+  const my = (CENTER.y + n.y) / 2 - 42;
+  return `M${CENTER.x} ${CENTER.y} Q${mx} ${my} ${n.x} ${n.y}`;
+}
+
+function Icon({ n, color }: { n: Node; color: string }) {
+  const { x, y, type } = n;
+  const s = { stroke: color, strokeWidth: 1.3, fill: "none" } as const;
+  const dark = "#11140d";
+  switch (type) {
+    case "weeder":
+      return (
+        <>
+          <rect x={x - 9} y={y - 5} width="18" height="11" rx="3" fill={dark} stroke={color} strokeWidth="1.3" />
+          <circle cx={x} cy={y} r="1.6" fill={color} />
+          <line x1={x} y1={y - 5} x2={x} y2={y - 9} {...s} />
+          <circle cx={x} cy={y - 10} r="1.4" fill={color} />
+          <circle cx={x - 6} cy={y + 6} r="2.1" {...s} strokeWidth="1.1" />
+          <circle cx={x + 6} cy={y + 6} r="2.1" {...s} strokeWidth="1.1" />
+        </>
+      );
+    case "scout":
+      return (
+        <>
+          <rect x={x - 8} y={y - 3} width="16" height="9" rx="2.5" fill={dark} stroke={color} strokeWidth="1.3" />
+          <circle cx={x} cy={y - 6} r="3" fill={dark} stroke={color} strokeWidth="1.2" />
+          <circle cx={x} cy={y - 6} r="1" fill={color} />
+          <circle cx={x - 5} cy={y + 6} r="1.9" {...s} strokeWidth="1.1" />
+          <circle cx={x + 5} cy={y + 6} r="1.9" {...s} strokeWidth="1.1" />
+        </>
+      );
+    case "drone":
+      return (
+        <>
+          <line x1={x - 8} y1={y - 8} x2={x + 8} y2={y + 8} {...s} strokeWidth="1.1" />
+          <line x1={x + 8} y1={y - 8} x2={x - 8} y2={y + 8} {...s} strokeWidth="1.1" />
+          <circle cx={x - 8} cy={y - 8} r="3" {...s} strokeWidth="1.1" />
+          <circle cx={x + 8} cy={y - 8} r="3" {...s} strokeWidth="1.1" />
+          <circle cx={x - 8} cy={y + 8} r="3" {...s} strokeWidth="1.1" />
+          <circle cx={x + 8} cy={y + 8} r="3" {...s} strokeWidth="1.1" />
+          <rect x={x - 3} y={y - 3} width="6" height="6" rx="1.5" fill={dark} stroke={color} strokeWidth="1.2" />
+        </>
+      );
+    case "satellite":
+      return (
+        <>
+          <rect x={x - 4} y={y - 4} width="8" height="8" rx="1.5" fill={dark} stroke={color} strokeWidth="1.2" />
+          <rect x={x - 13} y={y - 3} width="6" height="6" {...s} strokeWidth="1.1" />
+          <rect x={x + 7} y={y - 3} width="6" height="6" {...s} strokeWidth="1.1" />
+          <line x1={x} y1={y - 4} x2={x + 4} y2={y - 9} {...s} strokeWidth="1.1" />
+          <circle cx={x + 4} cy={y - 9} r="1.4" fill={color} />
+        </>
+      );
+    case "weather":
+      return (
+        <>
+          <circle cx={x - 4} cy={y} r="3.2" fill={dark} stroke={color} strokeWidth="1.1" />
+          <circle cx={x + 1} cy={y - 2.5} r="4" fill={dark} stroke={color} strokeWidth="1.1" />
+          <circle cx={x + 5} cy={y} r="3" fill={dark} stroke={color} strokeWidth="1.1" />
+          <line x1={x - 6} y1={y + 3} x2={x + 7} y2={y + 3} {...s} strokeWidth="1.2" />
+          <line x1={x - 2} y1={y + 6} x2={x - 3} y2={y + 9} {...s} strokeWidth="1.1" />
+          <line x1={x + 3} y1={y + 6} x2={x + 2} y2={y + 9} {...s} strokeWidth="1.1" />
+        </>
+      );
+    case "soil":
+      return (
+        <>
+          <line x1={x} y1={y - 8} x2={x} y2={y + 6} {...s} strokeWidth="1.4" />
+          <circle cx={x} cy={y - 8} r="1.6" fill={color} />
+          <line x1={x - 3} y1={y - 1} x2={x + 3} y2={y - 1} {...s} strokeWidth="1.1" />
+          <path d={`M${x - 8} ${y + 6} Q${x} ${y + 10} ${x + 8} ${y + 6}`} {...s} strokeWidth="1.1" />
+        </>
+      );
+    case "grower":
+      return (
+        <>
+          <circle cx={x} cy={y - 5} r="3" fill={dark} stroke={color} strokeWidth="1.2" />
+          <path d={`M${x - 6} ${y + 7} Q${x} ${y - 1} ${x + 6} ${y + 7}`} {...s} strokeWidth="1.3" />
+        </>
+      );
+    case "more":
+      return (
+        <>
+          <circle cx={x} cy={y} r="9" fill={dark} stroke={color} strokeWidth="1.2" strokeDasharray="3 4" />
+          <line x1={x - 3.5} y1={y} x2={x + 3.5} y2={y} {...s} strokeWidth="1.3" />
+          <line x1={x} y1={y - 3.5} x2={x} y2={y + 3.5} {...s} strokeWidth="1.3" />
+        </>
+      );
+  }
+}
+
+export default function SwarmOverlay({ className = "" }: { className?: string }) {
+  return (
+    <div className={`${styles.swarm} ${className}`} aria-hidden="true">
+      <svg
+        className={styles.swarmSvg}
+        viewBox="0 0 1200 520"
+        fill="none"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        {NODES.map((n, i) => {
+          const d = tendril(n);
+          const isIn = n.dir === "in";
+          return (
+            <g key={`t${i}`}>
+              <path
+                className={styles.tendril}
+                d={d}
+                style={{ animationDelay: `${0.3 + i * 0.11}s` }}
+              />
+              <circle
+                className={isIn ? styles.tokenIn : styles.token}
+                r="2.6"
+                style={{ offsetPath: `path("${d}")`, animationDelay: `${1.7 + i * 0.2}s` }}
+              />
+            </g>
+          );
+        })}
+
+        {/* central core — the agentic OS */}
+        <circle className={styles.coreGlow} cx={CENTER.x} cy={CENTER.y} r="30" />
+        <circle className={styles.coreRing} cx={CENTER.x} cy={CENTER.y} r="16" />
+        <circle className={styles.core} cx={CENTER.x} cy={CENTER.y} r="5.5" />
+
+        {/* nodes */}
+        {NODES.map((n, i) => {
+          const color = n.live ? "var(--sprout-bright)" : "var(--persimmon-bright)";
+          return (
+            <g
+              key={`n${i}`}
+              className={styles.robot}
+              style={{ animationDelay: `${1.2 + i * 0.11}s` }}
+            >
+              {n.robot && (
+                <circle
+                  className={styles.robotScan}
+                  cx={n.x}
+                  cy={n.y}
+                  r="11"
+                  style={{ animationDelay: `${2 + i * 0.2}s`, stroke: color }}
+                />
+              )}
+              <Icon n={n} color={color} />
+              <text className={styles.nodeLabel} x={n.x} y={n.y + 24}>
+                {n.label}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+}

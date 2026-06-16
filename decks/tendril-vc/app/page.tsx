@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./landing.module.css";
 import Reveal from "./components/Reveal";
 import Mark from "./components/Mark";
 import YaleMark from "./components/YaleMark";
-import FieldInstrument from "./components/FieldInstrument";
 import FarmFile from "./components/FarmFile";
+import SwarmOverlay from "./components/SwarmOverlay";
+import ScrollProgress from "./components/ScrollProgress";
 
 const Arrow = () => (
   <svg
@@ -94,6 +95,7 @@ const BUILD_WITH = [
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const heroPhotoRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -102,8 +104,30 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Hero photo parallax: drift the field down as you scroll (rAF, no re-render).
+  useEffect(() => {
+    const el = heroPhotoRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const y = Math.min(window.scrollY * 0.16, 150);
+        el.style.transform = `scale(1.12) translateY(${y}px)`;
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
     <div className={styles.root}>
+      <ScrollProgress />
       {/* NAV */}
       <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
         <a className={styles.brand} href="#top">
@@ -129,12 +153,12 @@ export default function Home() {
       {/* HERO */}
       <header className={styles.hero} id="top">
         <div className={styles.heroMedia}>
-          <div className={styles.heroPhoto} />
+          <div ref={heroPhotoRef} className={styles.heroPhoto} />
           <div className={styles.aurora} />
           <div className={styles.contours} />
         </div>
         <div className={styles.heroScrim} />
-        <FieldInstrument className={styles.heroInstrument} />
+        <SwarmOverlay />
 
         <div className={styles.heroContent}>
           <div className={styles.heroEyebrow}>
@@ -145,10 +169,13 @@ export default function Home() {
             <em className={styles.ital}>open field</em>.
           </h1>
           <p className={styles.heroSub}>
-            Not a dashboard, not a single-task tool. One cohesive system that runs a
-            farm&apos;s daily work and its long-range plan, delivered through a swarm of
-            small, chemical-free robots, and built with the family farms that are most
-            of American agriculture.
+            Not a dashboard, not a single-task tool.{" "}
+            <span className={styles.heroEmph}>One cohesive system</span> that runs a
+            farm&apos;s daily work and its long-range plan,{" "}
+            <span className={styles.heroEmph}>
+              delivered through a swarm of small, chemical-free robots
+            </span>
+            . Built with the family farms that are most of American agriculture.
           </p>
           <div className={styles.heroCtas}>
             <Link className={styles.btnPrimary} href="/deck">
@@ -160,12 +187,32 @@ export default function Home() {
           </div>
           <div className={styles.yaleCredit}>
             <span className={styles.yaleDot} />
-            Built by engineers and researchers from
-            <YaleMark height={12} />
+            <span>
+              Built by engineers and researchers from <YaleMark height={12} />, working
+              on food security and chemical-free farming, to feed a growing world
+              without poisoning the land that feeds it.
+            </span>
           </div>
-          <span className={styles.yaleSubnote}>
-            Working on food security and chemical-free farming.
-          </span>
+        </div>
+
+        <div className={styles.scrollCue}>
+          Scroll
+          <svg
+            className={styles.scrollCueArrow}
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M8 3v10M4 9l4 4 4-4"
+              stroke="currentColor"
+              strokeWidth="1.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </div>
       </header>
 
@@ -188,15 +235,15 @@ export default function Home() {
         <div className={styles.wrap}>
           <div className={styles.hookGrid}>
             <Reveal>
+              <div
+                className={styles.hookImg}
+                style={{ backgroundImage: "url(/images/grower.jpg)" }}
+              />
+            </Reveal>
+            <Reveal delay={120}>
               <div className={styles.kicker}>
                 <span>The premise</span>
               </div>
-              <p className={styles.hookAside}>
-                The signal a field gives off has always existed. Acting on it has
-                always required a person walking the rows.
-              </p>
-            </Reveal>
-            <Reveal delay={120}>
               <p className={styles.hookText}>
                 Every acre already encodes what it needs: where weeds push, where the
                 soil tires, where yield leaks.{" "}
@@ -295,6 +342,22 @@ export default function Home() {
               Built on edge vision, persistent spatial memory, and an agentic decision
               layer that coordinates a modular fleet. The same intelligence stack,
               repointed from the living room to the field.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* CONCEPT RENDER — THE SWARM */}
+      <section className={styles.renderBand}>
+        <div className={styles.renderBandBg} />
+        <div className={styles.renderBandInner}>
+          <Reveal>
+            <span className={styles.renderTag}>Concept render · hardware in development</span>
+            <p className={styles.renderText}>The hands of the system.</p>
+            <p className={styles.renderSub}>
+              A coordinated team of small, modular, chemical-free robots, swappable by
+              task and directed by the agentic core. The tendrils of the operating
+              system, in the field.
             </p>
           </Reveal>
         </div>
