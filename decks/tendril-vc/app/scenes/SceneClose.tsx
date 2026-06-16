@@ -65,6 +65,11 @@ export default function SceneClose(_props: SceneProps) {
           </span>
         </h2>
 
+        <p className="max-w-[58ch] text-balance text-[clamp(0.98rem,1.5vw,1.18rem)] leading-relaxed text-foreground/70">
+          Off the chemical treadmill that thins soil and breeds resistance, and onto a field that
+          perceives, remembers, and acts, plant by plant.
+        </p>
+
         <p className="max-w-[52ch] text-balance text-[clamp(1.1rem,1.9vw,1.4rem)] leading-relaxed text-foreground/85">
           We are looking to raise a pre-seed round and are actively in development.
         </p>
@@ -82,6 +87,10 @@ export default function SceneClose(_props: SceneProps) {
             className="neu-light inline-flex h-11 items-center gap-2 rounded-full px-5 text-[13.5px] font-medium"
             data-no-advance
           >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
             filippo.fonseca@yale.edu
           </a>
           <Link
@@ -89,7 +98,7 @@ export default function SceneClose(_props: SceneProps) {
             data-no-advance
             className="group neu-lit inline-flex h-11 items-center gap-2 rounded-full px-5 text-[13.5px] font-medium text-foreground"
           >
-            See the full site
+            See our website
             <svg className="nudge-x" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

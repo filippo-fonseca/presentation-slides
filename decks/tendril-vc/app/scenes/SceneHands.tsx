@@ -83,20 +83,27 @@ export default function SceneHands({ beat }: SceneProps) {
         </ul>
 
         <div
-          className={`flex max-w-[56ch] flex-col gap-3 transition-all duration-500 ${
+          className={`flex max-w-[72ch] flex-col gap-3 transition-all duration-500 ${
             beat >= 1 ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0"
           }`}
           aria-hidden={beat < 1}
         >
-          <p className="text-balance text-[clamp(1.2rem,2.2vw,1.7rem)] leading-snug text-foreground">
-            A dashboard tells you a weed is there.{" "}
-            <span className="italic text-accent" style={{ fontFamily: "var(--font-fraunces)" }}>
-              Our hand pulls it.
-            </span>
+          <p className="text-balance text-[clamp(0.95rem,1.5vw,1.15rem)] leading-relaxed text-foreground/85">
+            The MVP detects weeds and autonomously actuates their removal. Farmers get a live,
+            constantly updating 3D map of the farm with health metrics across every block, and the
+            robots gain new capabilities in future iterations.
           </p>
-          <p className="text-[12px] leading-relaxed text-foreground/65">
-            v1 leads with weeding and perception. The other modules are the near-term roadmap on
-            the same proven loop. Hardware in development.
+          <span className="neu-sage mx-auto inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.2em] text-accent-soft backdrop-blur-md">
+            <span className="size-1.5 rounded-full bg-accent-soft shadow-[0_0_8px_rgba(181,211,61,0.8)]" />
+            Jarvis · the farm&apos;s agent
+          </span>
+          <p
+            className="text-balance text-[clamp(1.05rem,1.9vw,1.4rem)] italic leading-snug text-accent"
+            style={{ fontFamily: "var(--font-fraunces)" }}
+          >
+            All managed through Jarvis, the farm&apos;s personal agent: it reads complex input
+            sources, decides what to do with the farmer, and deploys one or many robots to actuate
+            on it.
           </p>
         </div>
       </div>

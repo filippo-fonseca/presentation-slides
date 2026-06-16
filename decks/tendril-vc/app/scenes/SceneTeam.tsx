@@ -13,14 +13,14 @@ const FOUNDERS = [
     name: "Filippo Fonseca",
     photo: "/people/filippo.png",
     role: "Hardware, systems & spatial AI",
-    bio: "Mechanical Eng. (ABET) + EECS. Robotics, spatial AI, and humanist hardware, built across Stanford, Harvard Medical School, and Yale.",
+    bio: "Mechanical Eng. (ABET) + EECS. President of Yale Robotics. Built deep cardiac technology at Harvard Medical School, collaborated with Stanford researchers on geospatial robotics, and shipped at top VC-backed startups.",
     linkedin: "https://www.linkedin.com/in/filippo-fonseca/",
   },
   {
     name: "Emir Ahmed",
     photo: "/people/emir.jpeg",
     role: "Computer vision & architecture",
-    bio: "EECS. Robotics and ML researcher building human-centered systems; Robotics Lead on the Yale Rover Project.",
+    bio: "EECS. Robotics Lead for Yale Robotics. ML researcher building human-centered robotic systems.",
     linkedin: "https://www.linkedin.com/in/emir-ahmed-6016422a1/",
   },
   {
@@ -38,25 +38,33 @@ const ISPY_COVERAGE =
 // Stanford + Yale lockup, on a light chip so both read on the dark card.
 function ResearchMarks() {
   return (
-    <span className="inline-flex items-center gap-2 rounded-md bg-[#f4f2e9] px-2 py-1">
+    <span className="inline-flex w-fit items-center gap-3 rounded-lg bg-[#f4f2e9] px-3 py-2">
       <Image
         src="/logos/stanford-logo.png"
-        alt="Stanford"
-        width={18}
-        height={18}
+        alt="Stanford University"
+        width={78}
+        height={26}
         unoptimized
-        className="h-[18px] w-auto"
+        className="h-[24px] w-auto"
       />
-      <span className="h-3.5 w-px bg-black/15" />
+      <span className="h-5 w-px bg-black/15" />
       <Image
         src="/logos/yale-mark.png"
         alt="Yale"
-        width={27}
-        height={18}
+        width={33}
+        height={22}
         unoptimized
-        className="h-[13px] w-auto"
+        className="h-[22px] w-auto"
       />
     </span>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm6 0h3.8v1.64h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.09V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21H9V9z" />
+    </svg>
   );
 }
 
@@ -106,12 +114,11 @@ export default function SceneTeam({ beat }: SceneProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-no-advance
-                className="mt-auto inline-flex w-fit items-center gap-1 font-mono text-[10px] uppercase tracking-[0.16em] text-foreground/55 transition-colors hover:text-accent"
+                aria-label={`${f.name} on LinkedIn`}
+                className="mt-auto inline-flex w-fit items-center gap-1.5 text-foreground/55 transition-colors hover:text-accent"
               >
-                LinkedIn
-                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <LinkedInIcon />
+                <span className="font-mono text-[10px] uppercase tracking-[0.16em]">LinkedIn</span>
               </a>
             </li>
           ))}
@@ -130,14 +137,12 @@ export default function SceneTeam({ beat }: SceneProps) {
               target="_blank"
               rel="noopener noreferrer"
               data-no-advance
-              className="neu-sage flex h-full flex-col gap-2 rounded-2xl p-4 text-left transition-colors hover:border-accent-soft"
+              className="neu-sage flex h-full flex-col gap-2.5 rounded-2xl p-4 text-left transition-colors hover:border-accent-soft"
             >
-              <span className="flex items-center justify-between">
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-soft">
-                  Spatial-MemER
-                </span>
-                <ResearchMarks />
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent-soft">
+                Spatial-MemER
               </span>
+              <ResearchMarks />
               <span className="text-[12px] leading-snug text-foreground/85">
                 Persistent spatial memory, built with Stanford researchers. The brain remembers the
                 field.

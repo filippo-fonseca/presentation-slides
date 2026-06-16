@@ -24,10 +24,34 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tendrilrobotics.xyz"),
   title: { default: THEME.title, template: `%s · ${THEME.shortTitle}` },
   description: THEME.description,
   authors: THEME.authors,
+  applicationName: THEME.shortTitle,
+  keywords: [
+    "Tendril",
+    "agriculture",
+    "farm operating system",
+    "agentic AI",
+    "agricultural robotics",
+    "chemical-free farming",
+    "precision agriculture",
+  ],
   robots: { index: false, follow: false },
+  openGraph: {
+    title: THEME.title,
+    description: THEME.description,
+    siteName: THEME.shortTitle,
+    type: "website",
+    images: [{ url: "/images/field-hero.jpg", alt: "Tendril — the operating system for the open field" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: THEME.title,
+    description: THEME.description,
+    images: ["/images/field-hero.jpg"],
+  },
 };
 
 export const viewport: Viewport = {

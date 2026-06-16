@@ -46,8 +46,8 @@ export default function SceneProblem({ beat }: SceneProps) {
 
         <p className="max-w-[64ch] text-balance text-[clamp(1rem,1.7vw,1.25rem)] leading-relaxed text-foreground/85">
           Growers spray more every season, on a calendar, across acres{" "}
-          <span className="font-semibold text-foreground">no one ever sees plant by plant</span>, so
-          resistance compounds, soil thins, and inputs keep climbing.
+          <span className="font-semibold text-foreground">no one ever sees plant by plant</span>.
+          Resistance compounds while soil thins and inputs keep climbing.
         </p>
 
         <p

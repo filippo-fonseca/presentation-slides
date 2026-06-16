@@ -31,7 +31,8 @@ export default function SceneFarmFile({ beat }: SceneProps) {
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
             one file.
-          </span>
+          </span>{" "}
+          It&apos;s that simple.
         </h2>
 
         <div className="grid w-full grid-cols-1 items-center gap-6 lg:grid-cols-[1.05fr_0.95fr]">
