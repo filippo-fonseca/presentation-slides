@@ -218,7 +218,7 @@ export default function Home() {
           <div className={styles.yaleCredit}>
             <span className={styles.yaleDot} />
             <span>
-              Built by engineers and researchers from <YaleMark height={12} /> working on
+              In dev by engineers and researchers from <YaleMark height={12} /> working on
               food security and chemical-free farming to feed a growing world without
               taking more of its land.
             </span>
@@ -507,7 +507,9 @@ export default function Home() {
               <span>Who we build with</span>
             </div>
             <h2 className={styles.h2}>
-              Built <em className={styles.ital}>with</em> growers, not for them.
+              Built <em className={styles.ital}>with</em> growers,
+              <br />
+              not for them.
             </h2>
           </Reveal>
           <Reveal delay={80}>

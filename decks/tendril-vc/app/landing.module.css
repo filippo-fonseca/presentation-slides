@@ -519,9 +519,10 @@
 /* ── SWARM OVERLAY (hero) ─────────────────────────────────── */
 .swarm {
   position: absolute;
-  top: 90px;
-  left: 0;
-  right: 0;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, 88vw);
   z-index: 2;
   pointer-events: none;
 }
@@ -674,8 +675,8 @@
    counter-rotates about its own point so icons/labels stay upright */
 .orbit {
   transform-box: view-box;
-  transform-origin: 648px 162px;
-  animation: orbitSpin 120s linear 2.6s infinite;
+  transform-origin: 320px 186px;
+  animation: orbitSpin 22s linear 1.8s infinite;
 }
 @keyframes orbitSpin {
   to {
@@ -684,7 +685,7 @@
 }
 .orbitNode {
   transform-box: view-box;
-  animation: orbitSpinRev 120s linear 2.6s infinite;
+  animation: orbitSpinRev 22s linear 1.8s infinite;
 }
 @keyframes orbitSpinRev {
   to {

@@ -3,7 +3,7 @@ import styles from "../landing.module.css";
 // The agentic core, fed by a diverse swarm of input sources and reaching
 // out to a team of small modular robots. Data flows in (green), commands
 // flow out (persimmon). Decorative; sits behind the hero copy.
-const CENTER = { x: 648, y: 162 };
+const CENTER = { x: 320, y: 186 };
 
 type Node = {
   x: number;
@@ -15,23 +15,23 @@ type Node = {
   live?: boolean;
 };
 
+// Even ring around the core (uniform leg length) so the whole cluster
+// stays inside the square canvas through a full revolution.
 const NODES: Node[] = [
-  { x: 470, y: 92, type: "cam", label: "Cameras", dir: "in" },
-  { x: 330, y: 150, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
-  { x: 858, y: 86, type: "map", label: "3D map", dir: "in" },
-  { x: 1004, y: 150, type: "scout", label: "Scout", dir: "out", robot: true },
-  { x: 1126, y: 214, type: "weather", label: "Weather", dir: "in" },
-  { x: 250, y: 212, type: "soil", label: "Soil probe", dir: "in" },
-  { x: 560, y: 216, type: "grower", label: "Grower", dir: "in" },
-  { x: 778, y: 210, type: "more", label: "+ more", dir: "in" },
+  { x: 320, y: 40, type: "cam", label: "Cameras", dir: "in" },
+  { x: 423, y: 83, type: "map", label: "3D map", dir: "in" },
+  { x: 466, y: 186, type: "scout", label: "Scout", dir: "out", robot: true },
+  { x: 423, y: 289, type: "weather", label: "Weather", dir: "in" },
+  { x: 320, y: 332, type: "grower", label: "Grower", dir: "in" },
+  { x: 217, y: 289, type: "more", label: "+ more", dir: "in" },
+  { x: 174, y: 186, type: "soil", label: "Soil probe", dir: "in" },
+  { x: 217, y: 83, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
 ];
 
 const pillW = (label: string) => label.length * 6.2 + 18;
 
 function tendril(n: Node) {
-  const mx = (CENTER.x + n.x) / 2;
-  const my = (CENTER.y + n.y) / 2 - 42;
-  return `M${CENTER.x} ${CENTER.y} Q${mx} ${my} ${n.x} ${n.y}`;
+  return `M${CENTER.x} ${CENTER.y} L${n.x} ${n.y}`;
 }
 
 function Icon({ n, color }: { n: Node; color: string }) {
@@ -125,9 +125,9 @@ export default function SwarmOverlay({ className = "" }: { className?: string })
     <div className={`${styles.swarm} ${className}`} aria-hidden="true">
       <svg
         className={styles.swarmSvg}
-        viewBox="0 0 1200 320"
+        viewBox="0 0 640 380"
         fill="none"
-        preserveAspectRatio="xMidYMin meet"
+        preserveAspectRatio="xMidYMid meet"
       >
         <g className={styles.orbit}>
           {NODES.map((n, i) => {
