@@ -670,6 +670,28 @@
   }
 }
 
+/* slow orbit: the whole cluster revolves around the core, and each node
+   counter-rotates about its own point so icons/labels stay upright */
+.orbit {
+  transform-box: view-box;
+  transform-origin: 648px 162px;
+  animation: orbitSpin 120s linear 2.6s infinite;
+}
+@keyframes orbitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.orbitNode {
+  transform-box: view-box;
+  animation: orbitSpinRev 120s linear 2.6s infinite;
+}
+@keyframes orbitSpinRev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 /* ── SCROLL PROGRESS + CUE ────────────────────────────────── */
 .scrollProgress {
   position: fixed;

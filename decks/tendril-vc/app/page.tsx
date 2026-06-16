@@ -382,7 +382,7 @@ export default function Home() {
         <div className={styles.renderBandBg} />
         <div className={styles.renderBandInner}>
           <Reveal>
-            <span className={styles.renderTag}>Concept render · hardware in development</span>
+            <span className={styles.renderTag}>Hardware in development</span>
             <p className={styles.renderText}>The hands of the system:</p>
             <p className={styles.renderSub}>
               A coordinated team of <strong>small, modular, chemical-free robots</strong>,

@@ -129,63 +129,67 @@ export default function SwarmOverlay({ className = "" }: { className?: string })
         fill="none"
         preserveAspectRatio="xMidYMin meet"
       >
-        {NODES.map((n, i) => {
-          const d = tendril(n);
-          const isIn = n.dir === "in";
-          return (
-            <g key={`t${i}`}>
-              <path
-                className={styles.tendril}
-                d={d}
-                style={{ animationDelay: `${0.3 + i * 0.11}s` }}
-              />
-              <circle
-                className={isIn ? styles.tokenIn : styles.token}
-                r="2.6"
-                style={{ offsetPath: `path("${d}")`, animationDelay: `${1.7 + i * 0.2}s` }}
-              />
-            </g>
-          );
-        })}
-
-        {/* central core — the agentic OS */}
-        <circle className={styles.coreGlow} cx={CENTER.x} cy={CENTER.y} r="30" />
-        <circle className={styles.coreRing} cx={CENTER.x} cy={CENTER.y} r="16" />
-        <circle className={styles.core} cx={CENTER.x} cy={CENTER.y} r="5.5" />
-
-        {/* nodes */}
-        {NODES.map((n, i) => {
-          const color = n.live ? "var(--sprout-bright)" : "var(--persimmon-bright)";
-          return (
-            <g
-              key={`n${i}`}
-              className={styles.robot}
-              style={{ animationDelay: `${1.2 + i * 0.11}s` }}
-            >
-              {n.robot && (
-                <circle
-                  className={styles.robotScan}
-                  cx={n.x}
-                  cy={n.y}
-                  r="11"
-                  style={{ animationDelay: `${2 + i * 0.2}s`, stroke: color }}
+        <g className={styles.orbit}>
+          {NODES.map((n, i) => {
+            const d = tendril(n);
+            const isIn = n.dir === "in";
+            return (
+              <g key={`t${i}`}>
+                <path
+                  className={styles.tendril}
+                  d={d}
+                  style={{ animationDelay: `${0.3 + i * 0.11}s` }}
                 />
-              )}
-              <Icon n={n} color={color} />
-              <rect
-                className={styles.nodePill}
-                x={n.x - pillW(n.label) / 2}
-                y={n.y + 14}
-                width={pillW(n.label)}
-                height="18"
-                rx="9"
-              />
-              <text className={styles.nodeLabel} x={n.x} y={n.y + 26}>
-                {n.label}
-              </text>
-            </g>
-          );
-        })}
+                <circle
+                  className={isIn ? styles.tokenIn : styles.token}
+                  r="2.6"
+                  style={{ offsetPath: `path("${d}")`, animationDelay: `${1.7 + i * 0.2}s` }}
+                />
+              </g>
+            );
+          })}
+
+          {/* central core — the agentic OS */}
+          <circle className={styles.coreGlow} cx={CENTER.x} cy={CENTER.y} r="30" />
+          <circle className={styles.coreRing} cx={CENTER.x} cy={CENTER.y} r="16" />
+          <circle className={styles.core} cx={CENTER.x} cy={CENTER.y} r="5.5" />
+
+          {/* nodes — counter-rotated so icons/labels stay upright while orbiting */}
+          {NODES.map((n, i) => {
+            const color = n.live ? "var(--sprout-bright)" : "var(--persimmon-bright)";
+            return (
+              <g
+                key={`n${i}`}
+                className={styles.orbitNode}
+                style={{ transformOrigin: `${n.x}px ${n.y}px` }}
+              >
+                <g className={styles.robot} style={{ animationDelay: `${1.2 + i * 0.11}s` }}>
+                  {n.robot && (
+                    <circle
+                      className={styles.robotScan}
+                      cx={n.x}
+                      cy={n.y}
+                      r="11"
+                      style={{ animationDelay: `${2 + i * 0.2}s`, stroke: color }}
+                    />
+                  )}
+                  <Icon n={n} color={color} />
+                  <rect
+                    className={styles.nodePill}
+                    x={n.x - pillW(n.label) / 2}
+                    y={n.y + 14}
+                    width={pillW(n.label)}
+                    height="18"
+                    rx="9"
+                  />
+                  <text className={styles.nodeLabel} x={n.x} y={n.y + 26}>
+                    {n.label}
+                  </text>
+                </g>
+              </g>
+            );
+          })}
+        </g>
       </svg>
     </div>
   );
