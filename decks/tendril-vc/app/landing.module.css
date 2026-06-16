@@ -308,12 +308,14 @@
   height: 138%;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(
-    115% 92% at 8% 100%,
-    rgba(10, 11, 7, 0.92),
-    rgba(10, 11, 7, 0.5) 36%,
-    transparent 66%
-  );
+  background:
+    radial-gradient(
+      125% 105% at 16% 96%,
+      rgba(10, 11, 7, 0.95),
+      rgba(10, 11, 7, 0.7) 40%,
+      transparent 74%
+    ),
+    linear-gradient(0deg, rgba(10, 11, 7, 0.6) 0%, transparent 58%);
 }
 .heroEyebrow {
   display: inline-flex;
@@ -519,10 +521,10 @@
 /* ── SWARM OVERLAY (hero) ─────────────────────────────────── */
 .swarm {
   position: absolute;
-  top: 56px;
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(560px, 88vw);
+  width: min(1080px, 96vw);
   z-index: 2;
   pointer-events: none;
 }
