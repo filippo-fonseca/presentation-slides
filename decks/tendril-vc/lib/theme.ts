@@ -1,6 +1,6 @@
 // Single source of truth for the per-presentation chrome:
 // metadata, deck title (small label in the header), and the optional pill
-// shown next to the audio toggle (e.g. "For Also Capital").
+// shown next to the audio toggle (optional investor/context label).
 //
 // Visual retheming (colors): edit app/globals.css.
 // Brand mark: edit components/Mark.tsx.
@@ -27,6 +27,5 @@ export const THEME: Theme = {
   description:
     "An agentic intelligence layer for agriculture, delivered through a fleet of small, modular, chemical-free farm robots. The system that resists decay in the field.",
   authors: [{ name: "Filippo Fonseca" }],
-  headerBadge: "For Also Capital",
   footerCaption: "© 2026 Tendril",
 };

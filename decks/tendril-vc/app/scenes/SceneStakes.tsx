@@ -11,7 +11,7 @@ export default function SceneStakes({ beat }: SceneProps) {
     <Stage eyebrow="13 · The stakes">
       <div className="relative z-10 flex w-full max-w-4xl flex-col items-center gap-7 text-center">
         <h2 className="text-balance text-[clamp(2rem,4.6vw,3.4rem)] font-medium leading-[1.02] tracking-[-0.035em]">
-          Ten billion people by 2060.{" "}
+          There will be ten billion people by 2060.{" "}
           <span
             className="italic font-normal text-accent"
             style={{ fontFamily: "var(--font-fraunces)" }}

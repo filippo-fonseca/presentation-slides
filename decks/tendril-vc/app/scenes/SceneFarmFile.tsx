@@ -17,8 +17,13 @@ const FUNNEL = [
 
 export default function SceneFarmFile({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="07 · The .farm file">
-      <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-7">
+    <Stage eyebrow="06 · The .farm file">
+      <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-5">
+        <span className="neu-inset inline-flex items-center gap-2 rounded-lg px-3.5 py-2 font-mono text-[12.5px] tracking-tight text-foreground/65">
+          <span className="size-1.5 rounded-full bg-accent-soft shadow-[0_0_8px_rgba(181,211,61,0.8)]" />
+          2026-06-15
+          <span className="font-bold text-accent">.farm</span>
+        </span>
         <h2 className="text-balance text-center text-[clamp(1.9rem,4vw,3rem)] font-medium leading-[1.04] tracking-[-0.03em]">
           Every day on the farm compiles to{" "}
           <span
@@ -60,14 +65,11 @@ export default function SceneFarmFile({ beat }: SceneProps) {
           aria-hidden={beat < 1}
         >
           <p
-            className="text-[clamp(1.3rem,2.6vw,2rem)] italic leading-snug text-accent"
+            className="max-w-[60ch] text-balance text-[clamp(1.1rem,2.1vw,1.55rem)] italic leading-snug text-accent"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Execution, not advice.
-          </p>
-          <p className="max-w-[56ch] text-[12px] leading-relaxed text-foreground/55">
-            The intelligence is built and proven. The robots are in development, co-developed with
-            growers.
+            Execution can then easily be enacted through the robotic team at the agent (and the
+            farmer&apos;s) disposal.
           </p>
         </div>
       </div>

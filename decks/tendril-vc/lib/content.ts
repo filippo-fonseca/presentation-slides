@@ -19,7 +19,6 @@ export const SCENES: ReadonlyArray<SceneMeta> = [
   { id: "thesis",    title: "The thesis",         beats: 2 },
   { id: "problem",   title: "The problem",        beats: 2 },
   { id: "why-now",   title: "Why now",            beats: 2 },
-  { id: "team",      title: "The brain",          beats: 3 },
   { id: "system",    title: "The system",         beats: 2 },
   { id: "hands",     title: "The hands",          beats: 2 },
   { id: "farm-file", title: "The .farm file",     beats: 2 },
@@ -28,6 +27,7 @@ export const SCENES: ReadonlyArray<SceneMeta> = [
   { id: "moat",      title: "The moat",           beats: 2 },
   { id: "market",    title: "Who we build with",  beats: 2 },
   { id: "model",     title: "Business model",     beats: 2 },
+  { id: "team",      title: "The brain",          beats: 3 },
   { id: "stakes",    title: "The stakes",         beats: 2 },
-  { id: "close",     title: "Close",              beats: 2 },
+  { id: "close",     title: "Close",              beats: 1 },
 ];

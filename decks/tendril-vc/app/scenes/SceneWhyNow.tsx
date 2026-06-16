@@ -46,7 +46,7 @@ export default function SceneWhyNow({ beat }: SceneProps) {
           style={{ fontFamily: "var(--font-fraunces)" }}
           aria-hidden={beat < 1}
         >
-          Unbuildable five years ago. Table stakes in five. The window is now.
+          Unbuildable five years ago. Now, we&apos;re turning it into reality.
         </p>
       </div>
     </Stage>

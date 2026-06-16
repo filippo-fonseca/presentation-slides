@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { SCENES } from "@/lib/content";
 import SceneCover from "./scenes/SceneCover";
 import SceneThesis from "./scenes/SceneThesis";
@@ -220,21 +221,37 @@ export default function DeckClient() {
         Skip to deck
       </a>
 
-      {/* Header — minimal: mark on the left, badge + audio toggle on the right */}
+      {/* Header — mark + wordmark link home on the left, audio toggle on the right */}
       <header className="relative z-30 flex shrink-0 items-center justify-between px-6 py-4 sm:px-10">
-        <span aria-label={THEME.shortTitle} className="text-foreground/90">
-          <Mark size={32} />
-        </span>
-        <div className="flex items-center gap-3">
-          {THEME.headerBadge && (
-            <span
-              className="hidden items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.24em] text-foreground/55 sm:inline-flex"
-              aria-hidden
-            >
-              <span className="size-1 rounded-full bg-accent shadow-[0_0_8px_rgba(245,176,106,0.7)]" />
-              {THEME.headerBadge}
-            </span>
-          )}
+        <Link
+          href="/"
+          aria-label={`${THEME.shortTitle} — home`}
+          className="inline-flex items-center gap-2.5 text-foreground/90 transition-opacity hover:opacity-80"
+          data-no-advance
+        >
+          <Mark size={30} />
+          <span
+            className="text-[18px] italic leading-none tracking-[-0.01em] text-foreground"
+            style={{ fontFamily: "var(--font-fraunces)", fontWeight: 600 }}
+          >
+            Tendril
+          </span>
+        </Link>
+        <div className="flex items-center gap-2 sm:gap-2.5">
+          <a
+            href="mailto:filippo.fonseca@yale.edu"
+            data-no-advance
+            className="neu-raised-sm hidden h-8 items-center rounded-full px-3.5 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:text-foreground sm:inline-flex"
+          >
+            Get in touch
+          </a>
+          <Link
+            href="/"
+            data-no-advance
+            className="neu-raised-sm hidden h-8 items-center rounded-full px-3.5 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:text-foreground sm:inline-flex"
+          >
+            See our website
+          </Link>
           <ChimeToggle onApi={setChimeApi} />
         </div>
       </header>
@@ -265,6 +282,9 @@ export default function DeckClient() {
         className="relative z-30 flex shrink-0 items-center justify-between gap-4 border-t border-line bg-background/80 px-6 py-3 backdrop-blur-md sm:px-10"
         data-no-advance
       >
+        <span className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 font-mono text-[9.5px] uppercase tracking-[0.3em] text-foreground/40 sm:block">
+          Investor deck
+        </span>
         <div className="flex items-center gap-3">
           <button
             type="button"

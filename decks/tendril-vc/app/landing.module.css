@@ -1608,7 +1608,7 @@
   }
 }
 
-/* ── STANCE (Also Capital thesis resonance) ───────────────── */
+/* ── STANCE (investor thesis resonance) ───────────────────── */
 .stance {
   position: relative;
   border-top: 1px solid var(--panel-line);
@@ -1786,6 +1786,9 @@
    any scene that hosts a landing widget. .swarmDeck neutralizes
    the hero-absolute positioning so the swarm centers in a scene. */
 .deckEmbed {
+  --bg: #0a0b07;
+  --bg-2: #0e1009;
+  --bg-3: #14160d;
   --persimmon: #e5602c;
   --persimmon-bright: #ff7a43;
   --persimmon-glow: #f56a30;
@@ -1807,4 +1810,16 @@
   width: 100%;
   max-width: 680px;
   margin: 0 auto;
+}
+/* Cover-specific Yale pill: left-aligned with the dot riding the first line's
+   cap height, and roomier internal padding. */
+.yaleCreditDeck {
+  align-items: flex-start;
+  text-align: left;
+  gap: 13px;
+  padding: 15px 30px;
+  margin-top: 22px;
+}
+.yaleCreditDeck .yaleDot {
+  margin-top: 5px;
 }

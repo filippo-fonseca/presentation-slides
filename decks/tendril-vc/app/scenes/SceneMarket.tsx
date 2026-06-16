@@ -15,7 +15,7 @@ const STATS = [
 
 export default function SceneMarket({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="11 · Who we build with">
+    <Stage eyebrow="10 · Who we build with">
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-8 text-center">
         <h2 className="text-balance text-[clamp(1.9rem,4vw,3rem)] font-medium leading-[1.04] tracking-[-0.03em]">
           Built{" "}

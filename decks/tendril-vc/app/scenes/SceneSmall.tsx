@@ -14,15 +14,15 @@ const TRAITS = [
 
 export default function SceneSmall({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="08 · Small and modular">
+    <Stage eyebrow="07 · Small and modular">
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-7 text-center">
         <h2 className="text-balance text-[clamp(1.9rem,4vw,3rem)] font-medium leading-[1.04] tracking-[-0.03em]">
-          Small and modular.{" "}
+          Small{" "}
           <span
             className="italic font-normal text-accent"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Like microreactors, not megaprojects.
+            and modular.
           </span>
         </h2>
 
@@ -54,7 +54,9 @@ export default function SceneSmall({ beat }: SceneProps) {
             className="text-[clamp(1rem,1.8vw,1.3rem)] italic leading-snug text-accent-soft"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            Small, mass-manufacturable, and modular beats big and centralized.
+            Small, mass-manufacturable, and modular
+            <br />
+            beats big and centralized.
           </p>
         </div>
       </div>

@@ -13,7 +13,7 @@ const LOOP = ["Perceive", "Remember", "Decide", "Act"];
 
 export default function SceneSystem({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="05 · The system">
+    <Stage eyebrow="04 · The system">
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-5 text-center">
         <h2 className="text-balance text-[clamp(1.8rem,3.8vw,2.8rem)] font-medium leading-[1.04] tracking-[-0.03em]">
           Small machines. One{" "}
@@ -46,8 +46,7 @@ export default function SceneSystem({ beat }: SceneProps) {
           style={{ fontFamily: "var(--font-fraunces)" }}
           aria-hidden={beat < 1}
         >
-          The core doesn&apos;t care what&apos;s growing. The same loop runs corn, cotton,
-          tomatoes, vines: swap the limb, not the brain.
+          The same loop runs corn, cotton, tomatoes, vines: swap the limb, not the brain.
         </p>
       </div>
     </Stage>

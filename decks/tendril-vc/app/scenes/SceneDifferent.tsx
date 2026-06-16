@@ -25,7 +25,7 @@ const MAX = 177;
 
 export default function SceneDifferent({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="09 · How we're different">
+    <Stage eyebrow="08 · How we're different">
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-6">
         <h2 className="text-balance text-center text-[clamp(1.8rem,3.8vw,2.8rem)] font-medium leading-[1.04] tracking-[-0.03em]">
           Big and bulky, or blind.{" "}

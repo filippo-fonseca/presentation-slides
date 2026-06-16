@@ -7,9 +7,9 @@ import Stage from "../components/Stage";
 // on beat 0; the anti-entropy pull-quote on beat 1.
 
 const STATS = [
-  { value: "548", label: "Resistant weeds", body: "Documented herbicide-resistant cases, and climbing." },
-  { value: "0", label: "New modes of action", body: "Since the 1980s. The chemistry pipeline is dry." },
-  { value: "50-70%", label: "Of specialty-crop cost", body: "Is labor. Under 2% of farm tasks are automated." },
+  { value: "548", label: "Resistant weeds", body: "documented herbicide-resistant cases, and climbing." },
+  { value: "0", label: "New modes of action", body: "since the 1980s, with the chemistry pipeline now dry." },
+  { value: "50-70%", label: "Of specialty-crop cost", body: "is labor, and under 2% of farm tasks are automated." },
 ];
 
 export default function SceneProblem({ beat }: SceneProps) {
@@ -44,9 +44,10 @@ export default function SceneProblem({ beat }: SceneProps) {
           ))}
         </ul>
 
-        <p className="max-w-[68ch] text-balance text-[14.5px] leading-relaxed text-foreground/80">
-          Spray more, on a calendar, across acres no one sees plant by plant. Resistance
-          compounds, soil thins, inputs escalate.
+        <p className="max-w-[64ch] text-balance text-[clamp(1rem,1.7vw,1.25rem)] leading-relaxed text-foreground/85">
+          Growers spray more every season, on a calendar, across acres{" "}
+          <span className="font-semibold text-foreground">no one ever sees plant by plant</span>, so
+          resistance compounds, soil thins, and inputs keep climbing.
         </p>
 
         <p

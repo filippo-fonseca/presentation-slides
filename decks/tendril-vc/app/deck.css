@@ -143,6 +143,15 @@
   animation: ringSpin 180s linear infinite reverse;
 }
 
+/* ───── Nudge — a small repeating rightward drift for "go" affordances ───── */
+@keyframes nudgeX {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+.nudge-x {
+  animation: nudgeX 1.4s ease-in-out infinite;
+}
+
 /* ───── Neumorphic surface variants specific to the deck ───── */
 
 /* Inset (pressed-in) variant — used for "search/thinking" panels and inactive cards */
