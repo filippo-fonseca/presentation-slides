@@ -38,38 +38,43 @@ const MARQUEE = [
   "Plant by plant",
 ];
 
-const COMPARE: [string, string, string][] = [
-  ["Resolution", "Per plant", "Per field"],
-  ["Chemistry", "Mechanical, chemical-free", "Herbicide, on a schedule"],
-  ["Field memory", "Persistent, compounding", "None"],
-  ["Hardware", "Small modular swarm", "Single heavy machine"],
-  ["Decisioning", "Agentic, autonomous", "Operator-driven"],
-  ["Grower capital", "Zero, priced on outcome", "Six to seven figures"],
-];
-
 const STEPS = [
   {
     n: "01",
     t: "Perceive",
-    b: "Small robots roll the rows at leaf level. Every plant is classified at the source: crop, weed, pest, disease, damage. A hundred decisions a second, in the field, not in a cloud.",
+    b: "Robots read the field at leaf level. Every plant classified at the source: crop, weed, pest, disease, damage.",
   },
   {
     n: "02",
     t: "Remember",
-    b: "Every pass writes to a persistent map of the land. The system knows which corners failed last season, and watches them before they fail again. The field accumulates a memory.",
+    b: "Every pass writes to a persistent map of the land. The system knows what failed last season and watches for it.",
   },
   {
     n: "03",
-    t: "Act",
-    b: "Weeds are removed mechanically. Treatment is placed plant by plant. No blanket spray, no chemical debt. The fleet acts, measures the result, and feeds it back into the loop.",
+    t: "Decide",
+    b: "The agentic layer plans the fleet's work against the field's memory and the grower's goals. This is the part no one else has.",
   },
+  {
+    n: "04",
+    t: "Act",
+    b: "Weeds removed mechanically, treatment placed plant by plant. The result is measured and fed back into the loop.",
+  },
+];
+
+const COMPARE: [string, string, string][] = [
+  ["Scope", "Daily work + the long-range plan", "One task, one season"],
+  ["Decisioning", "Agentic: decides, then acts", "Shows data, you decide"],
+  ["Integration", "One operating system", "An assortment of apps"],
+  ["In the field", "A swarm that acts, plant by plant", "Sensors you read, or none"],
+  ["Memory", "Persistent, compounding (.farm)", "Resets every view"],
+  ["Chemistry", "Mechanical, chemical-free", "Sprays, or only watches"],
 ];
 
 const BUILD_WITH = [
   {
     tag: "Row crops",
     title: "Row-crop growers",
-    body: "Corn, cotton, soybeans, wheat. Margins are razor-thin and the iron sits idle most of the year. We attack the single largest line on the farm: the cost of the machine.",
+    body: "Corn, cotton, soybeans, wheat. Margins are razor-thin and the iron sits idle most of the year. We attack the single largest line on the farm.",
   },
   {
     tag: "Specialty",
@@ -81,6 +86,16 @@ const BUILD_WITH = [
     title: "The soil itself",
     body: "Less compaction, fewer chemicals, biology that recovers. The advantages that make us defensible are the same ones that keep the ground alive.",
   },
+];
+
+const FARM_FILE: [string, React.ReactNode][] = [
+  ["field", "north-40 · 38.2 ac · corn, V6"],
+  ["sensors", "soil moisture, canopy temp, NDVI · 1,440 reads"],
+  ["swarm", "4 units · 11.6 ac worked · 38 min downtime"],
+  ["saw", "2,304 weeds · 17 disease flags · 3 wind-damaged rows"],
+  ["decided", "spot-weed NE quadrant · hold row 12 · alert grower"],
+  ["did", "2,291 weeds pulled mechanically · 0 mL herbicide"],
+  ["grower", <em key="g">&ldquo;harvesting the south strip Friday, skip it&rdquo;</em>],
 ];
 
 export default function Home() {
@@ -102,11 +117,11 @@ export default function Home() {
           Tendril
         </a>
         <div className={styles.navLinks}>
-          <a className={styles.navLink} href="#treadmill">
-            The treadmill
-          </a>
           <a className={styles.navLink} href="#system">
             The system
+          </a>
+          <a className={styles.navLink} href="#format">
+            The .farm file
           </a>
           <a className={styles.navLink} href="#moat">
             The moat
@@ -128,22 +143,23 @@ export default function Home() {
 
         <div className={styles.heroContent}>
           <div className={styles.heroEyebrow}>
-            <span>Robotics for the open field</span>
+            <span>Physically intelligent · agentic · chemical-free</span>
           </div>
           <h1 className={styles.heroTitle}>
-            Agriculture runs on a chemical treadmill. We build the machines that{" "}
-            <em className={styles.ital}>step off it</em>.
+            The operating system for the{" "}
+            <em className={styles.ital}>open field</em>.
           </h1>
           <p className={styles.heroSub}>
-            A fleet of small, chemical-free robots that work the field plant by plant,
-            run by an agentic intelligence layer that remembers every acre, season over
-            season.
+            Not a dashboard, not a single-task tool. One cohesive system that runs a
+            farm&apos;s daily work and its long-range plan, delivered through a swarm of
+            small, chemical-free robots, and built with the family farms that are most
+            of American agriculture.
           </p>
           <div className={styles.heroCtas}>
             <Link className={styles.btnPrimary} href="/deck">
               Read the brief <Arrow />
             </Link>
-            <a className={styles.btnGhost} href="#treadmill">
+            <a className={styles.btnGhost} href="#system">
               See the system
             </a>
           </div>
@@ -188,7 +204,8 @@ export default function Home() {
                 <span className={styles.hookMuted}>
                   Until now, reading it meant a person in the rows.
                 </span>{" "}
-                Tendril reads it <em className={styles.ital}>continuously</em>.
+                Tendril reads it, decides, and{" "}
+                <em className={styles.ital}>acts</em>.
               </p>
             </Reveal>
           </div>
@@ -203,7 +220,7 @@ export default function Home() {
               <span>The chemical treadmill</span>
             </div>
             <h2 className={styles.h2}>
-              The treadmill speeds up. <em className={styles.ital}>The yield does not.</em>
+              Agriculture runs on a <em className={styles.ital}>chemical treadmill</em>.
             </h2>
           </Reveal>
           <Reveal delay={100}>
@@ -255,9 +272,17 @@ export default function Home() {
               Small machines. One <em className={styles.ital}>agentic loop</em>. Every acre.
             </h2>
           </Reveal>
+          <Reveal delay={80}>
+            <p className={styles.problemIntro}>
+              Perception, memory, decision, action: four steps tied into a single system
+              that never stops running. That closed loop is the operating system. The
+              same loop runs whether the limb on the end is a weeder, a disease arm, or a
+              seeder.
+            </p>
+          </Reveal>
           <div className={styles.steps}>
             {STEPS.map((s, i) => (
-              <Reveal key={s.n} className={styles.step} delay={i * 110}>
+              <Reveal key={s.n} className={styles.step} delay={i * 90}>
                 <span className={styles.stepNum}>{s.n}</span>
                 <h3 className={styles.stepTitle}>{s.t}</h3>
                 <p className={styles.stepBody}>{s.b}</p>
@@ -274,23 +299,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COMPARISON */}
+      {/* NOT A DASHBOARD — THE CATEGORY */}
       <section className={`${styles.section} ${styles.compare}`}>
         <div className={styles.wrap}>
           <Reveal>
             <div className={styles.kicker}>
-              <span>The difference</span>
+              <span>The category</span>
             </div>
             <h2 className={styles.h2}>
-              What a sprayer <em className={styles.ital}>never knew</em>.
+              Not a dashboard. <em className={styles.ital}>An operating system</em>.
             </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className={styles.problemIntro}>
+              The field is crowded with point solutions: a sensor company here, an app
+              there, a single-task rover somewhere else. Each does one thing, none of
+              them act on their own, and none of them talk to each other. Tendril is the
+              opposite: one agentic system that ties perception, memory, decision, and
+              action into a single stack.
+            </p>
           </Reveal>
           <Reveal delay={120}>
             <div className={styles.table}>
               <div className={`${styles.row} ${styles.rowHead}`}>
                 <div className={styles.cell}>Capability</div>
                 <div className={styles.cell}>Tendril</div>
-                <div className={styles.cell}>Sprayers &amp; big iron</div>
+                <div className={styles.cell}>Point tools &amp; dashboards</div>
               </div>
               {COMPARE.map(([cap, ours, them]) => (
                 <div className={styles.row} key={cap}>
@@ -303,9 +337,69 @@ export default function Home() {
           </Reveal>
           <Reveal delay={160}>
             <p className={styles.compareCaption}>
-              They treat the field. <b>Tendril tends the plant.</b>
+              They hand you data. <b>Tendril runs the farm.</b>
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* THE .farm FILE */}
+      <section className={`${styles.section} ${styles.farmFile}`} id="format">
+        <div className={styles.wrap}>
+          <Reveal>
+            <div className={styles.kicker}>
+              <span>The format</span>
+            </div>
+            <h2 className={styles.h2}>
+              Every day on the farm compiles to <em className={styles.ital}>one file</em>.
+            </h2>
+          </Reveal>
+          <div className={styles.farmGrid}>
+            <Reveal>
+              <p className={styles.farmLead}>
+                <b>.farm</b> is the format the whole system runs on. One file per field
+                per day: every sensor reading, every robot action, every decision the
+                system made, every word the grower said, written to disk.
+              </p>
+              <p className={styles.farmLead}>
+                Stack them up and you have something no incumbent can reconstruct after
+                the fact: the complete, machine-readable{" "}
+                <b>memory of a piece of land</b>.
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className={styles.farmCard}>
+                <div className={styles.farmBar}>
+                  <div className={styles.farmDots}>
+                    <span
+                      className={styles.farmDot}
+                      style={{ background: "var(--persimmon)" }}
+                    />
+                    <span
+                      className={styles.farmDot}
+                      style={{ background: "var(--sprout)" }}
+                    />
+                    <span
+                      className={styles.farmDot}
+                      style={{ background: "var(--txt-faint)" }}
+                    />
+                  </div>
+                  <span className={styles.farmName}>
+                    2026-06-15<b>.farm</b>
+                  </span>
+                </div>
+                <div className={styles.farmBody}>
+                  {FARM_FILE.map(([k, v]) => (
+                    <div className={styles.farmRow} key={k as string}>
+                      <span className={styles.farmKey}>{k}</span>
+                      <span className={styles.farmVal}>{v}</span>
+                    </div>
+                  ))}
+                  <div className={styles.farmCarry}>carried → 2026-06-16.farm</div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -320,9 +414,9 @@ export default function Home() {
               </div>
               <p className={styles.intelText}>
                 Hardware gets copied. A field that <em className={styles.italGreen}>remembers</em>{" "}
-                does not. Every pass deepens a record of the land that no incumbent can
-                reconstruct after the fact. The robots are the hands. The memory is the
-                company.
+                does not. Every day writes another <b>.farm</b> file, and the stack
+                becomes a record of the land no incumbent can rebuild. The robots are
+                the hands. The memory is the company.
               </p>
             </Reveal>
             <Reveal delay={140}>
@@ -342,6 +436,13 @@ export default function Home() {
             <h2 className={styles.h2}>
               Built <em className={styles.ital}>with</em> growers, not for them.
             </h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className={styles.problemIntro}>
+              Family farms are 96% of US agriculture, and most of them are small. Big
+              iron was never designed for them. Tendril is. We design with the grower,
+              for the work they actually do.
+            </p>
           </Reveal>
           <div className={styles.cards}>
             {BUILD_WITH.map((c, i) => (
@@ -406,7 +507,7 @@ export default function Home() {
             <div className={styles.footerBrand}>
               <Mark size={22} />
               Tendril
-              <span className={styles.footerTag}>Agricultural infrastructure.</span>
+              <span className={styles.footerTag}>The operating system for the open field.</span>
             </div>
             <div className={styles.footerLinks}>
               <Link href="/deck">Brief</Link>

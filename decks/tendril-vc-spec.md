@@ -62,18 +62,22 @@ This is the brief I'd want Also to read end to end on their own time. One compan
 
 ---
 
-### 2 — The thesis (one line)
+### 2 — The thesis (what Tendril is)
 
 - **section_label**: 01 · The thesis
 - **pattern**: Beat-driven body, large editorial statement
-- **beats**: 2
+- **beats**: 3
 
 **On screen**
-- Headline (beat 0): "Agriculture runs on a chemical treadmill. We build the machines that **step off it.**"
-- Beat 1 (the shape, three short mono lines): "A fleet of small, modular, chemical-free robots." / "An agentic intelligence layer that perceives, remembers, decides, acts." / "Priced on the acre, not the machine."
+- Headline (beat 0): "The operating system for the **open field.**"
+- Beat 1 (the three differentiators, what makes it a *true* farm OS, not just more agtech):
+  - **Cohesive, not point tools.** One system for the daily work *and* the season-long plan, not an assortment of single-task gadgets.
+  - **Agentic, not a dashboard.** It perceives, remembers, decides, and acts. It doesn't just show you data.
+  - **Built with the grower.** Designed for the family farms that are most of US agriculture, not retrofitted from big iron.
+- Beat 2 (the shape): "Delivered through a swarm of small, modular, chemical-free robots, priced on the acre, not the machine. The chemical treadmill is what we replace."
 
 **Speaker notes**
-Everyone in the row-crop world is running faster on the same treadmill: more chemistry, worse results. We are not a better sprayer. We are the way off the treadmill. The robots are the hands; the intelligence is the company.
+The category is crowded with point solutions: a sensor here, an app there, a single-task rover somewhere else. None of them are cohesive, none are agentic, none run the whole farm. Tendril is physically intelligent: a real operating system for the open field. The robots are the hands; the intelligence, tied into one stack, is the company.
 
 ---
 
@@ -155,6 +159,23 @@ The loop never stops, and it's the same loop whether the limb on the end is a we
 
 ---
 
+### 6.5 — The .farm file (the format the system runs on)
+
+- **section_label**: 05 · The format
+- **pattern**: Split — editorial text (left) + a file-inspector mock (right). Mirrors the landing's `.farm` section.
+- **beats**: 2
+
+**On screen**
+- Headline: "Every day on the farm compiles to **one file.**"
+- Left text (beat 0): "`.farm` is the format the whole system runs on. One file per field per day: every sensor reading, every robot action, every decision the system made, every word the grower said, written to disk."
+- Right (beat 0): a styled `.farm` file showing FIELD / SENSORS / SWARM / SAW / DECIDED / DID / GROWER, and a `carried → tomorrow.farm` line.
+- Beat 1 (why it matters): "Stack them up and you have something no incumbent can reconstruct after the fact: the complete, machine-readable memory of a piece of land. The grower owns their field's history. We own the format."
+
+**Speaker notes**
+This is the most distinctive piece of architecture and worth dwelling on. An operating system has a filesystem; ours is the `.farm` file. It is the unit of memory (ties directly to the moat), the audit trail, and the portable record the grower keeps. It is also a planned innovation, so present it as the design, not a shipped feature. **[verify: framing as planned vs in-progress.]**
+
+---
+
 ### 7 — How we're different
 
 - **section_label**: 06 · The landscape
@@ -170,10 +191,11 @@ The loop never stops, and it's the same loop whether the limb on the end is a we
   - Hardware — Small modular swarm — Single heavy machine / single-task rover
   - Decisioning — Agentic, autonomous — Operator-driven
   - Grower capital — Zero, priced on outcome — Six to seven figures
-- Beat 3 closing line: "Deere and Carbon bet bigger. Aigen went small but single-task. We're the only ones building small + agentic + a full field OS."
+- Beat 3 (the other failure mode, name it): "The software side is just as fragmented. INCYT, for example, sells IoT sensors and a clean app: you read the data, then you go do something about it. It's not one system, and it's not agentic. It watches; it doesn't act."
+- Closing line: "Deere and Carbon bet bigger. Aigen went small but single-task. Sensor plays watch but don't act. We're the only ones building small + agentic + a full field OS."
 
 **Speaker notes**
-The competitive set validates the market (they've raised real money) without occupying our shape. The swarm plus the agentic layer plus persistent memory is what no one, not even Deere, is building.
+There are two failure modes in the landscape, and we sit between them. Big iron and single-task robots (Deere, Carbon, Aigen) are hardware with little or no intelligence. Sensor and dashboard plays (INCYT and the IoT crowd) are data with no hands: they show the grower a gauge and an app, but nothing is integrated and nothing decides or acts on its own. The competitive set validates the market (they've raised real money) without occupying our shape: small + agentic + persistent memory + a swarm that acts. That is the thing no one, not even Deere, is building.
 
 ---
 
