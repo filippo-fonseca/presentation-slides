@@ -19,9 +19,9 @@ const NODES: Node[] = [
   { x: 432, y: 84, type: "cam", label: "Cameras", dir: "in" },
   { x: 884, y: 76, type: "map", label: "3D map", dir: "in" },
   { x: 1088, y: 150, type: "weather", label: "Weather", dir: "in" },
-  { x: 236, y: 196, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
-  { x: 304, y: 250, type: "soil", label: "Soil probe", dir: "in" },
-  { x: 1016, y: 250, type: "scout", label: "Scout", dir: "out", robot: true },
+  { x: 360, y: 200, type: "weeder", label: "Weeder", dir: "out", robot: true, live: true },
+  { x: 286, y: 256, type: "soil", label: "Soil probe", dir: "in" },
+  { x: 936, y: 250, type: "scout", label: "Scout", dir: "out", robot: true },
   { x: 1150, y: 262, type: "grower", label: "Grower", dir: "in" },
   { x: 742, y: 246, type: "more", label: "+ more", dir: "in" },
 ];
