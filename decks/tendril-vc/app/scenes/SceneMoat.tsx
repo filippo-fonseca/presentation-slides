@@ -15,7 +15,7 @@ const POINTS = [
 
 export default function SceneMoat({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="09 · The moat">
+    <Stage eyebrow="10 · The moat">
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-7 text-center">
         <h2 className="text-balance text-[clamp(1.9rem,4vw,3rem)] font-medium leading-[1.04] tracking-[-0.03em]">
           Hardware gets copied.{" "}

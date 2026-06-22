@@ -70,7 +70,7 @@ function LinkedInIcon() {
 
 export default function SceneTeam({ beat }: SceneProps) {
   return (
-    <Stage eyebrow="12 · The brain">
+    <Stage eyebrow="13 · The brain">
       <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-6 text-center">
         <h2 className="text-balance text-[clamp(1.8rem,3.8vw,2.8rem)] font-medium leading-[1.04] tracking-[-0.03em]">
           We didn&apos;t start with robots.{" "}

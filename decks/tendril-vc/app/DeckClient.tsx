@@ -8,11 +8,17 @@ import SceneThesis from "./scenes/SceneThesis";
 import SceneProblem from "./scenes/SceneProblem";
 import SceneWhyNow from "./scenes/SceneWhyNow";
 import SceneTeam from "./scenes/SceneTeam";
+import SceneValidation from "./scenes/SceneValidation";
+import SceneSafety from "./scenes/SceneSafety";
+import SceneOnus from "./scenes/SceneOnus";
 import SceneSystem from "./scenes/SceneSystem";
 import SceneHands from "./scenes/SceneHands";
 import SceneFarmFile from "./scenes/SceneFarmFile";
 import SceneSmall from "./scenes/SceneSmall";
+import SceneLockIn from "./scenes/SceneLockIn";
+import SceneEnergy from "./scenes/SceneEnergy";
 import SceneDifferent from "./scenes/SceneDifferent";
+import SceneCompetition from "./scenes/SceneCompetition";
 import SceneMoat from "./scenes/SceneMoat";
 import SceneMarket from "./scenes/SceneMarket";
 import SceneModel from "./scenes/SceneModel";
@@ -49,11 +55,17 @@ const SCENE_COMPONENTS: Record<string, React.FC<SceneProps>> = {
   problem: SceneProblem,
   "why-now": SceneWhyNow,
   team: SceneTeam,
+  validation: SceneValidation,
+  safety: SceneSafety,
+  onus: SceneOnus,
   system: SceneSystem,
   hands: SceneHands,
   "farm-file": SceneFarmFile,
   small: SceneSmall,
+  "lock-in": SceneLockIn,
+  energy: SceneEnergy,
   different: SceneDifferent,
+  competition: SceneCompetition,
   moat: SceneMoat,
   market: SceneMarket,
   model: SceneModel,
