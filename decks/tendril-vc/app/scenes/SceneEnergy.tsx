@@ -56,7 +56,7 @@ export default function SceneEnergy({ beat }: SceneProps) {
     <Stage eyebrow="08 · Clean energy by design">
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center gap-6 text-center">
         <h2 className="text-balance text-[clamp(1.8rem,3.8vw,2.8rem)] font-medium leading-[1.04] tracking-[-0.03em]">
-          Replace the diesel giant{" "}
+          We are replacing the diesel giant{" "}
           <span
             className="italic font-normal text-accent"
             style={{ fontFamily: "var(--font-fraunces)" }}

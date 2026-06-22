@@ -74,7 +74,7 @@ export default function SceneDifferent({ beat }: SceneProps) {
           aria-hidden={beat < 1}
         >
           A swarm that is the{" "}
-          <span className="text-foreground">hands, eyes, and ears</span> of the farmer, run by one
+          <span className="text-foreground">hands, eyes, and ears</span>{" "}of the farmer, run by one
           agentic, crop-agnostic OS. The incumbents are big single-purpose machines, or dashboards
           with no hands. We&apos;re neither.
         </p>

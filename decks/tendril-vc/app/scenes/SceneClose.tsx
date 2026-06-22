@@ -60,12 +60,12 @@ export default function SceneClose(_props: SceneProps) {
             className="italic font-normal text-accent"
             style={{ fontFamily: "var(--font-fraunces)" }}
           >
-            treadmill.
+            treadmill&hellip;
           </span>
         </h2>
 
         <p className="max-w-[58ch] text-balance text-[clamp(0.98rem,1.5vw,1.18rem)] leading-relaxed text-foreground/70">
-          &hellip;off chemicals that thin soil and breed resistance, and onto a field
+          &hellip;of chemicals that thin soil and breed resistance, and onto a field
           that perceives, remembers, and acts, plant by plant.
         </p>
 

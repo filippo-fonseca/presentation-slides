@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { SceneProps } from "../DeckClient";
 import Stage from "../components/Stage";
 
@@ -23,6 +24,20 @@ export default function SceneLockIn({ beat }: SceneProps) {
         {/* Beat 0 — Walter's story */}
         <div className="flex w-full flex-col gap-3 sm:flex-row">
           <div className="neu-raised flex flex-1 flex-col gap-3 rounded-2xl p-5 text-left">
+            <figure className="overflow-hidden rounded-xl">
+              <span className="relative block h-36 w-full bg-[#f4f2e9] sm:h-40">
+                <Image
+                  src="/images/walter.png"
+                  alt="Walter beside his John Deere tractor"
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+              </span>
+              <figcaption className="mt-2 font-mono text-[9px] uppercase tracking-[0.18em] text-foreground/45">
+                Walter · crop farmer, American Midwest
+              </figcaption>
+            </figure>
             <p className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-accent">
               Walter's tractor · hay season
             </p>

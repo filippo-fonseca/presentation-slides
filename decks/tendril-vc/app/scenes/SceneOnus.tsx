@@ -35,7 +35,7 @@ export default function SceneOnus({ beat }: SceneProps) {
             Griggs Farm · YouTube
           </p>
           <h2 className="text-balance text-[clamp(1.8rem,3.8vw,2.8rem)] font-medium leading-[1.04] tracking-[-0.03em]">
-            &ldquo;Doing more wrenching{" "}
+            &ldquo;&hellip;doing more wrenching{" "}
             <span
               className="italic font-normal text-accent"
               style={{ fontFamily: "var(--font-fraunces)" }}

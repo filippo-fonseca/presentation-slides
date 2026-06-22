@@ -11,7 +11,7 @@ const STATS = [
   {
     value: "5×",
     label: "More dangerous than average",
-    body: "Agriculture's fatality rate is 18.6 per 100,000 workers — five times higher than the all-industry average. Source: CDC/BLS 2022.",
+    body: "Agriculture's fatality rate is 18.6 per 100,000 workers, five times higher than the all-industry average. Source: CDC/BLS 2022.",
   },
   {
     value: "36%",
@@ -68,12 +68,12 @@ export default function SceneSafety({ beat }: SceneProps) {
                 className="text-[14px] font-medium italic leading-snug text-foreground"
                 style={{ fontFamily: "var(--font-fraunces)" }}
               >
-                &ldquo;Several years ago he went out the windshield of his combine harvester.&rdquo;
+                &ldquo;Several years ago I went out of the windshield of my combine harvester.&rdquo;
               </p>
               <p className="text-[12.5px] leading-relaxed text-foreground/75">
-                Our partner at Griggs Farm — featured in WIRED and Season 1 of the History
+                Our partner at Griggs Farm (featured in WIRED and Season 1 of the History
                 Channel&apos;s{" "}
-                <span className="italic">The American Farm</span> — told us this story
+                <span className="italic">The American Farm</span>) told us this story
                 firsthand. He survived. He still farms. And he sees exactly why keeping the
                 human out of the hazardous machine matters.
               </p>

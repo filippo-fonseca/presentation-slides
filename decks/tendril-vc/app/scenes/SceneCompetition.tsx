@@ -68,7 +68,7 @@ export default function SceneCompetition({ beat }: SceneProps) {
         </div>
 
         <div
-          className={`flex w-full max-w-[62ch] flex-col gap-2.5 transition-all duration-500 ${
+          className={`flex w-full max-w-3xl flex-col gap-2.5 transition-all duration-500 ${
             beat >= 1 ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0"
           }`}
           aria-hidden={beat < 1}
@@ -76,14 +76,32 @@ export default function SceneCompetition({ beat }: SceneProps) {
           <p className="text-center font-mono text-[10px] uppercase tracking-[0.22em] text-foreground/45">
             Even Aigen&apos;s own demo reel hints at it
           </p>
-          <blockquote className="neu-raised rounded-2xl px-5 py-4 text-left">
-            <p className="text-[13.5px] italic leading-snug text-foreground/85">
-              &ldquo;A lousy film with incredibly short sequences showing the robot at work.&rdquo;
-            </p>
-            <footer className="mt-2 font-mono text-[10px] uppercase tracking-[0.16em] text-foreground/45">
-              Public comment on Aigen&apos;s Element video
-            </footer>
-          </blockquote>
+          <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-stretch">
+            <div
+              className="neu-raised w-full overflow-hidden rounded-2xl sm:w-[55%]"
+              data-no-advance
+            >
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/u7uVvPGonMw"
+                  title="Aigen Element demo video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                  style={{ border: "none" }}
+                />
+              </div>
+            </div>
+            <blockquote className="neu-raised flex flex-1 flex-col justify-center rounded-2xl px-5 py-4 text-left">
+              <p className="text-[13.5px] italic leading-snug text-foreground/85">
+                &ldquo;A lousy film with incredibly short sequences showing the robot at work 😞 What
+                do they hide??&rdquo;
+              </p>
+              <footer className="mt-2 font-mono text-[10px] uppercase tracking-[0.16em] text-foreground/45">
+                Public comment on Aigen&apos;s Element video
+              </footer>
+            </blockquote>
+          </div>
           <p className="text-center text-[12.5px] leading-snug text-foreground/65">
             A point tool is easy to show for two seconds. A system is what actually runs the farm.
           </p>

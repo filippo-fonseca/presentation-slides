@@ -205,22 +205,33 @@ export default function SceneTeam({ beat }: SceneProps) {
               target="_blank"
               rel="noopener noreferrer"
               data-no-advance
-              className="neu-raised flex h-full flex-col gap-2 rounded-2xl p-4 text-left"
+              className="neu-raised flex h-full flex-col overflow-hidden rounded-2xl text-left"
             >
-              <span className="flex items-center justify-between">
-                <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
-                  PosturePoke
-                </span>
-                <span className="rounded-md bg-[#f4f2e9]/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-foreground/70">
-                  YHack 2026
-                </span>
+              <span className="relative block h-24 w-full bg-[#f4f2e9]">
+                <Image
+                  src="/images/posturepoke.png"
+                  alt="PosturePoke at Yale's YHack 2026"
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
               </span>
-              <span className="text-[12px] leading-snug text-foreground/85">
-                Built and recognized at Yale&apos;s YHack. The team ships fast, on hardware and in
-                software.
-              </span>
-              <span className="mt-auto font-mono text-[9.5px] uppercase tracking-[0.16em] text-foreground/50">
-                See it on Devpost ↗
+              <span className="flex flex-1 flex-col gap-2 p-4">
+                <span className="flex items-center justify-between">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
+                    PosturePoke
+                  </span>
+                  <span className="rounded-md bg-[#f4f2e9]/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-foreground/70">
+                    YHack 2026
+                  </span>
+                </span>
+                <span className="text-[12px] leading-snug text-foreground/85">
+                  Built and recognized at Yale&apos;s YHack. The team ships fast, on hardware and in
+                  software.
+                </span>
+                <span className="mt-auto font-mono text-[9.5px] uppercase tracking-[0.16em] text-foreground/50">
+                  See it on Devpost ↗
+                </span>
               </span>
             </a>
           </li>

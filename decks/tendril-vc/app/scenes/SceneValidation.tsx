@@ -36,7 +36,7 @@ export default function SceneValidation({ beat }: SceneProps) {
     <Stage eyebrow="14 · In their own words">
       <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-6 text-center">
         <h2 className="text-balance text-[clamp(1.8rem,3.8vw,2.8rem)] font-medium leading-[1.04] tracking-[-0.03em]">
-          We talked to the farmers.{" "}
+          We are collaborating with real, impactful farmers already.{" "}
           <span
             className="italic font-normal text-accent"
             style={{ fontFamily: "var(--font-fraunces)" }}
@@ -44,6 +44,12 @@ export default function SceneValidation({ beat }: SceneProps) {
             They confirmed every bet.
           </span>
         </h2>
+        <p
+          className="text-[clamp(1.1rem,2vw,1.5rem)] italic leading-snug text-accent-soft"
+          style={{ fontFamily: "var(--font-fraunces)" }}
+        >
+          Meet Mr. Griggs.
+        </p>
 
         {/* Beat 0 — farmer insight cards */}
         <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
@@ -121,8 +127,8 @@ export default function SceneValidation({ beat }: SceneProps) {
                   Active partnerships
                 </p>
                 <p className="mt-2 text-[13px] leading-snug text-foreground/85">
-                  <span className="font-medium text-foreground">Griggs Farm</span> was featured in
-                  Season 1 of the History Channel&apos;s{" "}
+                  <span className="font-medium text-foreground">Griggs Farm</span>{" "}was featured
+                  in Season 1 of the History Channel&apos;s{" "}
                   <span className="italic">The American Farm</span>. We&apos;re working on partnering
                   with them and farms across the country. We&apos;re building with farmers, not at
                   them.
