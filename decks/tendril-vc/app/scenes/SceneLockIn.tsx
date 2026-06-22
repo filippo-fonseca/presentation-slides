@@ -27,8 +27,8 @@ export default function SceneLockIn({ beat }: SceneProps) {
               Walter's tractor · hay season
             </p>
             <p className="text-[13px] leading-relaxed text-foreground/85">
-              His tractor kept randomly shutting down. The fuel filter — the only
-              self-serviceable fix — did nothing. The dealer couldn't come for{" "}
+              His tractor kept randomly shutting down. The fuel filter (the only
+              self-serviceable fix) did nothing. The dealer couldn't come for{" "}
               <span className="font-medium text-foreground">a week</span>. Once the tractor was
               brought in, diagnosis took{" "}
               <span className="font-medium text-foreground">a month</span>. Root cause: a faulty
