@@ -16,7 +16,6 @@ const PEOPLE = [
     website: "https://filippofonseca.com",
   },
   { name: "Emir Ahmed", photo: "/people/emir.jpeg", linkedin: "https://www.linkedin.com/in/emir-ahmed-6016422a1/" },
-  { name: "David Antwi", photo: "/people/david.jpeg", linkedin: "https://www.linkedin.com/in/david-antwi-b17727205/" },
 ];
 
 function LinkedInIcon() {
@@ -66,7 +65,7 @@ export default function SceneClose(_props: SceneProps) {
         </h2>
 
         <p className="max-w-[58ch] text-balance text-[clamp(0.98rem,1.5vw,1.18rem)] leading-relaxed text-foreground/70">
-          &hellip;off the chemical treadmill that thins soil and breeds resistance, and onto a field
+          &hellip;off chemicals that thin soil and breed resistance, and onto a field
           that perceives, remembers, and acts, plant by plant.
         </p>
 

@@ -23,13 +23,6 @@ const FOUNDERS = [
     bio: "EECS. Robotics Lead for Yale Robotics. ML researcher building human-centered robotic systems.",
     linkedin: "https://www.linkedin.com/in/emir-ahmed-6016422a1/",
   },
-  {
-    name: "David Antwi",
-    photo: "/people/david.jpeg",
-    role: "Orchestration, memory & eval",
-    bio: "Self-taught full-stack engineer shipping AI products end to end, from search infra to assistive wearables.",
-    linkedin: "https://www.linkedin.com/in/david-antwi-b17727205/",
-  },
 ];
 
 const ISPY_COVERAGE =
@@ -83,7 +76,7 @@ export default function SceneTeam({ beat }: SceneProps) {
         </h2>
 
         {/* Beat 0 — founders */}
-        <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
+        <ul className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-3 sm:grid-cols-2">
           {FOUNDERS.map((f) => (
             <li key={f.name} className="neu-raised flex flex-col gap-3 rounded-2xl p-4 text-left">
               <div className="flex items-center gap-3">
