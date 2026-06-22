@@ -18,6 +18,8 @@
 \usepackage{enumitem}
 \usepackage{tikz}
 \usetikzlibrary{patterns,arrows.meta}
+\usepackage{graphicx}
+\graphicspath{{../public/images/full/}{../public/images/section/}}
 \usepackage{microtype}
 
 % --- literal Times New Roman, matching the ORS template ---
@@ -30,6 +32,10 @@
   BoldItalicFont = * Bold Italic ,
 ]
 
+% for overleaf 
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
 % --- brand palette carried over from the deck ---
 \definecolor{tealc}{HTML}{16767B}   % drug hub / joint
 \definecolor{perf}{HTML}{2D6CB0}     % perfusion
@@ -40,7 +46,7 @@
 \newcommand{\tbd}[1]{{\color{tbdcol}\textbf{[#1]}}}
 
 % run-in section heading, ORS style
-\newcommand{\osec}[1]{\par\smallskip\noindent{\bfseries\color{tealc}#1.}\hspace{0.6em}\ignorespaces}
+\newcommand{\osec}[1]{\par\vspace{1.5pt}\noindent{\bfseries\color{tealc}#1.}\hspace{0.6em}\ignorespaces}
 
 \setlength{\parindent}{0pt}
 \setlength{\columnsep}{16pt}
@@ -67,16 +73,16 @@
    \textsuperscript{2}Harris Orthopaedics Laboratory, Massachusetts General Hospital and
    Harvard Medical School, Boston, MA, USA.\par}
   \vspace{2pt}
-  {\footnotesize Presenting author: Filippo Fonseca \textnormal{(ffonseca1@mgh.harvard.edu)}\par}
+  {\footnotesize Presenting author: Filippo Fonseca \textnormal{(filippo.fonseca@yale.edu)}\par}
 \end{center}
 
 \vspace{2pt}
 {\color{tealc!60}\hrule height 0.6pt}
-\vspace{6pt}
+\vspace{4pt}
 
 % ============================ FIGURE 1 (full width) ============================
 \begin{center}
-\resizebox{\textwidth}{!}{%
+\resizebox{0.63\textwidth}{!}{%
 \begin{tikzpicture}[>=Latex, line width=0.6pt]
   % --- three chambers ---
   \node[draw=perf, fill=perf!12, rounded corners, minimum width=3.0cm, minimum height=2.05cm,
@@ -108,45 +114,50 @@
   \draw[<-, perf, line width=0.9pt] (0.45,-0.55) -- (-0.25,-0.55);
   \node[perf, align=center] at (-0.62,0) {\tiny flow};
 \end{tikzpicture}}
+\\[-1pt]
+{\footnotesize\bfseries\color{tealc}(A)} {\footnotesize\itshape radial three-chamber concept}
+
+\vspace{1pt}
+
+% --- row of three CAD views (B, C, D) ---
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}ccc@{}}
+  \includegraphics[height=1.74cm]{hero_full_assembly.jpg} &
+  \includegraphics[height=1.74cm]{topdown_sectioned.jpg} &
+  \includegraphics[height=1.74cm]{section_iso_membranes.jpg} \\[0pt]
+  {\footnotesize\bfseries\color{tealc}(B)} {\footnotesize as-modeled assembly} &
+  {\footnotesize\bfseries\color{tealc}(C)} {\footnotesize sectioned chambers} &
+  {\footnotesize\bfseries\color{tealc}(D)} {\footnotesize opposite-face membranes} \\
+\end{tabular}
 \end{center}
 \vspace{1pt}
-{\footnotesize\textbf{Figure 1.} Radial three-chamber architecture of the DRD-3. The two
-membranes sit on opposite faces of the central drug hub rather than stacked in series, so biofilm
-that is allowed to form on the sacrificial 0.2\,µm barrier on the infection side cannot reach the
-transport membrane that defines the release kinetics. The full device seals on three identical
-O-ring pairs (2.0\,mm cord, 1.5\,mm gland, 25\% compression) across three interface types
-(cartridge-to-satellite, lid-to-base, satellite-to-hub); each satellite is drawn to the hub by a
-two-piece C-ring wrapper with one bolt per side.\par}
-\vspace{7pt}
+{\footnotesize\textbf{Figure 1.} The DRD-3 three-chamber device.
+\textbf{(A)} Radial schematic: a central drug hub (joint space, holding the UHMWPE strip) is flanked on
+opposite faces by a perfusion satellite and a sealed bacteria satellite; placing the two membranes on
+opposite faces rather than in series keeps biofilm on the sacrificial 0.2\,µm barrier from reaching the
+transport membrane that sets the kinetics. \textbf{(B)} As-modeled assembly with the C-ring wrappers
+that load each joint. \textbf{(C)} Top-down section through the three chambers. \textbf{(D)} Isometric
+cut showing the two opposite-face membranes in modular cartridges. Sealing uses three identical O-ring
+pairs (2.0\,mm cord, 25\% compression).\par}
+\vspace{4pt}
 
 % ============================ BODY (two columns) ============================
 \begin{multicols}{2}
 \small
+\linespread{0.96}\selectfont
 
 \osec{Introduction}
-Ultra-high-molecular-weight polyethylene (UHMWPE) is the dominant bearing material in total joint
-arthroplasty, and drug-eluting UHMWPE is being developed to deliver antibiotics locally against
-periprosthetic joint infection (PJI), a leading cause of arthroplasty failure. Characterizing the
-intraarticular release behavior of such materials requires a benchtop model with physiologically
-relevant clearance. A published dynamic release device (DRD) couples a drug source, a diffusion
-membrane, and a flow-cleared sink at 37\,°C to reproduce joint-relevant transport.\textsuperscript{1}
-That platform, however, models fluid-phase transport only: it explicitly excludes the pathological
-features of an infected joint (biofilm, altered pH, inflammatory permeability) and can infer
-antimicrobial efficacy only by comparing drug concentration to the minimum inhibitory concentration,
-with no live-organism readout. Co-culturing bacteria in the drug chamber is not a solution, because
-biofilm on the transport membrane would change its permeability mid-experiment and corrupt the very
-kinetics the device exists to measure. We set out to design a benchtop platform that measures
-drug-release kinetics from drug-eluting UHMWPE and mounts a live, isolated infection challenge in the
-same experiment, such that the bacterial compartment cannot perturb the validated transport
-measurement.
+Periprosthetic joint infection (PJI) remains one of the most serious complications after total joint arthroplasty. An otherwise successful reconstruction can be converted into a prolonged course of revision surgery and antibiotic treatment, leading to impaired function and increased patient morbidity.\textsuperscript{1,2} Although systemic antibiotics are routinely used in PJI treatment, achieving sustained therapeutic concentrations inside the joint is difficult because intraarticular drug availability is limited by local transport barriers, synovial fluid interactions, and the need to avoid toxic serum concentrations.\textsuperscript{1,3} Local antibiotic delivery from drug-eluting implants is therefore attractive because it can concentrate drug at the site of infection while reducing systemic exposure.
+
+Ultra-high-molecular-weight polyethylene (UHMWPE) is the material of choice for load-bearing total joint implants, and antibiotic-eluting UHMWPE is being developed as a functional spacer or implant material for PJI treatment.\textsuperscript{1,2} Translation of these materials requires in-vitro models that capture the release, transport, and clearance conditions governing drug concentration inside the joint. The Dynamic Release Device (DRD) was recently developed to address this need by combining a drug chamber representing the joint space, a diffusion membrane representing synovial transport, and a perfused chamber representing clearance.\textsuperscript{3} However, the DRD evaluates drug transport without a live infection challenge, as the current design would mean adding bacteria directly to the drug chamber; this would allow biofilm to foul the transport membrane, thus altering the permeability that defines the measured release kinetics. In this study, we designed a three-chamber DRD-3 to preserve the DRD transport measurement while adding a physically isolated \emph{Staphylococcus aureus} challenge in the same experiment, furthering our understanding of intrarticular dynamics by simualting the infection-based scenario where a drug-eluding antiobiotic would be most useful.
 
 \osec{Methods}
-We designed a clean-sheet, three-chamber device (the DRD-3) in CAD (Fig.~1). A central drug hub
+We designed a clean-sheet, three-chamber device (the DRD-3) in CAD (Fig.~1A; assembly in Fig.~1B). A central drug hub
 represents the joint space, holds the UHMWPE implant strip, and targets a tunable fluid volume of
 4 to 20\,mL spanning healthy to infected knee synovial volumes. The hub is flanked on opposite faces
 by two satellites: a perfusion satellite providing continuous fresh-media clearance (the validated
-transport physics, preserved) and a bacteria satellite housing a sealed culture. Because the two
-membranes sit on opposite faces of the hub rather than stacked in series, neither membrane is exposed
+transport physics, preserved) and a bacteria satellite housing a sealed culture (Fig.~1C). Because the two
+membranes sit on opposite faces of the hub rather than stacked in series (Fig.~1D), neither membrane is exposed
 to the other's fouling. Each membrane is sealed off-device inside a modular lid-and-base cartridge; a
 single tapered tooth (tapering from 2.0 to 1.0\,mm) both captures the membrane sandwich and retains
 the finished cartridge in its satellite, and parallel protective bars shield the membrane from the
@@ -208,10 +219,24 @@ development of local-delivery strategies against periprosthetic joint infection.
 The authors thank the Harris Orthopaedics Laboratory. \tbd{funding sources}
 
 \osec{References}
+\footnotesize
 \begin{enumerate}[leftmargin=1.2em,nosep,label=\arabic*.]
-  \item Aşık MD, Reyhanli A, Serafim MF, Inverardi N, Muratoglu OK, Oral E. A dynamic device to
-        simulate intraarticular drug-release kinetics. \textit{Int J Pharm}. 2026;695:126738.
+\item Aşık MD, Zhao T, Fan Y, Ferreira M, Yang L, Inverardi N, Sekar A, Fujino K,
+Ben Malick F, Wannomae KK, Oral E, Muratoglu OK. Advancing joint infection
+treatment: long-term animal implantation of submicron gentamicin-loaded UHMWPE.
+\textit{J Biomed Mater Res B Appl Biomater}. 2025;113:e35673.
+
+\item Aşık MD, Walsh-Rock E, Inverardi N, Nepple C, Zhao T, Sekar A,
+Dutta Kannambadi D, Ferreira M, Wannomae KK, Oral E, Muratoglu OK.
+Enhanced antibiotic release and mechanical strength in UHMWPE antibiotic blends:
+the role of submicron gentamicin sulfate particles.
+\textit{J Bone Joint Surg Am}. 2025;107:586--593.
+
+\item Aşık MD, Reyhanli A, Serafim MF, Inverardi N, Muratoglu OK, Oral E.
+A dynamic device to simulate intraarticular drug-release kinetics.
+\textit{Int J Pharm}. 2026;695:126738.
 \end{enumerate}
 
 \end{multicols}
 \end{document}
+
