@@ -19,22 +19,20 @@
 \usepackage{tikz}
 \usetikzlibrary{patterns,arrows.meta}
 \usepackage{graphicx}
-\graphicspath{{../public/images/full/}{../public/images/section/}}
+\graphicspath{{figures/}}
 \usepackage{microtype}
 
 % --- literal Times New Roman, matching the ORS template ---
+% Font files are bundled in fonts/ so this compiles unchanged both locally
+% (tectonic) and on Overleaf (XeLaTeX) without relying on system fonts.
 \setmainfont{Times New Roman}[
-  Path = /System/Library/Fonts/Supplemental/ ,
+  Path = fonts/ ,
   Extension = .ttf ,
   UprightFont = * ,
   BoldFont = * Bold ,
   ItalicFont = * Italic ,
   BoldItalicFont = * Bold Italic ,
 ]
-
-% for overleaf 
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
 
 % --- brand palette carried over from the deck ---
 \definecolor{tealc}{HTML}{16767B}   % drug hub / joint
@@ -122,9 +120,9 @@
 % --- row of three CAD views (B, C, D) ---
 \setlength{\tabcolsep}{6pt}
 \begin{tabular}{@{}ccc@{}}
-  \includegraphics[height=1.74cm]{hero_full_assembly.jpg} &
-  \includegraphics[height=1.74cm]{topdown_sectioned.jpg} &
-  \includegraphics[height=1.74cm]{section_iso_membranes.jpg} \\[0pt]
+  \includegraphics[height=1.62cm]{hero_full_assembly.jpg} &
+  \includegraphics[height=1.62cm]{topdown_sectioned.jpg} &
+  \includegraphics[height=1.62cm]{section_iso_membranes.jpg} \\[0pt]
   {\footnotesize\bfseries\color{tealc}(B)} {\footnotesize as-modeled assembly} &
   {\footnotesize\bfseries\color{tealc}(C)} {\footnotesize sectioned chambers} &
   {\footnotesize\bfseries\color{tealc}(D)} {\footnotesize opposite-face membranes} \\
@@ -139,12 +137,12 @@ transport membrane that sets the kinetics. \textbf{(B)} As-modeled assembly with
 that load each joint. \textbf{(C)} Top-down section through the three chambers. \textbf{(D)} Isometric
 cut showing the two opposite-face membranes in modular cartridges. Sealing uses three identical O-ring
 pairs (2.0\,mm cord, 25\% compression).\par}
-\vspace{4pt}
+\vspace{2pt}
 
 % ============================ BODY (two columns) ============================
 \begin{multicols}{2}
 \small
-\linespread{0.96}\selectfont
+\linespread{0.955}\selectfont
 
 \osec{Introduction}
 Periprosthetic joint infection (PJI) remains one of the most serious complications after total joint arthroplasty. An otherwise successful reconstruction can be converted into a prolonged course of revision surgery and antibiotic treatment, leading to impaired function and increased patient morbidity.\textsuperscript{1,2} Although systemic antibiotics are routinely used in PJI treatment, achieving sustained therapeutic concentrations inside the joint is difficult because intraarticular drug availability is limited by local transport barriers, synovial fluid interactions, and the need to avoid toxic serum concentrations.\textsuperscript{1,3} Local antibiotic delivery from drug-eluting implants is therefore attractive because it can concentrate drug at the site of infection while reducing systemic exposure.
