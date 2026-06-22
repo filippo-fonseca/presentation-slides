@@ -27,6 +27,19 @@ export default function SceneWhyNow({ beat }: SceneProps) {
           </span>
         </h2>
 
+        <figure className="flex max-w-[62ch] flex-col items-center gap-1.5">
+          <blockquote
+            className="text-balance text-[clamp(1rem,1.7vw,1.25rem)] italic leading-snug text-foreground/85"
+            style={{ fontFamily: "var(--font-fraunces)" }}
+          >
+            &ldquo;All this new tech is what experts are calling the fourth agricultural
+            revolution.&rdquo;
+          </blockquote>
+          <figcaption className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/45">
+            Cleo Abram · Huge If True
+          </figcaption>
+        </figure>
+
         <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {DOORS.map((d, i) => (
             <li key={d.label} className="neu-raised-sm rounded-2xl px-4 py-5 text-left">
@@ -46,7 +59,8 @@ export default function SceneWhyNow({ beat }: SceneProps) {
           style={{ fontFamily: "var(--font-fraunces)" }}
           aria-hidden={beat < 1}
         >
-          Unbuildable five years ago. Now, we&apos;re turning it into reality.
+          Unbuildable five years ago. Now we make it agentic and modular: a true farm OS, with
+          agents both physical and virtual, that helps growers decide.
         </p>
       </div>
     </Stage>

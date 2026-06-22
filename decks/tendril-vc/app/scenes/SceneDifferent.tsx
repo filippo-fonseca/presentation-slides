@@ -16,12 +16,12 @@ const ROWS = [
 ];
 
 const COMPS = [
-  { name: "Carbon", raised: 177 },
+  { name: "Carbon", raised: 185 },
   { name: "Ecorobotix", raised: 150 },
   { name: "Verdant", raised: 46 },
   { name: "Aigen", raised: 19 },
 ];
-const MAX = 177;
+const MAX = 185;
 
 export default function SceneDifferent({ beat }: SceneProps) {
   return (
