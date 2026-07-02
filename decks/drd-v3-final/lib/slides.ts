@@ -103,7 +103,7 @@ export const SLIDES: SlideEntry[] = [
     sectionLabel: "What Changed",
     Component: SlideCompactness,
     notes:
-      "Last thing on the changes: the whole device is materially smaller. Same three-chamber function, far less material. These are the same views from June 10 and July 1 placed side by side, so the scale-down is obvious. This matters for print cost, for benchtop handling, and for eventually getting toward something closer to implant-relevant in size.",
+      "Last thing on the changes: the whole device is materially smaller. Same three-chamber function, far less material. These are the same views from June 10 and July placed side by side, so the scale-down is obvious. This matters for print cost, for benchtop handling, and for eventually getting toward something closer to implant-relevant in size.",
   },
   {
     id: "sealing",

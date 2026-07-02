@@ -54,7 +54,7 @@ export default function Compare({
   before,
   after,
   beforeLabel = "June 10",
-  afterLabel = "July 1 · final",
+  afterLabel = "July · final",
   height = "h-[300px]",
   className = "",
 }: CompareProps) {
