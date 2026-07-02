@@ -51,15 +51,18 @@ export default function Slide10() {
             meta="full device · legs from bottom C-ring"
           />
           <Plate
-            src="/images/final/hub_front.jpg"
-            alt="Drug hub, front view, looking into the bore with the membrane-floor pattern visible"
-            sizes="(max-width: 768px) 100vw, 35vw"
-            tone="paper"
+            tone="graph"
             padding="snug"
             figureNumber="10B"
-            caption="Drug hub · front"
-            meta="looking into the bore"
-          />
+            caption="Exploded chassis"
+            meta="screenshot pending"
+          >
+            <div className="flex h-full w-full items-center justify-center p-4 text-center">
+              <p className="font-mono text-[12px] uppercase tracking-[0.14em] leading-relaxed text-red-600">
+                EXPLODED VIEW OF CHASSIS ASSEMBLED, need to take screenshot
+              </p>
+            </div>
+          </Plate>
         </div>
       </div>
     </div>
