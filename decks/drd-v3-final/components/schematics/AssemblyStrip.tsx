@@ -51,7 +51,7 @@ export default function AssemblyStrip({ className = "" }: { className?: string }
         <circle cx="-6" cy="0" r="14" fill="#16767B" />
         <text x="-6" y="5" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="14" fontWeight="700" fill="white">2</text>
         <text x="18" y="5" fontFamily="var(--font-sans)" fontSize="12" fontWeight="600" letterSpacing="0.06em" fill="#1a1d24">PRESS INTO SATELLITE</text>
-        <text x="18" y="22" fontFamily="var(--font-sans)" fontSize="11" fill="#4a4f59">the tooth retains it</text>
+        <text x="18" y="22" fontFamily="var(--font-sans)" fontSize="11" fill="#4a4f59">tweezer-latches hold it</text>
 
         {/* satellite body — section view: boxy chamber on the left, dome on the right,
             with feet on the bottom and a mounting flange tab on the upper right. */}
@@ -79,7 +79,7 @@ export default function AssemblyStrip({ className = "" }: { className?: string }
         <ellipse cx="202" cy="180" rx="26" ry="46" fill="#ffffff" stroke="#5a5e66" strokeWidth="1.3" />
         {/* O-ring sat inside the bore (red, as in the CAD section) */}
         <ellipse cx="202" cy="180" rx="20" ry="38" fill="none" stroke="#C0552E" strokeWidth="2.4" />
-        {/* two locking-tooth marks at the top and bottom of the bore rim */}
+        {/* two tweezer-latch marks gripping the top and bottom of the bore rim */}
         <polygon points="198,140 206,140 202,150" fill="#16767B" />
         <polygon points="198,220 206,220 202,210" fill="#16767B" />
 
@@ -108,8 +108,8 @@ export default function AssemblyStrip({ className = "" }: { className?: string }
       <g transform="translate(800 30)">
         <circle cx="-6" cy="0" r="14" fill="#16767B" />
         <text x="-6" y="5" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="14" fontWeight="700" fill="white">3</text>
-        <text x="18" y="5" fontFamily="var(--font-sans)" fontSize="12" fontWeight="600" letterSpacing="0.06em" fill="#1a1d24">BOLT TO THE HUB</text>
-        <text x="18" y="22" fontFamily="var(--font-sans)" fontSize="11" fill="#4a4f59">4× M2.5 each side</text>
+        <text x="18" y="5" fontFamily="var(--font-sans)" fontSize="12" fontWeight="600" letterSpacing="0.06em" fill="#1a1d24">WRAP THE C-RINGS</text>
+        <text x="18" y="22" fontFamily="var(--font-sans)" fontSize="11" fill="#4a4f59">latched closed, screws for backup</text>
 
         {/* bacteria satellite */}
         <rect x="0" y="105" width="100" height="130" rx="14" fill="#f7e8df" stroke="#C0552E" strokeWidth="1.4" />
@@ -130,6 +130,11 @@ export default function AssemblyStrip({ className = "" }: { className?: string }
             <line x1={p.x - 3} y1={p.y} x2={p.x + 3} y2={p.y} stroke="#1a1d24" strokeWidth="0.8" />
           </g>
         ))}
+        {/* C-rings wrapping each satellite-hub joint (seen edge-on) */}
+        <ellipse cx="110" cy="170" rx="17" ry="80" fill="none" stroke="#16767B" strokeWidth="3" />
+        <ellipse cx="290" cy="170" rx="17" ry="80" fill="none" stroke="#16767B" strokeWidth="3" />
+        <text x="110" y="76" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#0e5a5e">C-ring</text>
+        <text x="290" y="76" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="9" fill="#0e5a5e">C-ring</text>
         <text x="200" y="170" textAnchor="middle" fontFamily="var(--font-serif)" fontStyle="italic" fontSize="13" fill="#0e5a5e">drug hub</text>
         <text x="50"  y="270" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="10" fill="#7a4530">bacteria</text>
         <text x="350" y="270" textAnchor="middle" fontFamily="var(--font-sans)" fontSize="10" fill="#2b4b73">perfusion</text>
