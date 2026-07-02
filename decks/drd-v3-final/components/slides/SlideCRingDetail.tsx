@@ -35,24 +35,24 @@ export default function SlideCRingDetail() {
             meta="mates the joint&rsquo;s outer U"
           />
           <Plate
-            src="/images/cring/cring_meeting.jpg"
-            alt="Close-up of the inverse U-shaped meeting point with the cartridge teeth pressed in and the extended lip locking the cartridge in place"
+            src="/images/final/cring_meeting.jpg"
+            alt="Close-up of the final C-ring meeting point with the latch engaged"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="graph"
             padding="snug"
             figureNumber="09B"
             caption="Meeting point, close-up"
-            meta="lip + teeth · cartridge pinned"
+            meta="final · latch engaged"
           />
           <Plate
-            src="/images/section/section_iso_membranes.jpg"
-            alt="Section view of the full DRD-3 from the side at an angle, both membrane cartridges visible inside the satellites"
+            src="/images/final/assembly_section_angle.jpg"
+            alt="Angled section view of the final DRD-3, both membrane cartridges seated inside the satellites"
             sizes="(max-width: 768px) 100vw, 35vw"
             tone="paper"
             padding="snug"
             figureNumber="09C"
             caption="Full section, in context"
-            meta="both cartridges seated · angled section"
+            meta="final · both cartridges seated"
             className="col-span-2"
           />
         </div>
