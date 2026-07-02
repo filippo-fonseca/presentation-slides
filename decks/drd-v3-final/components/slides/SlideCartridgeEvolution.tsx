@@ -1,5 +1,5 @@
-import Plate from "@/components/ui/Plate";
 import Compare from "@/components/ui/Compare";
+import ExpandableImage from "@/components/ui/ExpandableImage";
 
 // The core evolution slide: the June 10 cartridge sealed everywhere except at
 // the locking tooth, so the final cartridge drops the tooth and is retained by
@@ -29,9 +29,49 @@ const newParts = [
   },
 ];
 
+function PartPlate({
+  src,
+  alt,
+  figureNumber,
+  caption,
+  meta,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  figureNumber: string;
+  caption: string;
+  meta: string;
+  className?: string;
+}) {
+  return (
+    <figure className={`relative min-h-0 overflow-hidden rounded-[10px] border border-brand-soft bg-brand-fade shadow-sm ${className}`}>
+      <div className="relative h-full min-h-[185px] overflow-hidden">
+        <ExpandableImage
+          src={src}
+          alt={alt}
+          sizes="(max-width: 1024px) 100vw, 28vw"
+          className="object-contain p-2"
+          figureNumber={figureNumber}
+          caption={caption}
+          meta={meta}
+        />
+      </div>
+      <figcaption className="flex min-h-10 shrink-0 flex-wrap items-center justify-center gap-x-2 gap-y-1 border-t border-brand-soft bg-surface/88 px-3 py-2 backdrop-blur">
+        <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-brand">
+          Fig. {figureNumber}
+        </span>
+        <span className="text-line-strong">·</span>
+        <span className="font-serif text-[13px] italic text-ink-soft">{caption}</span>
+        <span className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-ink-muted">{meta}</span>
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function SlideCartridgeEvolution() {
   return (
-    <div className="grid h-full grid-rows-[auto_auto_1fr] gap-6">
+    <div className="grid h-full grid-rows-[auto_auto_1fr] gap-5">
       <div>
         <p className="eyebrow text-brand">The central change</p>
         <h2 className="mt-2 font-display text-[clamp(30px,3.2vw,48px)] leading-tight">
@@ -41,7 +81,7 @@ export default function SlideCartridgeEvolution() {
 
       {/* Hero comparison: assembled old vs assembled new */}
       <Compare
-        height="h-[210px]"
+        height="h-[245px]"
         before={{
           src: "/images/cartridge/cartridge_full_side.jpg",
           alt: "June 10 cartridge, assembled, top-from-side, with the sealing tooth",
@@ -59,7 +99,7 @@ export default function SlideCartridgeEvolution() {
       />
 
       {/* The finding, the fix, and the new parts */}
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.05fr]">
+      <div className="grid min-h-0 grid-cols-1 gap-5 lg:grid-cols-[0.72fr_1.28fr]">
         <div className="flex flex-col gap-3">
           <div className="card accent-brand p-4">
             <p className="font-serif text-[15px] font-semibold text-ink">What we kept</p>
@@ -75,21 +115,10 @@ export default function SlideCartridgeEvolution() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
-          {newParts.map((p) => (
-            <Plate
-              key={p.figureNumber}
-              src={p.src}
-              alt={p.alt}
-              sizes="(max-width: 768px) 33vw, 18vw"
-              tone="graph"
-              padding="snug"
-              figureNumber={p.figureNumber}
-              caption={p.caption}
-              meta={p.meta}
-              className="h-full"
-            />
-          ))}
+        <div className="grid min-h-0 grid-cols-2 gap-3">
+          <PartPlate {...newParts[0]} className="h-[190px]" />
+          <PartPlate {...newParts[1]} className="h-[190px]" />
+          <PartPlate {...newParts[2]} className="col-span-2 h-[230px]" />
         </div>
       </div>
     </div>

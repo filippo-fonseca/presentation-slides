@@ -16,7 +16,7 @@ const phases = [
   {
     label: "Phase 2",
     title: "Turn on the infection",
-    body: "Introduce S. aureus. Confirm zero bacteria cross to the drug side. Fall, when I return.",
+    body: "Introduce S. aureus. Confirm zero bacteria cross to the drug side. (this fall).",
     accent: "accent-bacteria",
     chip: "chip-bacteria",
   },
@@ -34,12 +34,14 @@ export default function Slide14() {
 
       <div className="grid min-h-0 grid-cols-3 gap-5">
         {phases.map((p) => (
-          <div key={p.label} className={`card ${p.accent} flex flex-col items-center justify-center p-8 text-center`}>
-            <span className={`${p.chip} mb-4 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]`}>
-              {p.label}
-            </span>
-            <p className="font-display text-[clamp(22px,2vw,32px)] leading-snug text-ink">{p.title}</p>
-            <p className="mt-4 font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">{p.body}</p>
+          <div key={p.label} className={`card ${p.accent} grid grid-rows-[auto_auto_1fr] content-center p-8 text-center`}>
+            <div className="flex h-12 items-start justify-center">
+              <span className={`${p.chip} w-fit rounded-full px-3 py-1 text-center text-[11px] font-semibold uppercase tracking-[0.16em]`}>
+                {p.label}
+              </span>
+            </div>
+            <p className="flex min-h-[78px] items-center justify-center font-display text-[clamp(22px,2vw,32px)] leading-snug text-ink">{p.title}</p>
+            <p className="mt-4 self-start font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">{p.body}</p>
           </div>
         ))}
       </div>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExpandableImage from "@/components/ui/ExpandableImage";
 import type { CSSProperties } from "react";
 
 // A refined image wrapper. Renders the figure inside a tinted plate with corner
@@ -117,14 +117,16 @@ export default function Plate({
         <CornerTicks color={palette.tick} />
         <div className="relative h-full w-full overflow-hidden rounded-[6px]">
           {src && (
-            <Image
+            <ExpandableImage
               src={src}
               alt={alt}
-              fill
               sizes={sizes || "(max-width: 768px) 100vw, 50vw"}
               className="rounded-[6px] object-contain"
               style={rotate ? { transform: `rotate(${rotate}deg)` } : undefined}
               priority={priority}
+              figureNumber={figureNumber}
+              caption={caption}
+              meta={meta}
             />
           )}
           {children}

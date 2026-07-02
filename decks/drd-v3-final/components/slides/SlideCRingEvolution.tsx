@@ -98,8 +98,8 @@ export default function SlideCRingEvolution() {
               meta="no legs"
             />
             <RingPlate
-              src="/images/cring/cring_alt.jpg"
-              alt="June 10 C-ring, second view: an identical legless half used for the bottom position"
+              src="/images/cring/cring_iso.png"
+              alt="June 10 C-ring, same legless symmetric half used for the bottom position"
               caption="Bottom ring"
               meta="no legs"
             />

@@ -61,18 +61,18 @@ export default function Slide01() {
         </p>
 
         {/* Hero plate — sized to leave breathing room */}
-        <div className="w-[clamp(260px,28vw,380px)]">
+        <div className="w-[clamp(360px,36vw,520px)]">
           <Plate
             src="/images/final/assembly_full.jpg"
             alt="DRD-3 final assembly, full device"
-            sizes="380px"
+            sizes="520px"
             priority
             tone="brand"
-            padding="snug"
+            padding="tight"
             figureNumber="01"
             caption="The DRD-3, final assembly"
             meta="Full device"
-            className="aspect-[5/4]"
+            className="aspect-[6/5]"
           />
         </div>
       </div>

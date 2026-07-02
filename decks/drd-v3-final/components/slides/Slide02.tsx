@@ -1,4 +1,5 @@
 import Plate from "@/components/ui/Plate";
+import ExpandableImage from "@/components/ui/ExpandableImage";
 
 // Slide 2 — three-stage lineage:
 //   v1  Aşık's published DRD (two chambers in series)
@@ -68,21 +69,91 @@ function Arrow() {
   );
 }
 
+function ImagePlate({
+  src,
+  alt,
+  figureNumber,
+  caption,
+  meta,
+  tone = "paper",
+  zoom = "scale-100",
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  figureNumber: string;
+  caption: string;
+  meta?: string;
+  tone?: "paper" | "brand";
+  zoom?: string;
+  className?: string;
+}) {
+  const palette =
+    tone === "brand"
+      ? "border-brand-soft bg-brand-fade ring-2 ring-brand-soft"
+      : "border-line bg-surface";
+
+  return (
+    <figure className={`relative flex min-h-0 flex-col overflow-hidden rounded-[10px] border shadow-sm ${palette} ${className}`}>
+      <div className="relative min-h-0 flex-1 overflow-hidden">
+        <ExpandableImage
+          src={src}
+          alt={alt}
+          sizes="(max-width: 768px) 100vw, 30vw"
+          className={`object-contain p-2 ${zoom}`}
+          figureNumber={figureNumber}
+          caption={caption}
+          meta={meta}
+        />
+      </div>
+      <figcaption className="flex min-h-10 shrink-0 flex-wrap items-center justify-center gap-x-2 gap-y-1 border-t border-line bg-surface/88 px-3 py-2 backdrop-blur">
+        <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-brand">
+          Fig. {figureNumber}
+        </span>
+        <span className="text-line-strong">·</span>
+        <span className="font-serif text-[13px] italic text-ink-soft">{caption}</span>
+        {meta && <span className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-ink-muted">{meta}</span>}
+      </figcaption>
+    </figure>
+  );
+}
+
+function StageCard({
+  children,
+  caption,
+  emphasized,
+}: {
+  children: React.ReactNode;
+  caption: React.ReactNode;
+  emphasized?: boolean;
+}) {
+  return (
+    <div className="grid h-full grid-rows-[1fr_auto] items-stretch gap-3">
+      <div className={`h-[330px] ${emphasized ? "rounded-[10px]" : ""}`}>
+        {children}
+      </div>
+      <p className={`min-h-[42px] text-center font-serif text-[14px] leading-snug ${emphasized ? "text-ink" : "italic text-ink-muted"}`}>
+        {caption}
+      </p>
+    </div>
+  );
+}
+
 export default function Slide02() {
   return (
-    <div className="grid h-full grid-rows-[auto_1fr_auto] gap-6">
+    <div className="grid h-full grid-rows-[auto_1fr_auto] gap-5">
       <div>
         <p className="eyebrow text-brand">Recap</p>
-        <h2 className="mt-2 font-display text-[clamp(36px,4vw,56px)] leading-tight">
+        <h2 className="mt-1 font-display text-[clamp(32px,3.5vw,50px)] leading-tight">
           From the June&nbsp;10 review to a <span className="text-brand">finalized device</span>.
         </h2>
       </div>
 
       {/* Three-stage lineage — vertically centered in the available space */}
-      <div className="my-auto grid grid-cols-[1fr_auto_1.5fr_auto_1.3fr] items-center gap-4">
+      <div className="my-auto grid grid-cols-[1fr_auto_1.5fr_auto_1fr] items-center gap-5">
         {/* v1 — published DRD */}
-        <div className="flex h-full flex-col items-center">
-          <div className="aspect-square w-full max-w-[240px]">
+        <StageCard caption="The published DRD.">
+          <div className="mx-auto h-full w-full max-w-[330px]">
             <Plate
               tone="graph"
               padding="snug"
@@ -93,62 +164,59 @@ export default function Slide02() {
               <DrdV1Schematic />
             </Plate>
           </div>
-          <p className="mt-3 max-w-[24ch] text-center font-serif text-[13.5px] italic text-ink-muted">
-            The published DRD.
-          </p>
-        </div>
+        </StageCard>
 
         <Arrow />
 
         {/* v2 — prior iteration */}
-        <div className="flex h-full flex-col items-center justify-center">
-          <div className="grid w-full max-w-[360px] grid-cols-[0.85fr_1fr] items-stretch gap-3">
+        <StageCard caption="Prior iteration.">
+          <div className="grid h-full w-full grid-cols-2 items-stretch gap-3">
             <Plate
               tone="graph"
               padding="snug"
               figureNumber="v2·a"
               caption="v2 sealing ring"
-              className="aspect-[4/5]"
+              className="h-full"
             >
               <SixToothRing />
             </Plate>
-            <Plate
+            <ImagePlate
               src="/images/v2/v2_section.png"
               alt="v2 device, section view, stacked chambers with screw threads visible"
-              sizes="(max-width: 768px) 100vw, 18vw"
               tone="paper"
-              padding="snug"
               figureNumber="v2·b"
               caption="v2 device"
               meta="section view"
-              className="aspect-[4/5]"
+              zoom="scale-[1.12]"
+              className="h-full"
             />
           </div>
-          <p className="mt-3 max-w-[26ch] text-center font-serif text-[13.5px] italic text-ink-muted">
-            Prior iteration.
-          </p>
-        </div>
+        </StageCard>
 
         <Arrow />
 
         {/* v3 — this week */}
-        <div className="flex h-full flex-col items-center">
-          <div className="aspect-[5/4] w-full max-w-[340px]">
-            <Plate
+        <StageCard
+          emphasized
+          caption={
+            <>
+              The <span className="font-semibold text-brand">DRD-3</span>. Finalized and ordered.
+            </>
+          }
+        >
+          <div className="mx-auto h-full w-full max-w-[330px]">
+            <ImagePlate
               src="/images/final/assembly_full.jpg"
               alt="DRD-3 final assembly, full device"
-              sizes="(max-width: 768px) 100vw, 30vw"
               tone="brand"
-              padding="snug"
               figureNumber="v3"
               caption="The DRD-3"
               meta="final · ordered"
+              zoom="scale-[1.08]"
+              className="h-full"
             />
           </div>
-          <p className="mt-3 max-w-[28ch] text-center font-serif text-[14px] text-ink">
-            The <span className="font-semibold text-brand">DRD-3</span>. Finalized and ordered.
-          </p>
-        </div>
+        </StageCard>
       </div>
 
       {/* Pull line */}
