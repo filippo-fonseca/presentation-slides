@@ -1,6 +1,6 @@
 export default function Slide03() {
   return (
-    <div className="grid h-full grid-rows-[auto_auto_1fr_auto] gap-5">
+    <div className="grid h-full grid-rows-[auto_auto_1fr] gap-5">
       <div>
         <p className="eyebrow text-brand">Motivation</p>
         <h2 className="mt-2 font-display text-[clamp(34px,3.6vw,52px)] leading-tight">
@@ -8,7 +8,7 @@ export default function Slide03() {
         </h2>
       </div>
 
-      {/* Verbatim quote — paper-style block */}
+      {/* Verbatim quote */}
       <figure className="relative rounded-[12px] border border-line bg-surface px-7 py-6 shadow-[0_1px_0_rgba(20,26,36,0.02),0_1px_2px_rgba(20,26,36,0.04)]">
         <span className="absolute -top-3 left-5 select-none bg-surface px-2 font-mono text-[10px] uppercase tracking-[0.22em] text-brand">
           Verbatim · Aşık et al. (2026), §4 Discussion
@@ -18,48 +18,28 @@ export default function Slide03() {
           <span className="font-display text-[40px] leading-none text-brand/35 align-[-0.35em] mr-1">&ldquo;</span>
           Finally, pathological features of diseased joints — including inflammation-induced vascular permeability, altered pH, and <span className="bg-bacteria-soft px-1 font-semibold text-bacteria">biofilm formation</span> — are not explicitly incorporated. Accordingly, this platform should be viewed as a <span className="italic">mechanistic and comparative tool</span> for evaluating joint-relevant transport behavior rather than a complete physiological replica of healthy or pathological human joints.
         </blockquote>
-        <figcaption className="mt-4 flex items-center justify-between border-t border-line pt-3 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-muted">
-          <span>Asik MD, Reyhanli A, Serafim MF, Inverardi N, Muratoglu OK, Oral E.</span>
-          <span>Int. J. Pharm. 695:126738 · 2026</span>
+        <figcaption className="mt-4 border-t border-line pt-3 font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink-muted">
+          Asik MD et al. · Int. J. Pharm. 695:126738 · 2026
         </figcaption>
       </figure>
 
-      {/* Three-card analysis */}
+      {/* Three-card answer */}
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-4">
-          <div className="card accent-bacteria h-full p-5">
-            <p className="eyebrow mb-2 text-bacteria">What the paper we published says</p>
-            <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              The existing device measures drug transport. Not whether the drug kills bacteria.
-            </p>
+          <div className="card accent-bacteria flex h-full items-center justify-center p-5 text-center">
+            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">The paper measures transport. Not killing.</p>
           </div>
         </div>
         <div className="col-span-12 md:col-span-4">
-          <div className="card accent-brand h-full p-5">
-            <p className="eyebrow mb-2 text-brand">What it implies</p>
-            <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              Killing power can only be <span className="font-semibold text-ink">inferred</span>. No live bacteria, no direct evidence.
-            </p>
+          <div className="card accent-brand flex h-full items-center justify-center p-5 text-center">
+            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">Killing power can only be inferred.</p>
           </div>
         </div>
         <div className="col-span-12 md:col-span-4">
-          <div className="card accent-hub h-full p-5">
-            <p className="eyebrow mb-2 text-hub">What the DRD-3 adds</p>
-            <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              A <span className="font-semibold text-ink">sealed bacterial compartment</span> challenges infection directly while drug transport stays untouched.
-            </p>
+          <div className="card accent-hub flex h-full items-center justify-center p-5 text-center">
+            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">The DRD-3 closes that gap directly.</p>
           </div>
         </div>
-      </div>
-
-      {/* Measurement-integrity callout */}
-      <div className="card accent-bacteria flex items-center gap-5 p-4">
-        <span className="chip-bacteria shrink-0 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em]">
-          Measurement integrity
-        </span>
-        <p className="font-serif text-[14.5px] leading-snug text-ink-soft">
-          <span className="font-semibold text-bacteria">The chambers are isolated to protect the measurement.</span>
-        </p>
       </div>
     </div>
   );
