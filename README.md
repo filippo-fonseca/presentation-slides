@@ -13,6 +13,8 @@ This repo holds both the open-source-ready **kit** (templates + docs + slash com
 /new-prez
 ```
 
+That's it.
+
 The slash command will ask:
 
 1. **Path to the instruction markdown** (e.g. `decks/sosa-spec.md`)
