@@ -40,7 +40,7 @@ export default function Slide09() {
         figureNumber="09"
         caption="Three-step assembly"
         meta="schematic strip"
-        className="h-[170px]"
+        className="h-[128px]"
       >
         <AssemblyStrip className="h-full w-full" />
       </Plate>
@@ -55,7 +55,7 @@ export default function Slide09() {
                 alt={s.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 32vw"
-                className="object-contain p-2"
+                className="object-contain p-1.5"
               />
               <span className="absolute left-2.5 top-2.5 grid size-8 place-items-center rounded-full bg-brand font-display text-[16px] font-semibold text-white shadow-md">
                 {s.n}
@@ -64,16 +64,16 @@ export default function Slide09() {
                 Step {String(i + 1).padStart(2, "0")}
               </span>
             </div>
-            <div className="shrink-0 border-t border-line p-3">
-              <p className="font-serif text-[14.5px] font-semibold text-ink">{s.title}</p>
-              <p className="mt-1 font-serif text-[13px] leading-snug text-ink-soft">{s.body}</p>
+            <div className="shrink-0 border-t border-line px-3 py-2.5">
+              <p className="font-serif text-[13.5px] font-semibold text-ink">{s.title}</p>
+              <p className="mt-0.5 font-serif text-[12px] leading-snug text-ink-soft">{s.body}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="card-quote px-5 py-2.5">
-        <p className="font-serif text-[14px] text-ink">
+      <div className="card-quote px-5 py-2">
+        <p className="font-serif text-[13px] text-ink">
           <span className="font-semibold">Modular by design:</span> a direct, recursive descendant of what worked in the cartridge and outer-disc-pair of the last two versions, now fully separable and bench-mountable.
         </p>
       </div>
