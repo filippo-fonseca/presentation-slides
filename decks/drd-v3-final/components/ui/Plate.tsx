@@ -112,7 +112,7 @@ export default function Plate({
     <figure
       className={`relative flex h-full flex-col overflow-hidden rounded-[10px] border ${palette.bg} ${palette.border} shadow-[0_1px_0_rgba(20,26,36,0.02),0_1px_2px_rgba(20,26,36,0.04)] ${className}`}
     >
-      <div className={`relative flex-1 ${padMap[padding]}`}>
+      <div className={`relative min-h-0 flex-1 ${padMap[padding]}`}>
         {tone === "graph" && <GraphBackdrop />}
         <CornerTicks color={palette.tick} />
         <div className="relative h-full w-full overflow-hidden rounded-[6px]">

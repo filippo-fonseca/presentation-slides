@@ -108,7 +108,6 @@ export default function Slide02() {
               padding="snug"
               figureNumber="v2·a"
               caption="Six-tooth CSM"
-              meta="seal mechanism"
               className="aspect-[4/5]"
             >
               <SixToothRing />
