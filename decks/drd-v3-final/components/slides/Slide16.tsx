@@ -20,7 +20,11 @@ export default function Slide16() {
           Thank&nbsp;you. <span className="text-brand italic">More to come</span>.
         </h1>
 
-        <p className="mt-6 max-w-[52ch] font-serif text-[clamp(15px,1.3vw,19px)] leading-snug text-ink-soft">
+        <p className="mt-6 max-w-[60ch] font-serif text-[clamp(15px,1.3vw,19px)] leading-snug text-ink-soft">
+          These have been an incredible two months, and I&rsquo;ve loved every part of them. Thank you to everyone at the lab, especially Dr.&nbsp;Aşık, Smriti, and Olivia for the mentorship. Everyone I met made this place so welcoming, and the work has been genuinely fun. Deniz, it was a pleasure sharing the office as fellow interns.
+        </p>
+
+        <p className="mt-5 max-w-[52ch] font-serif text-[clamp(14px,1.2vw,17px)] italic leading-snug text-ink-muted">
           Next: watertight testing before July&nbsp;12, then the bacteria challenge in the fall.
         </p>
 
