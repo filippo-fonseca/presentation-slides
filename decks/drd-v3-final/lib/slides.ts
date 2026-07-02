@@ -16,7 +16,6 @@ import Slide09 from "@/components/slides/Slide09";
 import Slide10 from "@/components/slides/Slide10";
 import Slide11 from "@/components/slides/Slide11";
 import Slide12 from "@/components/slides/Slide12";
-import Slide13 from "@/components/slides/Slide13";
 import SlideV2Findings from "@/components/slides/SlideV2Findings";
 import Slide14 from "@/components/slides/Slide14";
 import Slide15 from "@/components/slides/Slide15";
@@ -154,14 +153,6 @@ export const SLIDES: SlideEntry[] = [
       "Materials philosophy in one line: rigid where it should be, compliant where it must be. The body is PC-like SLA, the same chassis-class resin we've been using, for geometry. The seals are real silicone O-rings, because elastomers don't fatigue-crack the way thin printed teeth do.\n\nOne caveat I want to flag before you ask: SLA resin can leach uncured monomer that's mildly antimicrobial, so any part touching live culture gets a full post-cure and wash first. It's a known, managed risk, not a surprise.",
   },
   {
-    id: "volume",
-    title: "Open item: internal volume",
-    sectionLabel: "Validation",
-    Component: Slide13,
-    notes:
-      "One honest open item: I haven't yet verified the exact internal fluid volume of the current model. The design targets a tunable 4 to 20 milliliters to cover healthy through infected knee volumes, and it's built so I can tune the hub depth to hit a target.\n\nI'll pull the as-modeled volume straight from CAD and confirm it before we commit further. I'm flagging it now rather than hand-waving it.",
-  },
-  {
     id: "v2-findings",
     title: "Designing the press-fits out",
     sectionLabel: "Validation",
@@ -175,7 +166,7 @@ export const SLIDES: SlideEntry[] = [
     sectionLabel: "Validation",
     Component: Slide14,
     notes:
-      "Here's how we make this a credible instrument and not just nice CAD.\n\nPhase zero, the watertightness test: does the sealing strategy actually hold. That runs before I leave on July 12, with the testing Smriti and I already planned.\n\nPhase one, reproduce your published kinetics: same flow-rate, temperature, and membrane-thickness sensitivities, same half-life trends. We validate against the known baseline first.\n\nOnly in Phase two do we introduce S. aureus and measure a kill curve, and critically, prove zero bacteria cross to the perfusion side, which is the whole isolation argument made real. That happens in the fall when I return.",
+      "Here's how we make this a credible instrument and not just nice CAD.\n\nOne quick closed item first: I pulled the as-modeled drug-hub volume from CAD and confirmed it lands inside the 4 to 20 milliliter target window, and the hub depth stays tunable if we want to move within it. That was the last open dimension.\n\nPhase zero, the watertightness test: does the sealing strategy actually hold. That runs before I leave on July 12, with the testing Smriti and I already planned.\n\nPhase one, reproduce your published kinetics: same flow-rate, temperature, and membrane-thickness sensitivities, same half-life trends. We validate against the known baseline first.\n\nOnly in Phase two do we introduce S. aureus and measure a kill curve, and critically, prove zero bacteria cross to the perfusion side, which is the whole isolation argument made real. That happens in the fall when I return.",
   },
   {
     id: "next-steps",
@@ -183,7 +174,7 @@ export const SLIDES: SlideEntry[] = [
     sectionLabel: "Next Steps",
     Component: Slide15,
     notes:
-      "Immediate next steps on my side: run the watertight testing before I leave on July 12, then return in the fall for the bacteria challenge. The design itself is locked and ordered.\n\nWhere your input would genuinely help today: anything you want changed or double-checked before the watertight testing, and your read on the sealing and the new latch. Whatever you flag, I fold in.",
+      "Immediate next steps on my side: run the watertight testing before I leave on July 12, then return in the fall for the bacteria challenge. The design itself is locked and ordered.\n\nIn parallel, and remotely, I'll keep working with Dr. Aşık to get an abstract submitted to the ORS 2027 Annual Meeting (San Francisco, February 19 to 23). The submission deadline is August 31, so that continues after I leave.\n\nWhere your input would genuinely help today: anything you want changed or double-checked before the watertight testing, and your read on the sealing and the new latch. Whatever you flag, I fold in.",
   },
   {
     id: "close",

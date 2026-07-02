@@ -27,7 +27,7 @@ const phases = [
 
 export default function Slide14() {
   return (
-    <div className="grid h-full grid-rows-[auto_1fr] gap-6">
+    <div className="grid h-full grid-rows-[auto_1fr_auto] gap-6">
       <div>
         <p className="eyebrow text-brand">Validation</p>
         <h2 className="mt-2 font-display text-[clamp(30px,3.2vw,48px)] leading-tight">
@@ -56,6 +56,28 @@ export default function Slide14() {
         ))}
       </div>
 
+      <div className="card accent-brand grid grid-cols-1 items-center gap-5 px-5 py-4 md:grid-cols-[1fr_1.1fr]">
+        <div>
+          <p className="eyebrow mb-1 text-brand">Chamber volume · verified</p>
+          <p className="font-serif text-[14px] leading-snug text-ink-soft">
+            An earlier open item is now closed: the drug-hub volume was pulled from CAD and confirmed to land inside the <span className="font-semibold text-ink">4&ndash;20&nbsp;mL</span> window spanning healthy-to-infected knee synovial fluid, with hub depth left tunable to move within it.
+          </p>
+        </div>
+        <div>
+          <p className="eyebrow mb-3 text-brand">Target window</p>
+          <div className="relative mb-3 h-3 w-full rounded-full bg-surface-2">
+            <div className="absolute inset-y-0 left-[5%] right-[15%] rounded-full bg-brand" />
+            <div className="absolute inset-y-0 left-[5%] w-[2px] bg-ink" />
+            <div className="absolute inset-y-0 right-[15%] w-[2px] bg-ink" />
+          </div>
+          <div className="flex justify-between font-mono text-[11px] text-ink-muted">
+            <span>0 mL</span>
+            <span className="font-semibold text-brand">4 mL · healthy</span>
+            <span className="font-semibold text-brand">20 mL · infected</span>
+            <span>30 mL</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
