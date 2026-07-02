@@ -43,6 +43,12 @@ export default function Slide12() {
         </div>
       </div>
 
+      <div className="card accent-brand px-5 py-3.5">
+        <p className="font-serif text-[clamp(13px,1.1vw,15px)] leading-snug text-ink">
+          <span className="eyebrow mr-2 align-middle text-brand">Biocompatibility</span>
+          The current parts are printed in Accura&nbsp;60 and Somos&nbsp;9120 so mechanical testing can start now without waiting on procurement. Biocompatible equivalents from Formlabs are already identified, and will be ordered for the design-verification build once the mechanics are proven.
+        </p>
+      </div>
     </div>
   );
 }
