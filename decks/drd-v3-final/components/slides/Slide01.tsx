@@ -40,7 +40,7 @@ export default function Slide01() {
           </div>
         </div>
         <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-ink-muted">
-          {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+          July 2026
         </span>
       </div>
 
