@@ -1,14 +1,14 @@
 import Plate from "@/components/ui/Plate";
 
 const immediate = [
-  "The design is finalized and ordered; the physical parts arrive next.",
-  "Run watertight (leak) testing before I leave on July 12.",
-  "Return in the fall for the S. aureus bacteria challenge.",
+  "Parts ordered. Arrive next.",
+  "Watertight testing before July 12.",
+  "Return in the fall for the bacteria challenge.",
 ];
 
 const input = [
-  "Anything to check during watertight testing before July 12.",
-  "What you would want to see from the bacteria testing in the fall.",
+  "Anything to flag before watertight testing.",
+  "What you want to see from the fall bacteria work.",
 ];
 
 export default function Slide15() {
@@ -53,7 +53,7 @@ export default function Slide15() {
             <p className="eyebrow mb-2 text-perfusion">In parallel · remote</p>
             <p className="font-display text-[clamp(15px,1.3vw,19px)] leading-snug text-ink">ORS 2027 abstract</p>
             <p className="mt-1.5 font-serif text-[13px] leading-snug text-ink-soft">
-              I&apos;ll keep working remotely with Dr.&nbsp;Aşık to get an abstract into the Orthopaedic Research Society 2027 Annual Meeting. Submission deadline is Aug&nbsp;31.
+              Abstract for ORS 2027 Annual Meeting. Deadline Aug&nbsp;31.
             </p>
             <div className="mt-3 min-h-0 flex-1">
               <Plate
@@ -73,11 +73,6 @@ export default function Slide15() {
         </div>
       </div>
 
-      <div className="card-quote px-5 py-3">
-        <p className="font-serif text-[15px] text-ink">
-          The design is locked, so your feedback now shapes how we test it: what to watch for at watertight testing, and what to prove out in the fall.
-        </p>
-      </div>
     </div>
   );
 }

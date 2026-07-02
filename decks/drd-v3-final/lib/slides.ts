@@ -14,9 +14,7 @@ import Slide07 from "@/components/slides/Slide07";
 import SlideCRingDetail from "@/components/slides/SlideCRingDetail";
 import Slide09 from "@/components/slides/Slide09";
 import Slide10 from "@/components/slides/Slide10";
-import Slide11 from "@/components/slides/Slide11";
 import Slide12 from "@/components/slides/Slide12";
-import SlideV2Findings from "@/components/slides/SlideV2Findings";
 import Slide14 from "@/components/slides/Slide14";
 import Slide15 from "@/components/slides/Slide15";
 import Slide16 from "@/components/slides/Slide16";
@@ -137,28 +135,12 @@ export const SLIDES: SlideEntry[] = [
       "I want to spend a moment on engineering intent, because it drove a lot of decisions.\n\nFirst, it's standalone: the bottom C-ring now carries integral legs, so the device sits stable on the bench on its own feet. The earlier device was honestly a pain to set down and position; this one just stands.\n\nSecond, cleanliness was an explicit goal: one O-ring spec, one screw size, symmetric satellites, low part count. A clean device is a reliable device and an easy one to hand to the next person.\n\nThird, the fits are better: several generations of learning went into defined clearances instead of press-fit guesswork. This is the version that's actually pleasant to use.",
   },
   {
-    id: "bacteria",
-    title: "The bacteria satellite",
-    sectionLabel: "Design Work",
-    Component: Slide11,
-    notes:
-      "The bacteria satellite shares the perfusion body on purpose, the same proven chassis, but it specializes. One port instead of two, because it's a sealed culture, not a flow-through. Access is through a self-sealing septum so I can inoculate and pull CFU samples with a needle without ever opening the compartment: either a swabbable luer valve, which is the buy-the-proven-part route, or an integral septum well.\n\nThe bacteria-facing membrane is a 0.2-micron filter that passes drug but stops the bugs from migrating, and it's the one we let foul, deliberately. And I've designed in an optional optical window on a swappable face, so we can image biofilm later without committing to it now.",
-  },
-  {
     id: "materials",
     title: "Materials & biocompatibility",
     sectionLabel: "Design Work",
     Component: Slide12,
     notes:
       "Materials philosophy in one line: rigid where it should be, compliant where it must be. The body is PC-like SLA, the same chassis-class resin we've been using, for geometry. The seals are real silicone O-rings, because elastomers don't fatigue-crack the way thin printed teeth do.\n\nOne caveat I want to flag before you ask: SLA resin can leach uncured monomer that's mildly antimicrobial, so any part touching live culture gets a full post-cure and wash first. It's a known, managed risk, not a surprise.",
-  },
-  {
-    id: "v2-findings",
-    title: "Designing the press-fits out",
-    sectionLabel: "Validation",
-    Component: SlideV2Findings,
-    notes:
-      "I want to spend a moment on the assembly philosophy, because it's changed materially. Earlier iterations leaned on tight press fits between rigid SLA parts to hold things together. That made every assembly a little different and every disassembly a fight.\n\nThree things are different now. First, I spent real care on filleting edges and on choosing clearances that match what the interface actually needs, rather than putting one number everywhere. Second, where two parts genuinely need to press or transition together, the compliance lives in a proper elastomer, not in a thin printed feature trying to flex. Third, where possible I've removed press-fit dependencies from the load path entirely. The clearest example is the C-ring wrapper: the satellite-hub joint is now latched closed around the interface, not held together by friction.\n\nThe net effect is that each interface has a defined job and a defined retainer: a fillet to seat against, an elastomer to seal, or a latch to clamp. Nothing is asked to do a job its geometry can't back up.",
   },
   {
     id: "validation",

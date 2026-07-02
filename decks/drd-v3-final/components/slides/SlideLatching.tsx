@@ -12,21 +12,17 @@ export default function SlideLatching() {
 
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 flex flex-col gap-5 md:col-span-5">
-          <p className="font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">
-            The membrane-cartridge latches from June 10 worked well, so that lesson moved up to the wrappers: the two C-rings now close with a <span className="font-semibold text-ink">dedicated latching mechanism</span>.
-          </p>
-
           <div className="card accent-brand p-5">
             <p className="eyebrow mb-1 text-brand">Latch, then screws</p>
             <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              The latch does the closing, so it reduces reliance on the screws. The screw holes are kept on purpose: redundancy, plus extra tightening if watertightness ever needs it. Belt and suspenders, not a single point of failure.
+              The latch closes. Screws are backup. Belt and suspenders.
             </p>
           </div>
 
           <div className="card-quote p-5">
-            <p className="eyebrow mb-1 text-brand">One lip, three O-rings</p>
+            <p className="eyebrow mb-1 text-brand">One closure, three seals</p>
             <p className="font-serif text-[15px] leading-snug italic text-ink">
-              The wrappers meet at an inverse-U point whose extended lip presses the joint with even radial pressure. That same lip doubles as the pressure point for the cartridge, so the O-rings at all three levels (intra-cartridge, cartridge-to-satellite, satellite-to-drug-hub) get uniform, sustained load: watertight sealing plus a barrier against outside contaminants.
+              One motion seals all three O-rings at once.
             </p>
           </div>
         </div>

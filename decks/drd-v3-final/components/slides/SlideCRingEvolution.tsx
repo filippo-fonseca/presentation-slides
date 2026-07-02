@@ -81,9 +81,6 @@ export default function SlideCRingEvolution() {
         <h2 className="mt-2 font-display text-[clamp(30px,3.2vw,46px)] leading-tight">
           C-rings that <span className="text-brand">carry the device</span>.
         </h2>
-        <p className="mt-2 max-w-[74ch] font-serif text-[clamp(14px,1.15vw,16.5px)] leading-snug text-ink-soft">
-          June 10 wrapped each satellite-hub joint in two identical, legless halves: symmetric, and with nothing to stand on. The final pair breaks that symmetry. The top ring stays a clean arc, and the bottom ring grows integral legs.
-        </p>
       </div>
 
       {/* Paired top/bottom comparison: old symmetric pair vs. new asymmetric pair */}
@@ -141,9 +138,8 @@ export default function SlideCRingEvolution() {
       {/* What the asymmetry buys */}
       <div className="grid grid-cols-3 gap-3">
         {wins.map((w) => (
-          <div key={w.key} className="card accent-brand p-4">
-            <p className="eyebrow mb-1 text-brand">{w.label}</p>
-            <p className="font-serif text-[13px] leading-snug text-ink-soft">{w.body}</p>
+          <div key={w.key} className="card accent-brand flex items-center justify-center p-5 text-center">
+            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">{w.label}</p>
           </div>
         ))}
       </div>

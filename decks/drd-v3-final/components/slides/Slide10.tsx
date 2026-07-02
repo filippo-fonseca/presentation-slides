@@ -1,22 +1,10 @@
 import Plate from "@/components/ui/Plate";
 
 const tenets = [
-  {
-    title: "It stands on its own.",
-    body: "The bottom C-ring now carries integral legs, so the device sits flat and stable on the bench by itself. The published setup was awkward to place; this one is free-standing.",
-  },
-  {
-    title: "Clean by intent.",
-    body: "Uniform O-rings, one screw size, symmetric satellites, minimal part count. The cleanliness is a design goal, not an afterthought: fewer parts, fewer failure modes, less to explain to the next user.",
-  },
-  {
-    title: "Easy, repeatable mounting.",
-    body: "Lab-bench-friendly: the modular cartridge + defined clamp means anyone can assemble it the same way every time, with no special technique.",
-  },
-  {
-    title: "Tighter, more honest fits.",
-    body: "Fits refined over three generations: defined clearances and gasket compression rather than hope-it-presses-in tolerances.",
-  },
+  { title: "Free-standing.", body: "" },
+  { title: "Minimal part count.", body: "" },
+  { title: "Repeatable assembly.", body: "" },
+  { title: "Fits refined across three versions.", body: "" },
 ];
 
 export default function Slide10() {
@@ -32,9 +20,8 @@ export default function Slide10() {
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 grid grid-cols-2 gap-4 md:col-span-7">
           {tenets.map((t, i) => (
-            <div key={i} className="card accent-brand p-5">
-              <p className="font-serif text-[16.5px] font-semibold text-ink">{t.title}</p>
-              <p className="mt-1.5 font-serif text-[14px] leading-snug text-ink-soft">{t.body}</p>
+            <div key={i} className="card accent-brand flex items-center justify-center p-6 text-center">
+              <p className="font-serif text-[clamp(18px,1.6vw,26px)] font-semibold leading-snug text-ink">{t.title}</p>
             </div>
           ))}
         </div>

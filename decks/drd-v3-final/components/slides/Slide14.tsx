@@ -2,24 +2,21 @@ const phases = [
   {
     label: "Phase 0",
     title: "Watertightness test",
-    body: "Dye perfusion at 64 mL/hr for 24 h; confirm the O-ring strategy holds. This runs soon, before I leave on July 12.",
-    threshold: "Threshold: < 2% volume loss / 24 h",
+    body: "Pressurize with dye. Confirm no leaks. Before July 12.",
     accent: "accent-brand",
     chip: "chip-hub",
   },
   {
     label: "Phase 1",
-    title: "Reproduce the published kinetics",
-    body: "Sweep flow rate (2–64 mL/hr), temperature (RT vs 37 °C), and membrane thickness; show DRD-3 reproduces the published device's half-life trends.",
-    threshold: "Validate against the known baseline before claiming anything new.",
+    title: "Reproduce published results",
+    body: "Confirm the DRD-3 matches the published device's drug-transport results.",
     accent: "accent-perfusion",
     chip: "chip-perfusion",
   },
   {
     label: "Phase 2",
     title: "Turn on the infection",
-    body: "Introduce S. aureus in the bacteria satellite; CFU-sample over 24 h; confirm zero bacterial migration to the perfusion side. This happens in the fall, when I return.",
-    threshold: "Proves the isolation / measurement-integrity claim.",
+    body: "Introduce S. aureus. Confirm zero bacteria cross to the drug side. Fall, when I return.",
     accent: "accent-bacteria",
     chip: "chip-bacteria",
   },
@@ -35,7 +32,6 @@ export default function Slide14() {
         </h2>
       </div>
 
-      {/* Staircase */}
       <div className="grid grid-cols-3 gap-5">
         {phases.map((p, i) => (
           <div
@@ -47,11 +43,9 @@ export default function Slide14() {
               <span className={`${p.chip} rounded-full px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.16em]`}>
                 {p.label}
               </span>
-              <span className="font-mono text-[11px] tabular-nums text-ink-muted">0{i}</span>
             </div>
             <p className="font-display text-[clamp(18px,1.5vw,24px)] leading-snug text-ink">{p.title}</p>
             <p className="mt-3 font-serif text-[14.5px] leading-snug text-ink-soft">{p.body}</p>
-            <p className="mt-auto pt-4 font-serif text-[13px] italic text-ink-muted">{p.threshold}</p>
           </div>
         ))}
       </div>
@@ -60,7 +54,7 @@ export default function Slide14() {
         <div>
           <p className="eyebrow mb-1 text-brand">Chamber volume · verified</p>
           <p className="font-serif text-[14px] leading-snug text-ink-soft">
-            An earlier open item is now closed: the drug-hub volume was pulled from CAD and confirmed to land inside the <span className="font-semibold text-ink">4&ndash;20&nbsp;mL</span> window spanning healthy-to-infected knee synovial fluid, with hub depth left tunable to move within it.
+            Hub volume confirmed to land inside the target window for knee joint fluid. Hub depth stays tunable.
           </p>
         </div>
         <div>

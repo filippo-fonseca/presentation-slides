@@ -6,19 +6,19 @@ const steps = [
   {
     n: "1",
     title: "Build the cartridge.",
-    body: "Membrane clipped between lid and base with its O-ring. Done on the bench, as a module.",
+    body: "Membrane clipped between lid and base. Built as a module.",
     img: "/images/final/cartridge_full.jpg",
   },
   {
     n: "2",
     title: "Press into the satellite.",
-    body: "Six tweezer-latches hold the cartridge in the satellite; each satellite now owns its cartridge.",
+    body: "Clips hold the cartridge in the satellite. Each satellite takes its own cartridge.",
     img: "/images/final/perfusion_section_cartridge.jpg",
   },
   {
     n: "3",
     title: "Wrap the C-rings, latch them closed.",
-    body: "Two C-rings meet around each satellite-hub joint, one pair per satellite (four C-rings total). The pair latches closed; screw holes stay for redundancy. Done.",
+    body: "Two rings wrap each joint and latch closed. Four rings total. Done.",
     img: "/images/final/cring_meeting.jpg",
   },
 ];
@@ -72,11 +72,6 @@ export default function Slide09() {
         ))}
       </div>
 
-      <div className="card-quote px-5 py-2">
-        <p className="font-serif text-[13px] text-ink">
-          <span className="font-semibold">Modular by design:</span> a direct, recursive descendant of what worked in the cartridge and outer-disc-pair of the last two versions, now fully separable and bench-mountable.
-        </p>
-      </div>
     </div>
   );
 }

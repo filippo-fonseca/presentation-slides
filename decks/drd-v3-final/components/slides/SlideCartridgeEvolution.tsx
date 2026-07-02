@@ -62,28 +62,16 @@ export default function SlideCartridgeEvolution() {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.05fr]">
         <div className="flex flex-col gap-3">
           <div className="card accent-brand p-4">
-            <p className="font-serif text-[15px] font-semibold text-ink">
-              What we kept:
-            </p>
-            <p className="mt-1 font-serif text-[14px] leading-snug text-ink-soft">
-              Two things genuinely worked on June 10, and the lessons carried over: the two-latch closure was solid, and the tweezer pinch-tabs were a real usability win, much easier to seat and remove by hand.
-            </p>
+            <p className="font-serif text-[15px] font-semibold text-ink">What we kept</p>
+            <p className="mt-1 font-serif text-[14px] leading-snug text-ink-soft">Clip closure. Tab grips for easy seating and removal.</p>
           </div>
           <div className="card accent-bacteria p-4">
-            <p className="font-serif text-[15px] font-semibold text-ink">
-              What failed on the bench:
-            </p>
-            <p className="mt-1 font-serif text-[14px] leading-snug text-ink-soft">
-              The cartridge sealed everywhere except right at the locking tooth: a peculiar, highly localized leak precisely at the tooth interface, even though the rest of the seal held.
-            </p>
+            <p className="font-serif text-[15px] font-semibold text-ink">What failed</p>
+            <p className="mt-1 font-serif text-[14px] leading-snug text-ink-soft">Leaked at the locking point. Everywhere else held.</p>
           </div>
           <div className="card accent-hub p-4">
-            <p className="font-serif text-[15px] font-semibold text-ink">
-              The fix:
-            </p>
-            <p className="mt-1 font-serif text-[14px] leading-snug text-ink-soft">
-              The final cartridge drops the sealing tooth entirely. It is retained instead by six tweezer-holders spaced around the rim that double as security latches: the usability win of the tweezer grip, now doing the retention job the tooth used to do. It is also scaled down and uses less material.
-            </p>
+            <p className="font-serif text-[15px] font-semibold text-ink">The fix</p>
+            <p className="mt-1 font-serif text-[14px] leading-snug text-ink-soft">Dropped the locking point. Six clips hold the cartridge. Smaller and lighter.</p>
           </div>
         </div>
 

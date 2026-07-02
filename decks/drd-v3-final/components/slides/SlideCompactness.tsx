@@ -67,11 +67,6 @@ export default function SlideCompactness() {
         />
       </div>
 
-      <div className="card-quote px-6 py-4">
-        <p className="font-serif text-[clamp(15px,1.3vw,19px)] leading-snug text-ink">
-          Scaled down across the board: smaller footprint, less material, the same three-chamber function.
-        </p>
-      </div>
     </div>
   );
 }

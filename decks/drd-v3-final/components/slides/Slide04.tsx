@@ -7,12 +7,7 @@ const chambers = [
     role: "the joint space",
     accent: "accent-hub",
     chip: "chip-hub",
-    body: (
-      <>
-        Holds the UHMWPE implant strip. Volume tunable <span className="font-semibold">4–20&nbsp;mL</span> (healthy &rarr; infected knee).
-        <span className="mt-2 block text-[12px] italic text-ink-muted">Internal volume pending verification.</span>
-      </>
-    ),
+    body: <>Holds the implant.</>,
   },
   {
     key: "perfusion",
@@ -20,7 +15,7 @@ const chambers = [
     role: "simulated blood flow",
     accent: "accent-perfusion",
     chip: "chip-perfusion",
-    body: <>Continuous fresh-media flow. The validated clearance physics, untouched.</>,
+    body: <>Continuous fluid flow. Measures drug transport.</>,
   },
   {
     key: "bacteria",
@@ -28,7 +23,7 @@ const chambers = [
     role: "isolated infection challenge",
     accent: "accent-bacteria",
     chip: "chip-bacteria",
-    body: <>Sealed culture compartment, behind its own bacteria-blocking membrane.</>,
+    body: <>Sealed compartment for live bacteria. Isolated from everything else.</>,
   },
 ] as const;
 

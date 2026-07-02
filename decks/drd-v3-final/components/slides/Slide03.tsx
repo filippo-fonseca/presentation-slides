@@ -30,7 +30,7 @@ export default function Slide03() {
           <div className="card accent-bacteria h-full p-5">
             <p className="eyebrow mb-2 text-bacteria">What the paper we published says</p>
             <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              Biofilm formation, altered pH, and inflammatory vascular permeability are <span className="font-semibold text-ink">explicitly out of scope</span>. The DRD models <span className="italic">fluid-phase transport</span>, not pathology.
+              The existing device measures drug transport. Not whether the drug kills bacteria.
             </p>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function Slide03() {
           <div className="card accent-brand h-full p-5">
             <p className="eyebrow mb-2 text-brand">What it implies</p>
             <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              Efficacy against infection can only be <span className="font-semibold text-ink">inferred</span> from drug concentration vs. MIC. No live bacteria, no kill curve, no <span className="italic">in&nbsp;situ</span> evidence that the dose actually works.
+              Killing power can only be <span className="font-semibold text-ink">inferred</span>. No live bacteria, no direct evidence.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function Slide03() {
           <div className="card accent-hub h-full p-5">
             <p className="eyebrow mb-2 text-hub">What the DRD-3 adds</p>
             <p className="font-serif text-[15px] leading-snug text-ink-soft">
-              An <span className="font-semibold text-ink">isolated bacterial compartment</span>: closes the inferred gap by challenging infection directly, while the validated transport measurement stays untouched.
+              A <span className="font-semibold text-ink">sealed bacterial compartment</span> challenges infection directly while drug transport stays untouched.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Slide03() {
           Measurement integrity
         </span>
         <p className="font-serif text-[14.5px] leading-snug text-ink-soft">
-          Bacteria cannot touch the main transport membrane. Biofilm on the transport membrane would change its permeability mid-experiment and corrupt the very kinetics the device exists to measure. <span className="font-semibold text-bacteria">Isolation is important to protect the measurement.</span>
+          <span className="font-semibold text-bacteria">The chambers are isolated to protect the measurement.</span>
         </p>
       </div>
     </div>

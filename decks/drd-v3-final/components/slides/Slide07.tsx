@@ -36,7 +36,7 @@ export default function Slide07() {
       </div>
 
       <p className="max-w-[82ch] font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">
-        In earlier iterations the O-rings were painful to work with and didn&apos;t always seal cleanly. So this version flips the logic: <span className="text-ink">the latched C-ring clamp and the wrapper&apos;s inverse-U lip do the actual sealing</span>, and the O-ring sits in a proper gland as a redundant helper on top. Belt, suspenders, and a known-good gasket.
+        The mechanical clamp does the sealing. The O-ring is a backup.
       </p>
 
       <div className="grid grid-cols-12 gap-5">
@@ -60,15 +60,15 @@ export default function Slide07() {
             <ol className="flex flex-col gap-2 font-serif text-[13.5px] text-ink-soft">
               <li className="flex gap-2">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand text-[10.5px] font-bold text-white">1</span>
-                <span><span className="font-semibold text-ink">C-ring wrapper.</span> Two halves latch closed around the satellite-hub joint, pulling it together with uniform radial load; screw holes stay for redundancy and extra tightening if watertightness needs it.</span>
+                <span><span className="font-semibold text-ink">Mechanical clamp.</span> Two ring halves latch closed. Screws for backup.</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand text-[10.5px] font-bold text-white">2</span>
-                <span><span className="font-semibold text-ink">Six tweezer-latches.</span> Holders around the cartridge rim double as security latches, holding the cartridge in the satellite the way the v2 disc-pair captured its module.</span>
+                <span><span className="font-semibold text-ink">Cartridge clips.</span> Six tabs lock the cartridge in place.</span>
               </li>
               <li className="flex gap-2">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-brand text-[10.5px] font-bold text-white">3</span>
-                <span><span className="font-semibold text-ink">O-ring helper.</span> 2 mm cord, 1.5 mm gland, 25% compression. Drops in if needed; doesn't carry the joint by itself.</span>
+                <span><span className="font-semibold text-ink">O-ring backup.</span> Fills the last gap.</span>
               </li>
             </ol>
           </div>
@@ -102,11 +102,6 @@ export default function Slide07() {
         ))}
       </div>
 
-      <div className="card-quote px-5 py-3">
-        <p className="font-serif text-[15px] text-ink">
-          <span className="font-semibold">v1 + v2, refined.</span> The latching C-ring wrapper replaces the old four-screw clamp, six tweezer-latches replace the old retaining tooth, and prior fixes are folded in. The O-ring goes back to doing what it&apos;s good at: filling the last micron.
-        </p>
-      </div>
     </div>
   );
 }

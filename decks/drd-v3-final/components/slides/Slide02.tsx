@@ -94,7 +94,7 @@ export default function Slide02() {
             </Plate>
           </div>
           <p className="mt-3 max-w-[24ch] text-center font-serif text-[13.5px] italic text-ink-muted">
-            The published DRD. Two chambers stacked in series, one membrane between.
+            The published DRD.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export default function Slide02() {
               tone="graph"
               padding="snug"
               figureNumber="v2·a"
-              caption="Six-tooth CSM"
+              caption="v2 sealing ring"
               className="aspect-[4/5]"
             >
               <SixToothRing />
@@ -125,7 +125,7 @@ export default function Slide02() {
             />
           </div>
           <p className="mt-3 max-w-[26ch] text-center font-serif text-[13.5px] italic text-ink-muted">
-            Prior iteration: the six-tooth CSM (Compliant Seal Mechanism) inside the v2 device.
+            Prior iteration.
           </p>
         </div>
 
@@ -146,7 +146,7 @@ export default function Slide02() {
             />
           </div>
           <p className="mt-3 max-w-[28ch] text-center font-serif text-[14px] text-ink">
-            The <span className="font-semibold text-brand">DRD-3</span>. The finalized, clean-sheet device.
+            The <span className="font-semibold text-brand">DRD-3</span>. Finalized and ordered.
           </p>
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function Slide02() {
       {/* Pull line */}
       <div className="card-quote px-6 py-5">
         <p className="font-serif text-[clamp(16px,1.4vw,20px)] leading-snug text-ink">
-          Most of you saw the June&nbsp;10 version. Since then the design has been finalized and ordered. Today focuses on what changed: the membrane cartridge, the C-rings and their new legs, the latching mechanism, and an overall scale-down, all while keeping the validated <span className="italic">three-chamber</span> concept.
+          Most of you saw the June&nbsp;10 version. Today: what changed.
         </p>
       </div>
     </div>

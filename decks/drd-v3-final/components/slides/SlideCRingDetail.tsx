@@ -12,20 +12,14 @@ export default function SlideCRingDetail() {
 
       <div className="grid min-h-0 grid-cols-12 gap-5">
         <div className="col-span-12 flex flex-col gap-4 md:col-span-5">
-          <p className="font-serif text-[clamp(14px,1.2vw,17px)] leading-snug text-ink-soft">
-            The wrapper&apos;s inner U-channel rides over the joint where the satellite meets the hub. The hub&apos;s outer edge sits radially <span className="italic">inboard</span> of the satellite&apos;s outer edge, so as the wrapper closes it presses the satellite&apos;s rim slightly inward toward the hub axis. That inward step continues through the joint to the membrane cartridge, which gets squeezed in turn.
-          </p>
 
           <div className="card accent-brand p-4">
             <p className="eyebrow mb-2 text-brand">Three O-rings, one source of pressure</p>
             <ol className="list-decimal space-y-1.5 pl-5 font-serif text-[14.5px] text-ink-soft">
-              <li><span className="font-semibold text-ink">Satellite ↔ drug hub.</span> The outer joint between the two shells.</li>
-              <li><span className="font-semibold text-ink">Cartridge ↔ satellite.</span> Captures the membrane cartridge into the satellite bore.</li>
-              <li><span className="font-semibold text-ink">Intra-cartridge.</span> Between lid and base, sealing the membrane itself.</li>
+              <li><span className="font-semibold text-ink">Outer joint.</span> Where the satellite meets the hub.</li>
+              <li><span className="font-semibold text-ink">Cartridge to satellite.</span> Holds the membrane cartridge in place.</li>
+              <li><span className="font-semibold text-ink">Inside the cartridge.</span> Between lid and base, sealing the membrane.</li>
             </ol>
-            <p className="mt-2 font-serif text-[13.5px] italic text-ink">
-              All three see the same radial squeeze, transmitted through the geometry. No O-ring is doing work alone.
-            </p>
           </div>
         </div>
 
@@ -66,7 +60,7 @@ export default function SlideCRingDetail() {
 
       <div className="card-quote px-5 py-3">
         <p className="font-serif text-[clamp(14px,1.2vw,17px)] leading-snug text-ink">
-          <span className="font-semibold">Closing one ring seals three.</span> The wrapper turns the old four-screw clamp problem into one continuous, watertight hoop that latches closed, and uses the same compression to seat the membrane cartridge in line with the joint.
+          <span className="font-semibold">One ring closed. Three interfaces sealed.</span>
         </p>
       </div>
     </div>
