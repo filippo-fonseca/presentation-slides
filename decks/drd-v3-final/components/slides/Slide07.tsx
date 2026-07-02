@@ -75,7 +75,7 @@ export default function Slide07() {
 
           <div className="flex flex-1 flex-col">
             <Plate
-              src="/images/section/section_side_orings.jpg"
+              src="/images/final/assembly_section_side.jpg"
               alt="DRD-3 cross-section showing O-rings tucked into glands behind a clamped joint"
               sizes="(max-width: 1024px) 50vw, 30vw"
               tone="paper"

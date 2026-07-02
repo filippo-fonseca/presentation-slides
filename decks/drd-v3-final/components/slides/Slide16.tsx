@@ -39,7 +39,7 @@ export default function Slide16() {
           />
           <p className="mt-1 font-serif text-[17px] font-semibold text-ink">Filippo Fonseca</p>
           <p className="text-[13px] text-ink-soft">Yale Mechanical Engineering & EECS · Research Engineer | Summer Intern</p>
-          <p className="text-[13px] text-ink-muted">ffonseca1@mgh.harvard.edu</p>
+          <p className="text-[13px] text-ink-muted">filippo.fonseca@yale.edu</p>
         </div>
 
         <div className="mt-10 flex items-center gap-6">

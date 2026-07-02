@@ -1,31 +1,26 @@
 import Image from "next/image";
-import AssemblyStrip from "@/components/schematics/AssemblyStrip";
-import Plate from "@/components/ui/Plate";
 
 const steps = [
   {
     n: "1",
     title: "Build the cartridge.",
-    body: "Membrane clipped between lid and base. Built as a module.",
     img: "/images/final/cartridge_full.jpg",
   },
   {
     n: "2",
     title: "Press into the satellite.",
-    body: "Clips hold the cartridge in the satellite. Each satellite takes its own cartridge.",
     img: "/images/final/perfusion_section_cartridge.jpg",
   },
   {
     n: "3",
-    title: "Wrap the C-rings, latch them closed.",
-    body: "Two rings wrap each joint and latch closed. Four rings total. Done.",
+    title: "Wrap the C-rings, latch closed.",
     img: "/images/final/cring_meeting.jpg",
   },
 ];
 
 export default function Slide09() {
   return (
-    <div className="grid h-full grid-rows-[auto_auto_1fr_auto] gap-3">
+    <div className="grid h-full grid-rows-[auto_1fr] gap-4">
       <div>
         <p className="eyebrow text-brand">Design Work</p>
         <h2 className="mt-1 font-display text-[clamp(30px,3.2vw,46px)] leading-tight">
@@ -33,45 +28,27 @@ export default function Slide09() {
         </h2>
       </div>
 
-      {/* Schematic strip — kept compact so the CAD photos can dominate */}
-      <Plate
-        tone="graph"
-        padding="tight"
-        figureNumber="09"
-        caption="Three-step assembly"
-        meta="schematic strip"
-        className="h-[128px]"
-      >
-        <AssemblyStrip className="h-full w-full" />
-      </Plate>
-
-      {/* CAD-backed step cards — images fill the freed vertical space */}
-      <div className="grid min-h-0 grid-cols-3 gap-3">
+      <div className="grid min-h-0 grid-cols-3 gap-4">
         {steps.map((s, i) => (
-          <div key={i} className="card flex h-full min-h-0 flex-col overflow-hidden">
+          <div key={i} className="card flex min-h-0 flex-col overflow-hidden">
             <div className="relative min-h-0 flex-1 bg-surface-2">
               <Image
                 src={s.img}
                 alt={s.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 32vw"
-                className="object-contain p-1.5"
+                className="object-contain"
               />
-              <span className="absolute left-2.5 top-2.5 grid size-8 place-items-center rounded-full bg-brand font-display text-[16px] font-semibold text-white shadow-md">
+              <span className="absolute left-3 top-3 grid size-9 place-items-center rounded-full bg-brand font-display text-[18px] font-semibold text-white shadow-md">
                 {s.n}
               </span>
-              <span className="absolute right-2.5 top-2.5 font-mono text-[9.5px] uppercase tracking-[0.2em] text-ink-muted">
-                Step {String(i + 1).padStart(2, "0")}
-              </span>
             </div>
-            <div className="shrink-0 border-t border-line px-3 py-2.5">
-              <p className="font-serif text-[13.5px] font-semibold text-ink">{s.title}</p>
-              <p className="mt-0.5 font-serif text-[12px] leading-snug text-ink-soft">{s.body}</p>
+            <div className="shrink-0 border-t border-line px-4 py-3">
+              <p className="font-serif text-[15px] font-semibold text-ink">{s.title}</p>
             </div>
           </div>
         ))}
       </div>
-
     </div>
   );
 }

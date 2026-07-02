@@ -8,35 +8,28 @@ export default function Slide12() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        <div className="card accent-brand flex flex-col p-6">
-          <p className="eyebrow mb-2 text-brand">Structure</p>
-          <p className="font-display text-[clamp(20px,1.7vw,26px)] text-ink">Two resin grades</p>
-          <p className="mt-3 font-serif text-[14.5px] leading-snug text-ink-soft">
-            Stiff resin for the outer chassis. More flexible grade for the inner cartridge parts, so the clips snap cleanly without breaking.
+      <div className="grid min-h-0 grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="card accent-brand flex flex-col items-center justify-center p-8 text-center">
+          <p className="eyebrow mb-3 text-brand">Structure</p>
+          <p className="font-display text-[clamp(28px,2.4vw,40px)] leading-tight text-ink">Two resin grades</p>
+          <p className="mt-4 font-serif text-[clamp(16px,1.4vw,20px)] leading-snug text-ink-soft">
+            Stiff resin for the outer chassis. More flexible grade for the inner cartridge parts, so the clips snap cleanly.
           </p>
         </div>
 
-        <div className="card accent-bacteria flex flex-col p-6">
-          <p className="eyebrow mb-2 text-bacteria">Seals</p>
-          <p className="font-display text-[clamp(20px,1.7vw,26px)] text-ink">Silicone O-rings</p>
-          <p className="mt-3 font-serif text-[15px] leading-snug text-ink-soft">
-            Elastomers recover from compression indefinitely — no fatigue cracking.
+        <div className="card accent-bacteria flex flex-col items-center justify-center p-8 text-center">
+          <p className="eyebrow mb-3 text-bacteria">Seals</p>
+          <p className="font-display text-[clamp(28px,2.4vw,40px)] leading-tight text-ink">Silicone O-rings</p>
+          <p className="mt-4 font-serif text-[clamp(16px,1.4vw,20px)] leading-snug text-ink-soft">
+            Elastomers recover from compression indefinitely. No fatigue cracking.
           </p>
-          <div className="mt-auto flex flex-wrap gap-2 pt-5">
-            {["medical grade", "compression seal"].map((t) => (
-              <span key={t} className="rounded-full border border-bacteria/30 bg-bacteria-soft px-2.5 py-1 text-[11px] uppercase tracking-[0.14em] text-bacteria">
-                {t}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
       <div className="card accent-brand px-5 py-3.5">
         <p className="font-serif text-[clamp(13px,1.1vw,15px)] leading-snug text-ink">
           <span className="eyebrow mr-2 align-middle text-brand">Biocompatibility</span>
-          Current parts are for mechanical testing. Biocompatible equivalents are already identified and will be ordered once the mechanics are proven.
+          Current parts are for mechanical testing. Biocompatible equivalents are identified and will be ordered once the mechanics are proven.
         </p>
       </div>
     </div>

@@ -32,20 +32,14 @@ export default function Slide14() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-5">
-        {phases.map((p, i) => (
-          <div
-            key={p.label}
-            className={`card ${p.accent} flex flex-col p-5`}
-            style={{ marginTop: `${i * 24}px` }}
-          >
-            <div className="mb-3 flex items-center gap-2">
-              <span className={`${p.chip} rounded-full px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.16em]`}>
-                {p.label}
-              </span>
-            </div>
-            <p className="font-display text-[clamp(18px,1.5vw,24px)] leading-snug text-ink">{p.title}</p>
-            <p className="mt-3 font-serif text-[14.5px] leading-snug text-ink-soft">{p.body}</p>
+      <div className="grid min-h-0 grid-cols-3 gap-5">
+        {phases.map((p) => (
+          <div key={p.label} className={`card ${p.accent} flex flex-col items-center justify-center p-8 text-center`}>
+            <span className={`${p.chip} mb-4 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em]`}>
+              {p.label}
+            </span>
+            <p className="font-display text-[clamp(22px,2vw,32px)] leading-snug text-ink">{p.title}</p>
+            <p className="mt-4 font-serif text-[clamp(15px,1.3vw,18px)] leading-snug text-ink-soft">{p.body}</p>
           </div>
         ))}
       </div>
@@ -54,7 +48,7 @@ export default function Slide14() {
         <div>
           <p className="eyebrow mb-1 text-brand">Chamber volume · verified</p>
           <p className="font-serif text-[14px] leading-snug text-ink-soft">
-            Hub volume confirmed to land inside the target window for knee joint fluid. Hub depth stays tunable.
+            Hub volume confirmed inside the target window for knee joint fluid. Hub depth stays tunable.
           </p>
         </div>
         <div>

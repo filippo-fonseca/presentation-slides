@@ -11,7 +11,6 @@ import SlideCRingEvolution from "@/components/slides/SlideCRingEvolution";
 import SlideLatching from "@/components/slides/SlideLatching";
 import SlideCompactness from "@/components/slides/SlideCompactness";
 import Slide07 from "@/components/slides/Slide07";
-import SlideCRingDetail from "@/components/slides/SlideCRingDetail";
 import Slide09 from "@/components/slides/Slide09";
 import Slide10 from "@/components/slides/Slide10";
 import Slide12 from "@/components/slides/Slide12";
@@ -109,14 +108,6 @@ export const SLIDES: SlideEntry[] = [
     Component: Slide07,
     notes:
       "I want to address something you and Smriti both flagged. In the earlier device the O-rings were painful: they fought you on assembly and they didn't always seal cleanly. So in the DRD-3 I deliberately stopped treating the O-ring as the thing that makes it watertight.\n\nThe geometry does that. The C-ring wrappers latch the satellite onto the hub face under a defined clamp load, and the wrapper's inverse-U lip presses the cartridge into the satellite. Between those two, the joint is mechanically tight before the elastomer even shows up.\n\nThe O-ring then sits in a proper 1.5 mm gland with 0.5 mm stand-proud, getting the textbook 25% compression, and it does what an O-ring is actually good at: filling the last micron behind the clamp. It's a helper, not the hero. Belt-and-suspenders, not a single point of failure.",
-  },
-  {
-    id: "cring-detail",
-    title: "Three O-rings under one wrapper",
-    sectionLabel: "Assembly / Bench Testing",
-    Component: SlideCRingDetail,
-    notes:
-      "Here is the mechanics of why the wrapper is the right move.\n\nThe inner profile of the C-ring is a U-channel. That U mates with the U shape created where the satellite meets the drug hub on the outside. The hub's outer edge sits a little closer to the center of the concentric circles than the satellite's outer edge does. So when the wrapper closes around the joint, it presses the satellite's rim radially inward toward the hub axis.\n\nThat inward push propagates through the satellite into the membrane cartridge sitting inside it. The cartridge is squeezed in turn, which compresses its own O-ring against the lid.\n\nResult: three O-rings, all loaded by the same wrapper, all at the same uniform radial pressure. One wrapper, three seals, equal pressure. No O-ring is doing work alone, and no joint is being held by point loads from individual screws.",
   },
   {
     id: "assembly",

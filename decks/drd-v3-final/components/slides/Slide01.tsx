@@ -102,7 +102,7 @@ export default function Slide01() {
                 <br />
                 and Electrical Engineering &amp; Computer Science
               </p>
-              <p className="font-mono text-[12px] text-ink-muted">ffonseca1@mgh.harvard.edu</p>
+              <p className="font-mono text-[12px] text-ink-muted">filippo.fonseca@yale.edu</p>
             </div>
           </div>
         </div>
