@@ -79,7 +79,7 @@ export default function Slide02() {
       </div>
 
       {/* Three-stage lineage — vertically centered in the available space */}
-      <div className="my-auto grid grid-cols-[1fr_auto_1fr_auto_1.3fr] items-center gap-4">
+      <div className="my-auto grid grid-cols-[1fr_auto_1.5fr_auto_1.3fr] items-center gap-4">
         {/* v1 — published DRD */}
         <div className="flex h-full flex-col items-center">
           <div className="aspect-square w-full max-w-[240px]">

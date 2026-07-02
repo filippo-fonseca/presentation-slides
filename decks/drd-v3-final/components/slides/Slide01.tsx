@@ -4,9 +4,10 @@ import Plate from "@/components/ui/Plate";
 export default function Slide01() {
   return (
     <div className="relative mx-auto flex h-full w-full max-w-[1200px] flex-col gap-4 px-2 py-4">
-      {/* Top affiliation row */}
-      <div className="flex shrink-0 items-center justify-between border-b border-line pb-4">
-        <div className="flex items-center gap-6">
+      {/* Top affiliation rows */}
+      <div className="flex shrink-0 flex-col gap-2 border-b border-line pb-4">
+        {/* Row 1: MGH wordmark */}
+        <div className="flex items-center justify-between">
           <Image
             src="/images/logos/mgh.png"
             alt="Massachusetts General Hospital"
@@ -15,7 +16,12 @@ export default function Slide01() {
             className="h-7 w-auto opacity-90"
             priority
           />
-          <span className="text-[11px] text-line-strong">·</span>
+          <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-ink-muted">
+            July 2026
+          </span>
+        </div>
+        {/* Row 2: HMS + HOL */}
+        <div className="flex items-center gap-6">
           <Image
             src="/images/logos/hms.png"
             alt="Harvard Medical School"
@@ -39,9 +45,6 @@ export default function Slide01() {
             </span>
           </div>
         </div>
-        <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-ink-muted">
-          July 2026
-        </span>
       </div>
 
       {/* Title block — centered, restrained, scaled to fit */}

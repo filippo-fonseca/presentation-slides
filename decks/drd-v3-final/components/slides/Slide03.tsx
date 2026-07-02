@@ -26,18 +26,21 @@ export default function Slide03() {
       {/* Three-card answer */}
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-4">
-          <div className="card accent-bacteria flex h-full items-center justify-center p-5 text-center">
-            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">The paper measures transport. Not killing.</p>
+          <div className="card accent-bacteria flex h-full flex-col items-center justify-center gap-2 p-5 text-center">
+            <p className="eyebrow text-bacteria">The problem</p>
+            <p className="font-serif text-[clamp(15px,1.35vw,20px)] font-semibold text-ink">The published DRD has no bacteria.</p>
           </div>
         </div>
         <div className="col-span-12 md:col-span-4">
-          <div className="card accent-brand flex h-full items-center justify-center p-5 text-center">
-            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">Killing power can only be inferred.</p>
+          <div className="card accent-brand flex h-full flex-col items-center justify-center gap-2 p-5 text-center">
+            <p className="eyebrow text-brand">Why that matters</p>
+            <p className="font-serif text-[clamp(15px,1.35vw,20px)] font-semibold text-ink">No infection challenge means we can&apos;t evaluate antibiotic effectiveness in the joint.</p>
           </div>
         </div>
         <div className="col-span-12 md:col-span-4">
-          <div className="card accent-hub flex h-full items-center justify-center p-5 text-center">
-            <p className="font-serif text-[clamp(16px,1.4vw,22px)] font-semibold text-ink">The DRD-3 closes that gap directly.</p>
+          <div className="card accent-hub flex h-full flex-col items-center justify-center gap-2 p-5 text-center">
+            <p className="eyebrow text-hub">The solution</p>
+            <p className="font-serif text-[clamp(15px,1.35vw,20px)] font-semibold text-ink">We&apos;re adding an isolated bacteria chamber.</p>
           </div>
         </div>
       </div>
