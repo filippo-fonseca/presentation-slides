@@ -1,14 +1,9 @@
-import SeptumPort from "@/components/schematics/SeptumPort";
 import Plate from "@/components/ui/Plate";
 
 const changes = [
   {
     title: "One port, not two.",
     body: "It's a sealed culture, not a flow-through. A second port has no job here, so it's removed.",
-  },
-  {
-    title: "Self-sealing septum for access.",
-    body: "Inoculate and CFU-sample with a needle while the compartment stays closed and sterile. Two viable paths: a swabbable luer valve (buy the proven part, zero new geometry) or an integral septum well built into the puck.",
   },
   {
     title: "Bacteria-blocking membrane.",
@@ -55,7 +50,7 @@ export default function Slide11() {
           ))}
         </div>
 
-        <div className="col-span-12 grid grid-rows-2 gap-4 md:col-span-6">
+        <div className="col-span-12 md:col-span-6">
           <Plate
             src="/images/satellite/bacteria_satellite.jpg"
             alt="Full perfusion satellite assembly, shared chassis with the bacteria satellite, cartridge installed"
@@ -66,15 +61,6 @@ export default function Slide11() {
             caption="Satellite, fully assembled"
             meta="shared chassis · cartridge installed"
           />
-          <Plate
-            tone="graph"
-            padding="snug"
-            figureNumber="11B"
-            caption="Septum port"
-            meta="side section · schematic"
-          >
-            <SeptumPort className="h-full w-full" />
-          </Plate>
         </div>
       </div>
     </div>
